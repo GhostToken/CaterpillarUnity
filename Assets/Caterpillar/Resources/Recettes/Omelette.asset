@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
+  m_Name: Omelette
+  m_EditorClassIdentifier: 
+  Nom: omelette
+  TypeDeRecette: 1
+  IngredientsDeBase:
+  - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
+  - {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
+  - {fileID: 11400000, guid: 3d32c2527144e2a46b6bcf1bcabce789, type: 2}
+  IngredientsOptionnels:
+  - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
+  "IngredientsCach\xE9s": []

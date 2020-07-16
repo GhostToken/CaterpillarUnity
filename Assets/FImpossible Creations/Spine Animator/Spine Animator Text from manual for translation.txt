@@ -1,0 +1,44 @@
+Text version is here for using translation.
+
+Page 1:
+
+Spine animator is dedicated to be used on transform chains (game objects) placed like animal spine, But it can work with other variants too.
+
+To make component work correctlyyou will have to define right spine bones.Also check tooltips for variables, everything is described precisely.
+Often you have just to add pelvis bone then neck / pre-neck bone an click getthen spine animator create spine chain.
+Spine animator is giving possibility to work on reversed hierarchy, sometimes you will need first bone to be leading and sometimes last one.
+
+You can hit button ‘auto’ next to “basic correction options” tab, but sometimes it can work wrong.
+Sometimes your animation can lack keyframed tracks of positions or rotations. 
+Then after start your model will slowly rotate around some point, it will be clear that something is wrong.
+To fix that open ‘simple correcting’ and toggle ‘not animated positions’ or rotations, in some cases only individual bones will need to be toggled so you can adjust it here.
+
+It depending of which software was used for creating skeleton, component will adjust bones orientations automatically, 
+but sometimes still something can be wrong, for example when spine chain goes up, rotations of spine segment can rotate in wrong direction, 
+then check ‘reversed vertical rotation’ toggle or others. 
+If it not helps, check if your pelvis bone have flipped rotation to next spine bone, then you should adjust your skeleton in modelling software 
+or try use second spine animator like for tail (next page) but it works in rare case.
+
+Page 2:
+
+Add spine animator to main transform of movement for your creature.Put pelvis bone as ‘start’ bone then last spine bone or neck bone as ‘last’ one and click get.
+
+Then it’s recommended to hit ‘auto’ buttonor hit ‘precise’ put head bone and hit ‘try correct’.
+
+Next thing you can do is toggle off‘connect with animator’ if you want use tail animator on not animated skeleton but mostly you probably  will use it on animated ones, then ‘connect with animator’ is keeping whole animation motion for you.
+
+With ‘animation options’ tab you can easily customize behaviour of animation, check tooltips for precise description of each variable.
+
+When your skelton’s bones have pivots in not friendly positions for such animation, you can adjust it with ‘pivot offsets’ or manual position / rotation offsets
+
+Page 3:
+
+To make your animation look more smooth you can set some small values in smoother parameters.when you need to limit angleit’s good to use limit smoother in high values then go lower with angle limit.
+
+Straightening value can give you some good results of limitation without need of using previous two variables.Use ‘G0 back speed’ for tails or animate it when your creature is landing / attacking etc.
+
+When you want connect tail with spine animator to animated spine bones by other spine animator, you mostly have to redefine anchor transform and toggle ‘queue to last update’ in tail’s spine animator.i recommend using tail animator (my other package) for such purpose, because it will work right without any additional tweaking, result will be little different but still awesome.
+
+Offsetting rotation point for your creature can make big difference in animation, check how it’s done in PR_SpineAnimator_Filipede.model inside motion transform is offseted to point that head is in zeroed position, giving much better result.
+
+Consider creating script to controll component’s variables in certain situations to create insane looking animation controller for your creatures.also check my other packages like head animator or tail animator and connect them with spine animator!
