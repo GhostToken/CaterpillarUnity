@@ -32,10 +32,17 @@ public class CameraFollowing : MonoBehaviour
         Gesture current = EasyTouch.current;
 
         // Pinch
-        //if (current.type == EasyTouch.EvtType.On_Pinch)
-        //{
-        //    Camera.main.fieldOfView += current.deltaPinch * 10 * Time.deltaTime;
-        //}
+        if (current.type == EasyTouch.EvtType.On_Pinch)
+        {
+            if( Camera.main.orthographic )
+            {
+                Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize + current.deltaPinch * Time.deltaTime, 1, 10);
+            }
+            else
+            {
+                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView + current.deltaPinch * 10 * Time.deltaTime, 16, 130);
+            }
+        }
 
         // Twist
         if (current.type == EasyTouch.EvtType.On_Twist)
