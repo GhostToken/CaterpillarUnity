@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Caterpillar/Scene/Level_2/Level 2.unity
     guid: 07844923ec5f64c47ad114dc3dedeb40
+  - enabled: 1
+    path: Assets/Caterpillar/Scene/Level_4/Level 4.unity
+    guid: 5a0abafeddd4e494e9251610b7f2668b
   m_configObjects: {}

@@ -45,6 +45,11 @@ public class Partie
 
     public static void Update(float DeltaTime)
     {
+        if( Level.CurrentLevel == null)
+        {
+            return;
+        }
+
         if( !JustTerminated )
         {
             TempsRestant -= DeltaTime;
@@ -58,12 +63,10 @@ public class Partie
 
     public static void Terminate()
     {
-        Debug.Log("Terminate !");
         SaveGame.RecordCurrentGame();
         JustTerminated = true;
         ScreenFader.Launch_FadeIn( () =>
         {
-            Debug.Log("End fade in !");
             SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single);
         });
     }

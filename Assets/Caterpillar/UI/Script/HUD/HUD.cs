@@ -25,12 +25,22 @@ public class HUD : MonoBehaviour
 
     private void Start()
     {
+        if (Level.CurrentLevel == null)
+        {
+            return;
+        }
+
         Partie.Start();
         InitializeLevel();
     }
 
     private void Update()
     {
+        if(Level.CurrentLevel == null)
+        {
+            return;
+        }
+
         Partie.Update(Time.deltaTime);
 
         int minutes = Mathf.FloorToInt(Partie.TempsRestant / 60.0f);

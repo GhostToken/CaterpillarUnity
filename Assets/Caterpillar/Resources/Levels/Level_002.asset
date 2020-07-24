@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dde496695981794c8878eae6042c40c, type: 3}
   m_Name: Level_002
   m_EditorClassIdentifier: 
-  Id: 3
+  Id: 2
   TypeDeNiveau: 0
   Scene: Level 2
   RecetteAFaire:
@@ -30,6 +30,6 @@ MonoBehaviour:
     Description: 2 recettes
   StarThree:
     PasDeGrignotage: 1
-    NombreDeRecette: 2
-    NombreDeRecetteUnique: 0
+    NombreDeRecette: 1
+    NombreDeRecetteUnique: 2
     Description: 2 recettes sans grignotage

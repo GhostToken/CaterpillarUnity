@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136359112785942072}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139411582914489076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136455662206431570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136438159118894056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139473682224336290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139660030354402758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136551935661473062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136757310606691616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139486355605259194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136344232063130972}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8136555806550569296}
   - component: {fileID: 8150776010945526780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Filipede_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136552396416453324}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136781365918287450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139490148617841790}
-  m_Layer: 0
+  - component: {fileID: 7382865789205999123}
+  m_Layer: 10
   m_Name: BSpine_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,6 +598,20 @@ Transform:
   m_Father: {fileID: 8136401180968125286}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7382865789205999123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140646197753800994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bdb3cdc77af574a9c2dbabcd59eebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransparentMaterialTemplate: {fileID: 2100000, guid: a48c546055dd826419f712b8ff0c1675,
+    type: 2}
 --- !u!1 &8140652676494972344
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139352154394101254}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136750677679166544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139520779048021712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136830014853250820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136777552712276108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136405672020740430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136872806165337208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136619962778992092}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +868,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136516551982437610}
-  m_Layer: 0
+  - component: {fileID: 2365412459616960989}
+  m_Layer: 10
   m_Name: BSpine_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,6 +894,20 @@ Transform:
   m_Father: {fileID: 8139343273395970278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2365412459616960989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141412242928492810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bdb3cdc77af574a9c2dbabcd59eebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransparentMaterialTemplate: {fileID: 2100000, guid: a48c546055dd826419f712b8ff0c1675,
+    type: 2}
 --- !u!1 &8141421409173230832
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136321056035308826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136410381928529768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136345226078356692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +1010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136518240751140220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136785042956459784}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,7 +1075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136534919932970000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139515740354455824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136786216166563712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136615158184490714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139438873479050090}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139376274246759676}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139130770844586110}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139357018312124772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136741746364902672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136598752680878192}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136436617207563378}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139131710310530872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136416423279331774}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,7 +1479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136838921164018742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1479,7 +1509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139494834720364730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1510,7 +1540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136596659689973456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,7 +1571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136547624924255888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136876570201366340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1603,7 +1633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139413403879454422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139577878687648188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1664,7 +1694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139241601501252116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,7 +1725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136466811895376646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136492770174654988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139434597226358158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,7 +1818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139683446309036820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139161361933858146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,7 +1883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139415754225241844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136812594106803214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1915,7 +1945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136318971474427438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1946,7 +1976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139250372364396570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1977,7 +2007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136661641301013456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2008,7 +2038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139149479107542458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136854343773402088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2068,7 +2098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136533591540330074}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136483085888343496}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2131,7 +2161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139138658685386144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136363764111627756}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139360928813408952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2224,7 +2254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139633136224830648}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139432807677917002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2286,7 +2316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136776835381247350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2317,7 +2347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139175954522422590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,7 +2378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139377309627022946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2379,7 +2409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136411941684341160}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,7 +2439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139333477406925410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2440,7 +2470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136350227813063518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2471,7 +2501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136870001820373680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2502,7 +2532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136435047462013708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136609556964461214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2564,7 +2594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136456859822528222}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2594,7 +2624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139414946118000112}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2624,7 +2654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136358277803480466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139615941068878164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136401180968125286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2719,7 +2749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136772071188479780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2749,7 +2779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136356061751939912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,7 +2810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136469849232599360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2811,7 +2841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139183294673235968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2841,7 +2871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139143111355098922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2872,7 +2902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139447542993382242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2903,7 +2933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139653918588023460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2933,7 +2963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139253106590690228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2967,7 +2997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139583522744593284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2998,7 +3028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139227149846926706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3029,7 +3059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136621934998940798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3059,7 +3089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136453259249067266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3090,7 +3120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139385408001538588}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3120,7 +3150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136331455143073812}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136744394709373314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BMandibleL_2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3215,7 @@ GameObject:
   - component: {fileID: 508109574}
   - component: {fileID: 323109404024279335}
   - component: {fileID: 508109572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Perceval
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3201,7 +3231,7 @@ Transform:
   m_GameObject: {fileID: 8142419999847889090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.8, y: 1, z: -17.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8139351384522708502}
   m_Father: {fileID: 0}
@@ -3301,7 +3331,7 @@ MonoBehaviour:
   getReminders: 0
   wasIncorrectRemind: 0
   incorrectionWarning: 0
-  DrawDebug: 0
+  DrawDebug: 1
   DebugAlpha: 1
   AdditionalDebugAlpha: 1
   drawGizmos: 1
@@ -3351,7 +3381,7 @@ MonoBehaviour:
   CollidersScaleMul: 1.95
   DifferenceScaleFactor: 1
   DetailedCollision: 1
-  GravityPower: {x: 0, y: -2, z: 0}
+  GravityPower: {x: 0, y: 0, z: 0}
 --- !u!54 &508109575
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3363,11 +3393,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!135 &508109574
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3380,7 +3410,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0.63, z: -0.61}
+  m_Center: {x: 0, y: 0.57, z: -0.58}
 --- !u!114 &323109404024279335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,7 +3454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139581725476084776}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_3_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3456,7 +3486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8139351384522708502}
   - component: {fileID: 8189880115455924872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PR_Filipede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3507,7 +3537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139136830614865186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_2_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3538,7 +3568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139343273395970278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3572,7 +3602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136776792428560248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3603,7 +3633,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139520901788019220}
-  m_Layer: 0
+  - component: {fileID: 793067840130290049}
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3627,6 +3658,20 @@ Transform:
   m_Father: {fileID: 8136533591540330074}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &793067840130290049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142462382710890254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bdb3cdc77af574a9c2dbabcd59eebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransparentMaterialTemplate: {fileID: 2100000, guid: a48c546055dd826419f712b8ff0c1675,
+    type: 2}
 --- !u!1 &8142469501605483662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,7 +3681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139356759567418728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_2_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,7 +3712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136738894835716652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegL_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3697,7 +3742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139339726089351900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_3_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3728,7 +3773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139244784078923988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BSpine_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3762,7 +3807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8136738360174126120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLegR_4_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3790,6 +3835,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5217395399114854450}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3864,6 +3914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -3874,6 +3929,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 389439927805003570}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3949,6 +4009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &744013642586659290
@@ -3958,6 +4023,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5994776764508228453}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4033,6 +4103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &1335385238190398931
@@ -4042,6 +4117,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5980966500265378440}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4117,6 +4197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &1991689286167815263
@@ -4126,6 +4211,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5980966500265378440}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4201,6 +4291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &2832431362350746990
@@ -4210,6 +4305,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1931603116705351464}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4284,6 +4384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -4364,10 +4469,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -4459,10 +4574,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.114
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -4479,6 +4604,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1931603116705351464}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4554,6 +4684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &4011486961207364757
@@ -4563,6 +4698,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5994776764508228453}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4637,6 +4777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -4717,10 +4862,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -4737,6 +4892,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5217395399114854450}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4811,6 +4971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -4821,6 +4986,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8231658207982283737}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4896,6 +5066,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &4924014326488029530
@@ -4905,6 +5080,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8180304106007617852}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4979,6 +5159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -5059,10 +5244,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -5079,6 +5274,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8180304106007617852}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5153,6 +5353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -5237,6 +5442,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550486976183314726, guid: 62c5f8b06b14aba4690015347280aebf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591988451928026846, guid: 62c5f8b06b14aba4690015347280aebf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8762773549655475549, guid: 62c5f8b06b14aba4690015347280aebf,
         type: 3}
@@ -5383,10 +5598,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.041
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -5473,10 +5698,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -5493,6 +5728,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690018279457455191}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5567,6 +5807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -5647,10 +5892,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -5667,6 +5922,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 389439927805003570}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5742,6 +6002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &7763716938862909679
@@ -5751,6 +6016,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690018279457455191}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5826,6 +6096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &7864133636628409293
@@ -5835,6 +6110,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7308527090080529488}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5909,6 +6189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
@@ -5989,10 +6274,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -6079,10 +6374,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8167380382080520222, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
         type: 3}
       propertyPath: m_Name
       value: perceval_torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724430063926454, guid: d15a1a25be2ac3a439bd682cdf18978c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15a1a25be2ac3a439bd682cdf18978c, type: 3}
@@ -6099,6 +6404,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7308527090080529488}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6174,6 +6484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perceval_leg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
 --- !u!1001 &9026791446142322048
@@ -6187,6 +6502,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_tail
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799947502702375035, guid: 2a8b9a0183133e944bad790a212b6804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434638204655115679, guid: 2a8b9a0183133e944bad790a212b6804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5554515558880739925, guid: 2a8b9a0183133e944bad790a212b6804,
         type: 3}
@@ -6273,6 +6598,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8231658207982283737}
     m_Modifications:
+    - target: {fileID: 931732039690522907, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2092478837222793496, guid: bc0de5a48ff994d418ecd14ba559ff2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6347,6 +6677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: perceval_leg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861538467907049697, guid: bc0de5a48ff994d418ecd14ba559ff2b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0de5a48ff994d418ecd14ba559ff2b, type: 3}
