@@ -18,7 +18,6 @@ public class Ingredient : ScriptableObject
     public string Nom;
     public ETypeIngredient Type;
     public Sprite Icon;
-    public int Points;
     
     #endregion
 

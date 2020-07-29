@@ -13,8 +13,6 @@ public class MapCameraController : MonoBehaviour
     private bool DragInitialized = false;
     private float DragStartTime = 0.0f;
 
-    private float MinDragDuration = 0.25f;
-
     void Start()
     {
         MapCamera = GetComponent<Camera>();

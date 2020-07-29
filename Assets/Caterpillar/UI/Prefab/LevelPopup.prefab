@@ -480,6 +480,10 @@ MonoBehaviour:
   Star_Objective_Description_3: {fileID: 1509609439070400106}
   Achieved_Objective_Color: {r: 0.19215688, g: 0.1764706, b: 0.22352943, a: 1}
   Failed_Objective_Color: {r: 0.5921569, g: 0.5921569, b: 0.5921569, a: 1}
+  AnimationDuration: 0.25
+  ScaleRoot:
+  - {fileID: 1509609438474746192}
+  - {fileID: 1509609439201328644}
   PrefabRecette: {fileID: 7366859586453627309, guid: 0cac3a81babcb4d489c8b40e88612e3b,
     type: 3}
   ListeRecette: {fileID: 1509609438482141402}

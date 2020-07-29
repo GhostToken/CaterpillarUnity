@@ -181,7 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a98d8ab332d5e4482f6cd11e3827dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offest: {x: 0.85, y: 0.3, z: 0.35}
   CameraToLook: {fileID: 0}
   Star1_Off: {fileID: 5045256803572132762}
   Star1_On: {fileID: 6460939568016577947}
@@ -215,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 3202312281284697806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.30800003, y: 0, z: 0.131}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1745, y: 0.1745, z: 0.1745}
   m_Children: []
   m_Father: {fileID: 449986859954149174}
   m_RootOrder: 3
@@ -296,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 3867316091025458074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.30300003, y: 0, z: 0.131}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1745, y: 0.1745, z: 0.1745}
   m_Children: []
   m_Father: {fileID: 449986859954149174}
   m_RootOrder: 5
@@ -458,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 4203432254392864948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.131}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1745, y: 0.1745, z: 0.1745}
   m_Children: []
   m_Father: {fileID: 449986859954149174}
   m_RootOrder: 4

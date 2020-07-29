@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class LevelPopup : MonoBehaviour
     public TextMeshProUGUI Star_Objective_Description_3;
     public Color Achieved_Objective_Color;
     public Color Failed_Objective_Color;
+    public float AnimationDuration = 0.25f;
+    public RectTransform[] ScaleRoot;
 
     public GameObject PrefabRecette;
 
@@ -38,6 +41,11 @@ public class LevelPopup : MonoBehaviour
 
     public void Open(int LevelId)
     {
+        foreach(RectTransform root in ScaleRoot)
+        {
+            root.localScale = Vector3.zero;
+            root.DOScale(Vector3.one, 0.25f);
+        }
         CurrentLevelId = LevelId;
         Level ThisLevel = Level.GetLevel(LevelId);
         if(ThisLevel != null)
@@ -101,28 +109,69 @@ public class LevelPopup : MonoBehaviour
         int Stars = SaveGame.GetStars(LevelId);
         UpdateStars(Stars);
         UpdateTextColors(Stars);
-        UpdateScore(Score);
+        StartCoroutine(UpdateScore(Score));
     }
 
     protected void UpdateStars(int Stars)
     {
-        Title_Star1.enabled = (Stars >= 1);
-        Star_Objective1.enabled = (Stars >= 1);
-        Title_Star2.enabled = (Stars >= 2);
-        Star_Objective2.enabled = (Stars >= 2);
-        Title_Star3.enabled = (Stars == 3);
-        Star_Objective3.enabled = (Stars == 3);
+        Title_Star1.transform.localScale = Vector3.zero;
+        if (Stars >= 1)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Title_Star1.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Title_Star1.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration);
+        }
+        Title_Star2.transform.localScale = Vector3.zero;
+        if (Stars >= 2)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Title_Star2.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Title_Star2.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration * 2.0f);
+        }
+        Title_Star3.transform.localScale = Vector3.zero;
+        if (Stars == 3)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Title_Star3.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Title_Star3.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration * 3.0f);
+        }
     }
 
     protected void UpdateTextColors(int Stars)
     {
-        Star_Objective_Description_1.color = (Stars >= 1 ? Achieved_Objective_Color : Failed_Objective_Color);
-        Star_Objective_Description_2.color = (Stars >= 2 ? Achieved_Objective_Color : Failed_Objective_Color);
-        Star_Objective_Description_3.color = (Stars == 3 ? Achieved_Objective_Color : Failed_Objective_Color);
+        Star_Objective_Description_1.color = Failed_Objective_Color;
+        if (Stars >= 1)
+        {
+            Star_Objective_Description_1.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.25f);
+        }
+        Star_Objective_Description_2.color = Failed_Objective_Color;
+        if (Stars >= 2)
+        {
+            Star_Objective_Description_2.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.5f);
+        }
+        Star_Objective_Description_3.color = Failed_Objective_Color;
+        if (Stars == 3)
+        {
+            Star_Objective3.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.75f);
+        }
     }
 
-    protected void UpdateScore(int Score)
+    protected IEnumerator UpdateScore(int Score)
     {
+        BestScore.text = "0";
+        yield return new WaitForSeconds(AnimationDuration);
+        float Timer = 0.0f;
+        float TimerDuration = AnimationDuration * 3.0f;
+        while (Timer < TimerDuration)
+        {
+            int Value = (int)Mathf.Lerp(0, Score, Timer/ TimerDuration);
+            BestScore.text = Value.ToString();
+            Timer += Time.deltaTime;
+            yield return null;
+        }
         BestScore.text = Score.ToString();
     }
 

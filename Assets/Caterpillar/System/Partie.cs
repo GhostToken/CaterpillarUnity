@@ -16,6 +16,7 @@ public class Partie
     public static List<Ingredient> Repas;
     public static List<Recette> RecetteValidées;
     public static List<Recette> RecetteComplètes;
+    public static List<Ingredient> ToutLeRepas;
 
     #endregion
 
@@ -27,6 +28,7 @@ public class Partie
         Stars = 0;
         TempsRestant = (float)Level.CurrentLevel.Duration.TotalSeconds;
         Repas = new List<Ingredient>();
+        ToutLeRepas = new List<Ingredient>();
         RecetteValidées = new List<Recette>();
         RecetteComplètes = new List<Recette>();
     }
@@ -34,13 +36,19 @@ public class Partie
     public static void Mange(Ingredient Ingredient)
     {
         Repas.Add(Ingredient);
-        Score += Ingredient.Points;
+        ToutLeRepas.Add(Ingredient);
+        Score += 50;
 
         Debug.Log("Ingredient mange : " + Ingredient.Nom);
 
         CheckRecette();
         CheckRecetteAOptions();
         CheckStars();
+
+        if(Stars == 3)
+        {
+            Terminate();
+        }
     }
 
     public static void Update(float DeltaTime)
@@ -54,7 +62,7 @@ public class Partie
         {
             TempsRestant -= DeltaTime;
 
-            if (TempsRestant < 0.0f)
+            if ((TempsRestant < 0.0f) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 Terminate();
             }
@@ -63,6 +71,7 @@ public class Partie
 
     public static void Terminate()
     {
+        Score += Mathf.FloorToInt(TempsRestant);
         SaveGame.RecordCurrentGame();
         JustTerminated = true;
         ScreenFader.Launch_FadeIn( () =>
@@ -173,6 +182,7 @@ public class Partie
                     if( Level.CurrentLevel.StarOne.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
                     {
                         Stars++;
+                        Score += 500;
                     }
                     break;
                 }
@@ -181,6 +191,7 @@ public class Partie
                     if (Level.CurrentLevel.StarTwo.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
                     {
                         Stars++;
+                        Score += 500;
                     }
                     break;
                 }
@@ -189,6 +200,7 @@ public class Partie
                     if (Level.CurrentLevel.StarThree.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
                     {
                         Stars++;
+                        Score += 500;
                     }
                     break;
                 }
