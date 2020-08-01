@@ -3261,12 +3261,12 @@ MonoBehaviour:
   - {fileID: 8139253106590690228}
   - {fileID: 8139343273395970278}
   - {fileID: 8136516551982437610}
-  ForwardReference: {fileID: 0}
+  ForwardReference: {fileID: 8139181335267481446}
   BlendToOriginal: 0
   LastBoneLeading: 0
   BackwardMovement: 0
   ReverseOrder: 0
-  ChainMethod: 0
+  ChainMethod: 2
   ConnectWithAnimator: 1
   OptimizeWithMesh: 0
   VisibilityRenderer: {fileID: 0}
@@ -3323,7 +3323,7 @@ MonoBehaviour:
   StraightenSpeed: 0
   TurboStraighten: 0
   GoBackSpeed: 0
-  Springiness: 0
+  Springiness: 0.07
   MainPivotOffset: {x: 0, y: 0, z: 0}
   mainPivotOffsetTransform: {fileID: 0}
   SegmentsPivotOffset: {x: 0, y: 0, z: 0.85}
@@ -3335,8 +3335,14 @@ MonoBehaviour:
   DebugAlpha: 1
   AdditionalDebugAlpha: 1
   drawGizmos: 1
-  UseCollisions: 1
+  UseCollisions: 0
   IncludedColliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3395,9 +3401,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!135 &508109574
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3410,7 +3416,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0.57, z: -0.58}
+  m_Center: {x: 0, y: 0.57, z: -0.28}
 --- !u!114 &323109404024279335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,11 +3443,11 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 2
   m_BaseOffset: -0.18
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

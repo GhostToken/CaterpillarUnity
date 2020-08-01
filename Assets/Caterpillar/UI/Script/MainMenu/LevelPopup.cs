@@ -145,17 +145,17 @@ public class LevelPopup : MonoBehaviour
         Star_Objective_Description_1.color = Failed_Objective_Color;
         if (Stars >= 1)
         {
-            Star_Objective_Description_1.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.25f);
+            Star_Objective_Description_1.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration * 1.0f);
         }
         Star_Objective_Description_2.color = Failed_Objective_Color;
         if (Stars >= 2)
         {
-            Star_Objective_Description_2.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.5f);
+            Star_Objective_Description_2.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration * 2.0f);
         }
         Star_Objective_Description_3.color = Failed_Objective_Color;
         if (Stars == 3)
         {
-            Star_Objective3.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.75f);
+            Star_Objective3.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration * 3.0f);
         }
     }
 

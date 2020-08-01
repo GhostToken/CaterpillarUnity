@@ -65,13 +65,14 @@ public class Partie
             if ((TempsRestant < 0.0f) || Input.GetKeyDown(KeyCode.Backspace))
             {
                 Terminate();
+                TempsRestant = 0.0f;
             }
         }
     }
 
     public static void Terminate()
     {
-        Score += Mathf.FloorToInt(TempsRestant);
+        Score += Mathf.FloorToInt(TempsRestant) * 200;
         SaveGame.RecordCurrentGame();
         JustTerminated = true;
         ScreenFader.Launch_FadeIn( () =>

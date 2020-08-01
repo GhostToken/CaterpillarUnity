@@ -87,7 +87,6 @@ public class AfterLevelPopup : MonoBehaviour
     virtual protected void SetupCompletion(int LevelId)
     {
         UpdateStars(Partie.Stars);
-        UpdateTextColors(Partie.Stars);
         UpdateResultats();
         StartCoroutine(UpdateScore(Partie.Score));
     }
@@ -101,6 +100,7 @@ public class AfterLevelPopup : MonoBehaviour
             Sequence.Append(Title_Star1.transform.DOScale(1.0f, AnimationDuration));
             Sequence.Append(Title_Star1.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
             Sequence.PrependInterval(AnimationDuration);
+            Sequence.Play();
         }
         Title_Star2.transform.localScale = Vector3.zero;
         if (Stars >= 2)
@@ -109,6 +109,7 @@ public class AfterLevelPopup : MonoBehaviour
             Sequence.Append(Title_Star2.transform.DOScale(1.0f, AnimationDuration));
             Sequence.Append(Title_Star2.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
             Sequence.PrependInterval(AnimationDuration * 2.0f);
+            Sequence.Play();
         }
         Title_Star3.transform.localScale = Vector3.zero;
         if (Stars == 3)
@@ -117,25 +118,7 @@ public class AfterLevelPopup : MonoBehaviour
             Sequence.Append(Title_Star3.transform.DOScale(1.0f, AnimationDuration));
             Sequence.Append(Title_Star3.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
             Sequence.PrependInterval(AnimationDuration * 3.0f);
-        }
-    }
-
-    protected void UpdateTextColors(int Stars)
-    {
-        Star_Objective_Description_1.color = Failed_Objective_Color;
-        if (Stars >= 1)
-        {
-            Star_Objective_Description_1.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.25f);
-        }
-        Star_Objective_Description_2.color = Failed_Objective_Color;
-        if (Stars >= 2)
-        {
-            Star_Objective_Description_2.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.5f);
-        }
-        Star_Objective_Description_3.color = Failed_Objective_Color;
-        if (Stars == 3)
-        {
-            Star_Objective3.DOBlendableColor(Achieved_Objective_Color, 0.25f).SetDelay(0.75f);
+            Sequence.Play();
         }
     }
 
@@ -173,6 +156,56 @@ public class AfterLevelPopup : MonoBehaviour
         TotalScoreArtefact.text     = "0PTS";
     }
 
+    protected void UpdateDetailsStars(int Stars)
+    {
+        Star_Objective1.transform.localScale = Vector3.zero;
+        if (Stars >= 1)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Star_Objective1.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Star_Objective1.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration);
+            Sequence.Play();
+        }
+        Star_Objective2.transform.localScale = Vector3.zero;
+        if (Stars >= 2)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Star_Objective2.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Star_Objective2.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration * 2.0f);
+            Sequence.Play();
+        }
+        Star_Objective3.transform.localScale = Vector3.zero;
+        if (Stars == 3)
+        {
+            Sequence Sequence = DOTween.Sequence();
+            Sequence.Append(Star_Objective3.transform.DOScale(1.0f, AnimationDuration));
+            Sequence.Append(Star_Objective3.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+            Sequence.PrependInterval(AnimationDuration * 3.0f);
+            Sequence.Play();
+        }
+    }
+
+    protected void UpdateTextColors(int Stars)
+    {
+        Star_Objective_Description_1.color = Failed_Objective_Color;
+        if (Stars >= 1)
+        {
+            Star_Objective_Description_1.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration);
+        }
+        Star_Objective_Description_2.color = Failed_Objective_Color;
+        if (Stars >= 2)
+        {
+            Star_Objective_Description_2.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration * 2.0f);
+        }
+        Star_Objective_Description_3.color = Failed_Objective_Color;
+        if (Stars == 3)
+        {
+            Star_Objective3.DOBlendableColor(Achieved_Objective_Color, AnimationDuration).SetDelay(AnimationDuration * 3.0f);
+        }
+    }
+
     #endregion
 
 
@@ -180,17 +213,20 @@ public class AfterLevelPopup : MonoBehaviour
 
     public void OpenDetails()
     {
+        int Stars = Partie.Stars;
         DetailVisible = !DetailVisible;
-        ExpandAreaIcon.DOPunchScale(new Vector3(0.0f, (DetailVisible ? 1.0f : -1.0f), 1.0f), AnimationDuration);
+        ExpandAreaIcon.DOScale(new Vector3(1.0f, (DetailVisible ? -1.0f : 1.0f), 1.0f), AnimationDuration);
         if (DetailVisible)
         {
             ExpandArea.DOSizeDelta(new Vector2(ExpandArea.sizeDelta.x, ExpandAreaMaxHeight), AnimationDuration);
-            PolaroidArea.DOPunchScale(Vector3.one * PolaroidAreaMinScale, AnimationDuration);
+            PolaroidArea.DOScale(Vector3.one * PolaroidAreaMinScale, AnimationDuration);
+            UpdateDetailsStars(Stars);
+            UpdateTextColors(Stars);
         }
         else
         {
             ExpandArea.DOSizeDelta(new Vector2(ExpandArea.sizeDelta.x, ExpandAreaMinHeight), AnimationDuration);
-            PolaroidArea.DOPunchScale(Vector3.one * PolaroidAreaMaxScale, AnimationDuration);
+            PolaroidArea.DOScale(Vector3.one * PolaroidAreaMaxScale, AnimationDuration);
         }
     }
 
