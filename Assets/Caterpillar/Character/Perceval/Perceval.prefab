@@ -3335,14 +3335,8 @@ MonoBehaviour:
   DebugAlpha: 1
   AdditionalDebugAlpha: 1
   drawGizmos: 1
-  UseCollisions: 0
+  UseCollisions: 1
   IncludedColliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
