@@ -105,6 +105,7 @@ public class SaveGame : MonoBehaviour
     void Start()
     {
         Load();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnApplicationQuit()

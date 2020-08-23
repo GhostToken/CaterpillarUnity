@@ -6,8 +6,12 @@ using UnityEngine;
 public enum ETypeIngredient
 {
     Legume,
-    fruit,
-    Viande
+    Fruit,
+    Viande,
+    Poisson,
+    Cereales,
+    Boisson,
+    Autres
 }
 
 [CreateAssetMenu(fileName = "NewIngredient", menuName = "Caterpillar/Ingredient")]
