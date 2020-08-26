@@ -5,10 +5,10 @@
     "com.unity.2d.common": "2.0.2",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
-    "com.unity.ide.vscode": "1.2.0",
+    "com.unity.ide.vscode": "1.2.1",
     "com.unity.postprocessing": "2.3.0",
     "com.unity.probuilder": "4.2.3",
-    "com.unity.test-framework": "1.1.13",
+    "com.unity.test-framework": "1.1.16",
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.timeline": "1.2.14",
     "com.unity.ugui": "1.0.0",
@@ -43,15 +43,5 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  },
-  "lock": {
-    "com.coffee.upm-git-extension": {
-      "revision": "HEAD",
-      "hash": "3721ff96c879bb58373913e6cab3c6908ec04846"
-    },
-    "com.coffee.ui-effect": {
-      "revision": "upm",
-      "hash": "07926376c6999aae8df52173ccac80351ec417d5"
-    }
   }
 }
