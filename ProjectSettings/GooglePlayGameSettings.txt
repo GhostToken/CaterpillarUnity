@@ -1,0 +1,9 @@
+lastUpgrade=01010
+proj.pluginVersion=0.10.10
+proj.AppId=616516581082
+and.BundleId=com.GhostToken.Caterpillar
+proj.classDir=Assets%2fCaterpillar
+proj.ConstantsClassName=GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3cresources%3e%0d%0a%3cstring+name%3d%22app_id%22%3e616516581082%3c%2fstring%3e%0d%0a%3cstring+name%3d%22package_name%22%3ecom.GhostToken.Caterpillar%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d
+and.ClientId=616516581082-ueijlepeqk73dp87o26v4qr2mb51c734.apps.googleusercontent.com
+android.SetupDone=true
