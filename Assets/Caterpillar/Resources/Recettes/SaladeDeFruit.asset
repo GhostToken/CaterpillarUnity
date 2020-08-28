@@ -20,4 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29a053ae19e51c745a8f572a1eb755b5, type: 2}
   IngredientsOptionnels:
   - {fileID: 11400000, guid: cbaf2ff6ba369ac4b8fc5b4846c6360d, type: 2}
-  "IngredientsCach\xE9s": []
+  "IngredientsCach\xE9s":
+  - {fileID: 11400000, guid: 5fd0fb14e9a68b04bae133a569cb223f, type: 2}
