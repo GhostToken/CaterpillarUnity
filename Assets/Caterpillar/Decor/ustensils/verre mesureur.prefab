@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7131800020985183363}
   - component: {fileID: 3804385817505327958}
   - component: {fileID: 6383122394346249724}
+  - component: {fileID: 6350308654676717277}
   m_Layer: 0
   m_Name: verre mesureur
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8677733686414694352}
   m_Mesh: {fileID: -2791273132193786091, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+--- !u!65 &6350308654676717277
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8677733686414694352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 3.8, z: 2.9147105}
+  m_Center: {x: 0, y: 0, z: -0.110167265}

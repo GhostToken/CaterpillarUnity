@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8338422753882436000}
   - component: {fileID: 26301350227047543}
   - component: {fileID: 1621165691185705731}
+  - component: {fileID: 4469098759929029964}
   m_Layer: 0
   m_Name: spatule 1
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4831921903817413678}
   m_Mesh: {fileID: 6278480486203633931, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+--- !u!65 &4469098759929029964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831921903817413678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.6, y: 0.2, z: 1.2}
+  m_Center: {x: 0, y: -0.0000019073486, z: 0}

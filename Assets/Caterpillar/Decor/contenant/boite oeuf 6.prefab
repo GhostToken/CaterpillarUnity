@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7657860190880059141}
   - component: {fileID: 5117429716289001569}
   - component: {fileID: 9045247121520668446}
+  - component: {fileID: 6691946311103983643}
   m_Layer: 0
   m_Name: boite oeuf 6
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4731724300308958816}
   m_Mesh: {fileID: 1841231436798920597, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &6691946311103983643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731724300308958816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4, y: 1, z: 4.8}
+  m_Center: {x: 0, y: 0, z: 0}

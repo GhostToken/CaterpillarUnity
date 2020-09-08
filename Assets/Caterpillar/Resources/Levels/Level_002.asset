@@ -15,9 +15,7 @@ MonoBehaviour:
   Id: 2
   TypeDeNiveau: 0
   Scene: Level 2
-  RecetteAFaire:
-  - {fileID: 11400000, guid: 494b08fb0183c8e47bce7f7b7f56435b, type: 2}
-  - {fileID: 11400000, guid: 77a1d9e1067d31448accb30468efe74a, type: 2}
+  RecetteAFaire: []
   StarOne:
     PasDeGrignotage: 0
     NombreDeRecette: 1

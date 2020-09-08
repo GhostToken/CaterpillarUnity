@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3216883676814547108}
   - component: {fileID: 9097654029481738163}
   - component: {fileID: 4569438108970018530}
+  - component: {fileID: 2987342260365436009}
   m_Layer: 0
   m_Name: cassette audio 2
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254181562726873442}
   m_Mesh: {fileID: -212610565814508663, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+--- !u!65 &2987342260365436009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254181562726873442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 1.8000001, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}

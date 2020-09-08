@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3302534485453863443}
   - component: {fileID: 3476127751678387079}
   - component: {fileID: 663262382012988322}
+  - component: {fileID: 5985018338718670554}
   m_Layer: 0
   m_Name: casserole2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3302534485453863443
 Transform:
@@ -81,3 +82,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6957100111380024013}
   m_Mesh: {fileID: -1559434203858173153, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+--- !u!136 &5985018338718670554
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957100111380024013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.7533917
+  m_Height: 9
+  m_Direction: 1
+  m_Center: {x: -2.5284611e-15, y: 0, z: -1.7466083}

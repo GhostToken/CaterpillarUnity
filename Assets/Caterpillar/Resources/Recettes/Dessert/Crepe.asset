@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crepe
   m_EditorClassIdentifier: 
   Nom: 
-  TypeDeRecette: 0
+  TypeDeRecette: 2
   IngredientsDeBase: []
   IngredientsOptionnels: []
   "IngredientsCach\xE9s": []
