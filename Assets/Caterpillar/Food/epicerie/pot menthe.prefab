@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4903740627898069786}
   - component: {fileID: 6286956699529941136}
   - component: {fileID: 1785507867774808532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pot menthe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

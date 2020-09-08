@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5553213947442896399}
   - component: {fileID: 8520042232812124659}
   - component: {fileID: 1782618718557401672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: moutarde
   m_TagString: Untagged
   m_Icon: {fileID: 0}

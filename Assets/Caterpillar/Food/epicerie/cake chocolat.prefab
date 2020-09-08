@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4927673145246422944}
   - component: {fileID: 4239571913892538127}
   - component: {fileID: 7025073977356168719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cake chocolat
   m_TagString: Untagged
   m_Icon: {fileID: 0}

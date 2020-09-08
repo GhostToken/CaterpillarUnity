@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1065263876362962578}
   - component: {fileID: 6300485833657243808}
   - component: {fileID: 1549577182900634313}
-  m_Layer: 0
-  m_Name: beurre 1
+  m_Layer: 9
+  m_Name: motte de beurre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
