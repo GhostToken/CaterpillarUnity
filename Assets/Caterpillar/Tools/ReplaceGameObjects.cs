@@ -11,6 +11,8 @@ public class ReplaceGameObjects : ScriptableWizard
 {
     public bool copyValues = true;
     public GameObject NewType;
+    public Transform NouveauParent;
+
     public GameObject[] OldObjects;
  
     [MenuItem("Caterpillar/Replace GameObjects")]
@@ -22,17 +24,13 @@ public class ReplaceGameObjects : ScriptableWizard
     }
  
     void OnWizardCreate()
-    {
-        //Transform[] Replaces;
-        //Replaces = Replace.GetComponentsInChildren<Transform>();
- 
+    { 
         foreach (GameObject go in OldObjects)
         {
             GameObject newObject;
-            newObject = (GameObject)EditorUtility.InstantiatePrefab(NewType);
+            newObject = (GameObject)PrefabUtility.InstantiatePrefab(NewType, (NouveauParent != null ? NouveauParent : go.transform.parent));
             newObject.transform.position = go.transform.position;
             newObject.transform.rotation = go.transform.rotation;
-            newObject.transform.parent = go.transform.parent;
  
             DestroyImmediate(go);
  

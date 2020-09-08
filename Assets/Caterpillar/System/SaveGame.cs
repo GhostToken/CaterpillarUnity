@@ -124,7 +124,7 @@ public class SaveGame : MonoBehaviour
             MaxLevelReached = PlayerPrefs.GetInt("MaxLevelReached");
             Debug.Log("load with max level " + MaxLevelReached);
         }
-        for (int Level = 0; Level <= MaxLevelReached; ++Level)
+        for (int Level = 1; Level <= MaxLevelReached; ++Level)
         {
             LevelRecord Record = new LevelRecord(Level);
             Record.Load();

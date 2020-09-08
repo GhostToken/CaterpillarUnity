@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 739653859941082372}
   - component: {fileID: 2135588617059219970}
   - component: {fileID: 7868890618778522342}
+  - component: {fileID: -443215415187729406}
+  - component: {fileID: -1238292686920607692}
+  - component: {fileID: 73300776243632553}
+  - component: {fileID: 7754344496705783753}
   m_Layer: 9
   m_Name: baguette 1
   m_TagString: Untagged
@@ -81,3 +85,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3317278103499569661}
   m_Mesh: {fileID: 3439128704125812264, guid: 3ba137a1d7b0fef43910b34cf937efdb, type: 3}
+--- !u!54 &-443215415187729406
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317278103499569661}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-1238292686920607692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317278103499569661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ingredient: {fileID: 0}
+  DownScaleSpeed: 1.5
+--- !u!136 &73300776243632553
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317278103499569661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.61640066
+  m_Height: 10.827896
+  m_Direction: 0
+  m_Center: {x: -0.00644207, y: 0.027937233, z: 1.9447876e-17}
+--- !u!65 &7754344496705783753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317278103499569661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.8, y: 0.6266544, z: 1.2134752}
+  m_Center: {x: 0, y: -0.28667283, z: 0}

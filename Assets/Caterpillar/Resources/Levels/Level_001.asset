@@ -16,8 +16,8 @@ MonoBehaviour:
   TypeDeNiveau: 0
   Scene: Level 1
   RecetteAFaire:
-  - {fileID: 11400000, guid: 494b08fb0183c8e47bce7f7b7f56435b, type: 2}
-  - {fileID: 11400000, guid: 77a1d9e1067d31448accb30468efe74a, type: 2}
+  - {fileID: 11400000, guid: 58caed45d19ae3a44b4af37b2d976ac7, type: 2}
+  - {fileID: 11400000, guid: cdf15d831e64a064fa3933921b44bb55, type: 2}
   StarOne:
     PasDeGrignotage: 0
     NombreDeRecette: 2
