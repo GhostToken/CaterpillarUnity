@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0199c11aa6f514784c5c69cd8378d8, type: 3}
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
-  DevAccountEmail: 
-  DevAccountToken: 
-  SelectedStudio: 
-  SdkPath: 
+  DevAccountEmail: fabsther@gmail.com
+  DevAccountToken: iidnuopqj1i19wogar6n78dtg3njg8ibk4c7m6cbihdo399szjeewssg8sr59n4c8jrz1bgr6oftyzton8yymfhyour7aotn944zuee5y7znehdh83p7xhaxcmendncogm66tyzk1zj3p1c1cyrj118csa6gywp5kwn7hwyoay3u818is3kb9zaektqmioth48bzkr5b
+  SelectedStudio: Ghost Token
+  SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0

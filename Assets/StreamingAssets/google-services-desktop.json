@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "616516581082",
+    "firebase_url": "https://caterpillar-18404546.firebaseio.com",
+    "project_id": "caterpillar-18404546",
+    "storage_bucket": "caterpillar-18404546.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616516581082:android:7c95d5d5c6f1fbb15017e3",
+        "android_client_info": {
+          "package_name": "com.GhostToken.Caterpillar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616516581082-fep0psmo6t4nquakdh6ja27kdpr9bkqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.GhostToken.Caterpillar",
+            "certificate_hash": "e8dfa0482651c04c469a9dafa33d4dfc76622419"
+          }
+        },
+        {
+          "client_id": "616516581082-ueijlepeqk73dp87o26v4qr2mb51c734.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.GhostToken.Caterpillar",
+            "certificate_hash": "3d2fa5c683f6cd3d5841425dba076c92becb683c"
+          }
+        },
+        {
+          "client_id": "616516581082-k54sekjoiqu86amg3ds5kmlhna5l9p1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeU547CCn9LXbrhHOFXYmx4hhX52Z_Bhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616516581082-k54sekjoiqu86amg3ds5kmlhna5l9p1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

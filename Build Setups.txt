@@ -1,0 +1,14 @@
+Window / Google Play Games / Setup / Android Setup / Web app client ID 
+
+release : 616516581082-3s8va2kbb0egmiiov8emm4jsvbpjv639.apps.googleusercontent.com
+test : 616516581082-n1g7c8g4sjk1v4ab7fimncppknl1tsvp.apps.googleusercontent.com
+
+Assets/PlayfabSDK/Shared/Public/Resources/PlayfabSharedSettings
+
+TitleId :
+release : C9806
+test : 81FB5
+
+Dev secret key :
+release : BF7US5TD5E7XC6C7TIA63HC83Y88AWZS6RHDABJYAB1B9C847Q
+test : 3QHRU86BYCJQH4QYUY7B9P8ZZJOFCQM8E99WJYS6UUKFISEDQS

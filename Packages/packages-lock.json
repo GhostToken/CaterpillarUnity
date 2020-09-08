@@ -14,6 +14,24 @@
       "dependencies": {},
       "url": "https://unityregistry-pa.googleapis.com"
     },
+    "com.google.firebase.app": {
+      "version": "6.15.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.156"
+      },
+      "url": "https://unityregistry-pa.googleapis.com"
+    },
+    "com.google.firebase.messaging": {
+      "version": "6.15.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.google.firebase.app": "6.15.2"
+      },
+      "url": "https://unityregistry-pa.googleapis.com"
+    },
     "com.unity.2d.common": {
       "version": "3.0.0",
       "depth": 0,

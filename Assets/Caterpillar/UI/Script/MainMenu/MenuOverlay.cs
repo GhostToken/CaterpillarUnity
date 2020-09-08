@@ -15,6 +15,13 @@ public class MenuOverlay : MonoBehaviour
     public Sprite Selection_Boutique;
     public Sprite Selection_Parametres;
 
+    public GameObject Menu_Maison;
+    public GameObject Menu_Inventaire;
+    public GameObject Menu_CarnetDeNotes;
+    public GameObject Menu_Succes;
+    public GameObject Menu_Boutique;
+    public GameObject Menu_Parametres;
+
     public enum Menu
     {
         Maison,
@@ -101,32 +108,74 @@ public class MenuOverlay : MonoBehaviour
         {
             case Menu.Maison:
                 {
-                    Debug.Log("Ouvre Maison");
+                    if(Menu_Maison != null)
+                    {
+                        Menu_Maison.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre Maison");
+                    }
                     break;
                 }
             case Menu.Inventaire:
                 {
-                    Debug.Log("Ouvre Inventaire");
+                    if (Menu_Inventaire != null)
+                    {
+                        Menu_Inventaire.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre Inventaire");
+                    }
                     break;
                 }
             case Menu.CarnetDeNotes:
                 {
-                    Debug.Log("Ouvre CarnetDeNotes");
+                    if (Menu_CarnetDeNotes != null)
+                    {
+                        Menu_CarnetDeNotes.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre CarnetDeNotes");
+                    }
                     break;
                 }
             case Menu.Succes:
                 {
-                    Debug.Log("Ouvre Succes");
+                    if (Menu_Succes != null)
+                    {
+                        Menu_Succes.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre Succes");
+                    }
                     break;
                 }
             case Menu.Boutique:
                 {
-                    Debug.Log("Ouvre Boutique");
+                    if (Menu_Boutique != null)
+                    {
+                        Menu_Boutique.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre Boutique");
+                    }
                     break;
                 }
             case Menu.Parametres:
                 {
-                    Debug.Log("Ouvre Parametres");
+                    if (Menu_Parametres != null)
+                    {
+                        Menu_Parametres.SetActive(true);
+                    }
+                    else
+                    {
+                        Debug.Log("Ouvre Parametres");
+                    }
                     break;
                 }
         }
