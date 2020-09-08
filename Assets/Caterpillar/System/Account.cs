@@ -8,65 +8,158 @@ using UnityEngine.Events;
 // These using statements are required.
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-#endif
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-//using Steamworks;
+using Firebase.Messaging;
 #endif
 
 public class Account : MonoBehaviour
 {
+    #region Singleton
+    // Singleton
+    private static Account Instance;
+
+    #endregion
+
     public UnityEvent LoginSuccess;
     public UnityEvent Loginfail;
-    public TMPro.TextMeshProUGUI Output;
+
+    private bool LoggedOnPlayfab = false;
+    private bool LoggedWithGooglePlay = false;
+    private LoginResult PlayfabLogins = null;
+    private string AndroidPushToken = null;
 
     //public object SteamUser { get; private set; }
+
+    #region Unity Handlers
 
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         DontDestroyOnLoad(gameObject);
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-        //var request = new LoginWithSteamRequest() { CreateAccount = true };
-        //PlayFabClientAPI.LoginWithSteam(request, OnLoginSuccess, OnLoginFailure);
-#elif UNITY_ANDROID
+        InitializeLogin();
+    }
+
+    #endregion
+
+
+    #region Global Handlers
+    void InitializeLogin()
+    {
+#if UNITY_ANDROID
+        InitializeAndroidPlatform();
+        SignInWithGooglePlay();
+#endif
+    }
+
+    private void OnPlayfabLoginResult(LoginResult Result)
+    {
+        LoggedOnPlayfab = true;
+        PlayfabLogins = Result;
+        Debug.Log("Playfab : Signed In as " + Result.PlayFabId);
+        LoginSuccess.Invoke();
+
+        //PlayFabClientAPI.AddGenericID();
+        //PlayFabClientAPI.AddOrUpdateContactEmail();
+        //PlayFabClientAPI.AndroidDevicePushNotificationRegistration();
+        //PlayFabClientAPI.UpdateAvatarUrl();
+        //PlayFabClientAPI.UpdateUserTitleDisplayName();
+        //PlayFabClientAPI.GrantCharacterToUser();
+    }
+
+    private void OnPlayfabLoginError(PlayFabError Error)
+    {
+        Debug.LogError("Playfab Login Failed -> Error : " + Error.ToString());
+#if UNITY_ANDROID
+        SignInWithAndroidDevice();
+#endif
+        Loginfail.Invoke();
+    }
+
+    #endregion
+
+
+    #region Static Methods
+
+    public static void SetNotificationActive(bool Active)
+    {
+#if UNITY_ANDROID
+        Instance.SetAndroidNotificationEnabled(Active);
+#endif
+        Debug.Log("Notification activation is now : " + Active);
+    }
+
+    public static bool GetNotificationEnabled()
+    {
+        bool result = false;
+#if UNITY_ANDROID
+        result = Instance.GetAndroidNotificationEnabled();
+#endif
+        Debug.Log("Notification activation is : " + result);
+        return result;
+    }
+
+    #endregion
+
+
+    #region Android Handlers
+
+#if UNITY_ANDROID
+
+    private void InitializeAndroidPlatform()
+    {
         // The following grants profile access to the Google Play Games SDK.
         // Note: If you also want to capture the player's Google email, be sure to add
         // .RequestEmail() to the PlayGamesClientConfiguration
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
         .AddOauthScope("profile")
         .RequestServerAuthCode(false)
+        .RequestIdToken()
         .Build();
         PlayGamesPlatform.InitializeInstance(config);
 
         // recommended for debugging:
         PlayGamesPlatform.DebugLogEnabled = true;
 
+        // we activate only if player has opt in
+        InitializeAndroidNotification();
+
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
-#elif UNITY_IOS
-        var request = new LoginWithIOSDeviceIDRequest() { DeviceId = SystemInfo.deviceUniqueIdentifier, CreateAccount = true };
-        PlayFabClientAPI.LoginWithIOSDeviceID(request, OnLoginSuccess, OnLoginFailure);
-#endif
-        OnSignInButtonClicked();
     }
 
-#if UNITY_ANDROID
-
-    public void OnSignInButtonClicked()
+    public void SignInWithGooglePlay()
     {
-        Social.localUser.Authenticate(OnAuthentificate);
+        if (LoggedWithGooglePlay == true)
+        {
+            Debug.LogWarning("SignInWithGooglePlay : Already logged with Google Play !");
+            return;
+        }
+        Social.localUser.Authenticate(OnAuthentificateWithGoogle);
     }
 
-    private void OnAuthentificate(bool Success)
+    public void SignInWithAndroidDevice()
+    {
+        if (LoggedOnPlayfab == true)
+        {
+            Debug.LogWarning("SignInWithAndroidDevice : Already logged with Playfab !");
+            return;
+        }
+        LoginWithAndroidDeviceIDRequest LoginRequest = new LoginWithAndroidDeviceIDRequest()
+        {
+            CreateAccount = true,
+            AndroidDeviceId = SystemInfo.deviceUniqueIdentifier,
+            OS = "Android"
+        };
+        PlayFabClientAPI.LoginWithAndroidDeviceID(LoginRequest, OnPlayfabLoginResult, OnPlayfabLoginError);
+    }
+
+    private void OnAuthentificateWithGoogle(bool Success)
     {
         if (Success)
         {
-            Debug.Log("Google : Signed In");
-            Output.text = "Google : Signed In";
+            LoggedWithGooglePlay = true;
 
             var serverAuthCode = PlayGamesPlatform.Instance.GetServerAuthCode();
-            Debug.Log("Google : Server Auth Code: " + serverAuthCode);
-
             LoginWithGoogleAccountRequest LoginRequest = new LoginWithGoogleAccountRequest()
             {
                 TitleId = PlayFabSettings.TitleId,
@@ -78,48 +171,121 @@ public class Account : MonoBehaviour
         }
         else
         {
-            Loginfail.Invoke();
-            Debug.Log("Google : Failed to Authorize your login");
-            Output.text = "Google : Failed to Authorize your login";
+            Debug.LogWarning("Google : Failed to Login with Google Play : Fallback to Device Login");
+            SignInWithAndroidDevice();
         }
     }
 
-    private void OnPlayfabLoginResult(LoginResult Result)
+    private void InitializeAndroidNotification()
     {
-        Debug.Log("Playfab : Signed In as " + Result.PlayFabId);
-        LoginSuccess.Invoke();
-        Output.text = "Playfab : Signed In as " + Result.PlayFabId;
+        if(FirebaseMessaging.TokenRegistrationOnInitEnabled == true)
+        {
+            FirebaseMessaging.TokenReceived += OnTokenReceived;
+            FirebaseMessaging.MessageReceived += OnMessageReceived;
+        }
     }
 
-    private void OnPlayfabLoginError(PlayFabError Error)
+    public void SetAndroidNotificationEnabled(bool Enabled)
     {
-        Debug.Log("Playfab : Error : " + Error.ToString());
-        Loginfail.Invoke();
-        Output.text = "Playfab : Error : " + Error.ToString();
+        bool WasEnabled = GetAndroidNotificationEnabled();
+
+        if( WasEnabled != Enabled)
+        {
+            FirebaseMessaging.TokenRegistrationOnInitEnabled = Enabled;
+            if ( Enabled )
+            {
+                FirebaseMessaging.TokenReceived += OnTokenReceived;
+                //FirebaseMessaging.MessageReceived += OnMessageReceived;
+            }
+            else
+            {
+                FirebaseMessaging.TokenReceived -= OnTokenReceived;
+                //FirebaseMessaging.MessageReceived -= OnMessageReceived;
+
+                // TO DO : Do something to stop notification
+                // https://community.playfab.com/questions/25697/enabledisable-push-notifications.html
+                // FirebaseMessaging.getInstance().unsubscribeFromTopic("YourTopic");
+            }
+
+            ConnectPlayfabNotification(Enabled);
+        }
+    }
+
+    public bool GetAndroidNotificationEnabled()
+    {
+        return FirebaseMessaging.TokenRegistrationOnInitEnabled;
+    }
+
+    private void OnTokenReceived(object sender, TokenReceivedEventArgs token)
+    {
+        Debug.Log("FirebaseMessaging: OnTokenReceived : " + token.Token);
+        AndroidPushToken = token.Token;
+        ConnectPlayfabNotification(true);
+    }
+
+    private void OnMessageReceived(object sender, MessageReceivedEventArgs e)
+    {
+        Debug.Log("PlayFab: Received a notification:" + e.Message.Notification.Title);
+        Debug.Log("PlayFab: Received a new message from: " + e.Message.From);
+        if (e.Message.Data != null)
+        {
+            Debug.Log("PlayFab: Received a message with data:");
+            foreach (var pair in e.Message.Data)
+                Debug.Log("PlayFab data element: " + pair.Key + "," + pair.Value);
+        }
+        if (e.Message.Notification != null)
+        {
+            Debug.Log("PlayFab: Received a notification:" + e.Message.Notification.Body);
+        }
+    }
+
+    private void ConnectPlayfabNotification(bool Enabled)
+    {
+        if (LoggedOnPlayfab == false)
+        {
+            Debug.LogWarning("PlayFab: ConnectPlayfabNotification : Playfab not logged yet");
+            return;
+        }
+
+        if(Enabled && AndroidPushToken == null)
+        {
+            Debug.LogWarning("PlayFab: ConnectPlayfabNotification : Android Push token not received yet");
+            return;
+        }
+        Debug.Log("PlayFab: ConnectPlayfabNotification : " + Enabled);
+
+        AndroidDevicePushNotificationRegistrationRequest request = new AndroidDevicePushNotificationRegistrationRequest
+        {
+            DeviceToken = Enabled ? AndroidPushToken : "None",
+            SendPushNotificationConfirmation = Enabled,
+            ConfirmationMessage = "Push notifications registered successfully",
+        };
+        if(Enabled)
+        {
+            PlayFabClientAPI.AndroidDevicePushNotificationRegistration(request, OnAndroidDevicePushNotificationUpdate, OnAndroidDevicePushNotification_Activate_Error);
+        }
+        else
+        {
+            PlayFabClientAPI.AndroidDevicePushNotificationRegistration(request, OnAndroidDevicePushNotificationUpdate, OnAndroidDevicePushNotification_Deactivate_Error);
+        }
+    }
+
+    private void OnAndroidDevicePushNotificationUpdate(AndroidDevicePushNotificationRegistrationResult result)
+    {
+        Debug.Log("PlayFab: Push Registration Successful");
+    }
+
+    private void OnAndroidDevicePushNotification_Activate_Error(PlayFabError Error)
+    {
+        Debug.LogError("Playfab failed to register notification -> Error : " + Error.ToString());
+    }
+
+    private void OnAndroidDevicePushNotification_Deactivate_Error(PlayFabError Error)
+    {
+        Debug.LogWarning("Playfab failed to register notification -> Error : " + Error.ToString());
     }
 
 #endif
 
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-    //public string GetSteamAuthTicket()
-    //{
-    //    byte[] ticketBlob = new byte[1024];
-    //    uint ticketSize;
-
-    //    // Retrieve ticket; hTicket should be a field in the class so you can use it to cancel the ticket later
-    //    // When you pass an object, the object can be modified by the callee. This function modifies the byte array you've passed to it.
-    //    HAuthTicket hTicket = SteamUser.GetAuthSessionTicket(ticketBlob, ticketBlob.Length, out ticketSize);
-
-    //    // Resize the buffer to actual length
-    //    Array.Resize(ref ticketBlob, (int)ticketSize);
-
-    //    // Convert bytes to string
-    //    StringBuilder sb = new StringBuilder();
-    //    foreach (byte b in ticketBlob)
-    //    {
-    //        sb.AppendFormat("{0:x2}", b);
-    //    }
-    //    return sb.ToString();
-    //}
-#endif // UNITY_EDITOR || UNITY_STANDALONE_WIN
+    #endregion
 }
