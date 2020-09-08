@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6620272141587668865}
   - component: {fileID: 3198428304916048806}
   - component: {fileID: 141840173105744696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: oignon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
