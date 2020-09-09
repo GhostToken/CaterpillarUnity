@@ -717,7 +717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: maison
+  m_text: NOTIFICATIONS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f55927615b500d47a41d544d5487557, type: 2}
   m_sharedMaterial: {fileID: 6252584640167544104, guid: 9f55927615b500d47a41d544d5487557,
