@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
+  Ingredient: {fileID: 11400000, guid: 9e077258e9b1f364093575f206903807, type: 2}
   DownScaleSpeed: 1.5
 --- !u!136 &8795324270928884676
 CapsuleCollider:

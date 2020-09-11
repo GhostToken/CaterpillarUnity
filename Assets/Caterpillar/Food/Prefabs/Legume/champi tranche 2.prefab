@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 244491672311103736}
   - component: {fileID: 2660485654256929242}
   - component: {fileID: 890513771006986265}
+  - component: {fileID: -2128165656041934253}
   m_Layer: 9
   m_Name: champi tranche 2
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4404945957217045218}
   m_Mesh: {fileID: 7723742262843661178, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!114 &-2128165656041934253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404945957217045218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ingredient: {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
+  DownScaleSpeed: 1.5

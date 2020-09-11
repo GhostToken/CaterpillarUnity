@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
+  Ingredient: {fileID: 11400000, guid: 7d1faacfe14edf4498fdc2a11b056c54, type: 2}
   DownScaleSpeed: 1.5
 --- !u!65 &5988550223180224915
 BoxCollider:
