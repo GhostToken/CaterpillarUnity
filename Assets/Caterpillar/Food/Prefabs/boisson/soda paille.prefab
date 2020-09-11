@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6743078523634444757}
   - component: {fileID: 4219854758975363636}
   m_Layer: 9
-  m_Name: canette paille
+  m_Name: soda paille
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
+  Ingredient: {fileID: 11400000, guid: fb1b9da7af0ee06429cbec8e4fe5d245, type: 2}
   DownScaleSpeed: 1.5
 --- !u!136 &6743078523634444757
 CapsuleCollider:

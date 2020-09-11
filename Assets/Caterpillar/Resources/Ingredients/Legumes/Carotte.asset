@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: Carotte
   Type: 0
-  Icon: {fileID: 21300000, guid: cb35dd7af436aaa4c8fee6e102ff78c4, type: 3}
+  Icon: {fileID: 21300000, guid: b0341562ff685a04fa676d0be814f9d3, type: 3}
