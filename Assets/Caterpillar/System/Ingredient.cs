@@ -11,6 +11,8 @@ public enum ETypeIngredient
     Poisson,
     Cereales,
     Boisson,
+    Cremerie,
+    Epicerie,
     Autres
 }
 
