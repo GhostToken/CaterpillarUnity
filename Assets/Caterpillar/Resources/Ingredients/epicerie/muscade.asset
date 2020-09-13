@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: muscade
   m_EditorClassIdentifier: 
   Nom: 
-  Type: 0
+  Type: 7
   Icon: {fileID: 0}

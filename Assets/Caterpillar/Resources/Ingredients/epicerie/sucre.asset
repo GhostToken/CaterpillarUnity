@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: sucre
   m_EditorClassIdentifier: 
   Nom: sucre
-  Type: 0
+  Type: 7
   Icon: {fileID: 0}

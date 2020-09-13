@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
   m_Name: Omelette
   m_EditorClassIdentifier: 
-  Nom: omelette
+  Nom: " omelette compl\xEAte"
   TypeDeRecette: 1
   IngredientsDeBase:
   - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
@@ -20,4 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d32c2527144e2a46b6bcf1bcabce789, type: 2}
   IngredientsOptionnels:
   - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
+  - {fileID: 11400000, guid: 7d1faacfe14edf4498fdc2a11b056c54, type: 2}
   "IngredientsCach\xE9s": []

@@ -10,16 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
-  m_Name: Gratin Dauphinois
+  m_Name: veloutePoireaux
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: "velout\xE9 de poireaux"
   TypeDeRecette: 1
   IngredientsDeBase:
+  - {fileID: 11400000, guid: dbb10f596a43b904ca27fcfae9465915, type: 2}
   - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
   - {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
-  - {fileID: 11400000, guid: 522034eb62830f848b52c410bf36e1d3, type: 2}
-  - {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: b5b6830392ba39b4c9b732bca2304d03, type: 2}
-  - {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

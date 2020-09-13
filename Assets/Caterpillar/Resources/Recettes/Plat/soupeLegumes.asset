@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
-  m_Name: tarte tomate
+  m_Name: soupeLegumes
   m_EditorClassIdentifier: 
-  Nom: 
-  TypeDeRecette: 0
+  Nom: "soupe de l\xE9gumes"
+  TypeDeRecette: 1
   IngredientsDeBase:
-  - {fileID: 11400000, guid: dcaae5255d48a6e4d9ad845b4b83d010, type: 2}
-  - {fileID: 11400000, guid: 34c269671043c804a9070f9419eca57b, type: 2}
-  - {fileID: 11400000, guid: 96158ce4c6a76eb48b2a436ad15b8b0a, type: 2}
-  - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
+  - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
+  - {fileID: 11400000, guid: dbb10f596a43b904ca27fcfae9465915, type: 2}
+  - {fileID: 11400000, guid: cea496a5d16f3c641859c29a33f3f6ec, type: 2}
+  IngredientsOptionnels:
   - {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
-  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

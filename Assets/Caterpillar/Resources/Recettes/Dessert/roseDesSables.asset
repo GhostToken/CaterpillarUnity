@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
+  m_Name: roseDesSables
+  m_EditorClassIdentifier: 
+  Nom: roses des sables
+  TypeDeRecette: 2
+  IngredientsDeBase:
+  - {fileID: 11400000, guid: de7638e6124f05144b36b044b14ba790, type: 2}
+  - {fileID: 11400000, guid: 2327c70bcfabbfd44adeaff73d42ef1b, type: 2}
+  - {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
+  IngredientsOptionnels:
+  - {fileID: 11400000, guid: bf5518e8927edce48bc8655d8f551632, type: 2}
+  "IngredientsCach\xE9s": []

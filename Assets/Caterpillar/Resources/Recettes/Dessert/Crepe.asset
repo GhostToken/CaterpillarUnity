@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
   m_Name: Crepe
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: salade de fruits
   TypeDeRecette: 2
   IngredientsDeBase:
   - {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
@@ -20,5 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
   IngredientsOptionnels:
   - {fileID: 11400000, guid: e805692fb3931be4a96c9df6903ec779, type: 2}
+  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
   - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
   "IngredientsCach\xE9s": []

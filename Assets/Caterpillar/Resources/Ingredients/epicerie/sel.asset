@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: sel
   m_EditorClassIdentifier: 
   Nom: 
-  Type: 0
+  Type: 7
   Icon: {fileID: 21300000, guid: 3335a09eae8b794458adb84b03c2825b, type: 3}
