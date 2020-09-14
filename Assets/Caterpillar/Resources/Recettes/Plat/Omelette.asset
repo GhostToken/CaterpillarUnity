@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: " omelette compl\xEAte"
   TypeDeRecette: 1
+  Description: 
+  Polaroid: {fileID: 2800000, guid: d1c765cd450819f49aa4c3f5c1349da1, type: 3}
   IngredientsDeBase:
   - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
   - {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: gratin dauphinois
   TypeDeRecette: 1
+  Description: 
+  Polaroid: {fileID: 2800000, guid: d1c765cd450819f49aa4c3f5c1349da1, type: 3}
   IngredientsDeBase:
   - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
   - {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}

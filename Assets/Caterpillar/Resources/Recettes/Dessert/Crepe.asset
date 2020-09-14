@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: salade de fruits
   TypeDeRecette: 2
+  Description: 
+  Polaroid: {fileID: 2800000, guid: 996a9366ddecd6d4695e7b90c073c0b9, type: 3}
   IngredientsDeBase:
   - {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
   - {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}

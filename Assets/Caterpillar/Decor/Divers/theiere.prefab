@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4737222624353593283}
   - component: {fileID: 8858409699399642020}
   - component: {fileID: 5252787580064155629}
+  - component: {fileID: 305462985562786096}
   m_Layer: 0
   m_Name: theiere
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687412158516893690}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -1.7000006, y: 19.2, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,7 +52,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6947295159929546874, guid: 3ba137a1d7b0fef43910b34cf937efdb, type: 3}
+  - {fileID: 8689650146657832398, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,4 +81,17 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687412158516893690}
-  m_Mesh: {fileID: 4838912069629316076, guid: 3ba137a1d7b0fef43910b34cf937efdb, type: 3}
+  m_Mesh: {fileID: -6804849354895113227, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
+--- !u!65 &305462985562786096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3687412158516893690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.600001, y: 4.2, z: 3.6086302}
+  m_Center: {x: 6.131756e-17, y: -0.4000001, z: 0.49568504}
