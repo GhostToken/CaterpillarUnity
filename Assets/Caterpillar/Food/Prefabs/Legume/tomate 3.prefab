@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2899641321782776736}
   - component: {fileID: 6215250686991490993}
   - component: {fileID: -6815569832877078991}
-  - component: {fileID: -990078605268977976}
+  - component: {fileID: 6677725108686705980}
+  - component: {fileID: 5896727637060604298}
   m_Layer: 9
   m_Name: tomate 3
   m_TagString: Untagged
@@ -54,7 +55,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3667540418415223204, guid: 3ba137a1d7b0fef43910b34cf937efdb, type: 3}
+  - {fileID: -7803477563696206673, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +84,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6781129383985236552}
-  m_Mesh: {fileID: 5516641978190892681, guid: 3ba137a1d7b0fef43910b34cf937efdb, type: 3}
+  m_Mesh: {fileID: -2889971209879829035, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
 --- !u!54 &6215250686991490993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -114,7 +115,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: 34c269671043c804a9070f9419eca57b, type: 2}
   DownScaleSpeed: 1.5
---- !u!135 &-990078605268977976
+--- !u!65 &6677725108686705980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781129383985236552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 0.1, z: 1.6}
+  m_Center: {x: 0, y: -0.85, z: 0}
+--- !u!135 &5896727637060604298
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,5 +139,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.81539273
+  m_Center: {x: 0, y: -0.0814445, z: 0}

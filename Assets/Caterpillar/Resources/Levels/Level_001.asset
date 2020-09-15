@@ -20,16 +20,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdf15d831e64a064fa3933921b44bb55, type: 2}
   StarOne:
     PasDeGrignotage: 0
+    NombreDeRecette: 1
+    NombreDeRecetteUnique: 0
+    Description: 1 recettes
+  StarTwo:
+    PasDeGrignotage: 0
     NombreDeRecette: 2
     NombreDeRecetteUnique: 0
     Description: 2 recettes
-  StarTwo:
-    PasDeGrignotage: 0
-    NombreDeRecette: 4
-    NombreDeRecetteUnique: 0
-    Description: 4 recettes
   StarThree:
     PasDeGrignotage: 0
-    NombreDeRecette: 6
-    NombreDeRecetteUnique: 0
-    Description: 6 recettes
+    NombreDeRecette: 3
+    NombreDeRecetteUnique: 2
+    Description: 3 recettes dont 2 unique

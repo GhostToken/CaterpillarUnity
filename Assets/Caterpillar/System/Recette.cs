@@ -21,7 +21,8 @@ public class Recette : ScriptableObject
 
     public string Nom;
     public ETypeRecette TypeDeRecette;
-    //public string Description;
+    public string Description;
+    public Texture2D Polaroid;
 
     public List<Ingredient> IngredientsDeBase;
     public List<Ingredient> IngredientsOptionnels;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2647273225064123770}
   - component: {fileID: -7637465821114607830}
   - component: {fileID: 4278066940928448814}
+  - component: {fileID: 1940178050075914392}
   m_Layer: 9
   m_Name: orange
   m_TagString: Untagged
@@ -127,3 +128,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1940178050075914392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867827165995709308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0287225, y: 0.17153955, z: 1.0220735}
+  m_Center: {x: 0.013297915, y: -0.9142302, z: 0.0033245087}

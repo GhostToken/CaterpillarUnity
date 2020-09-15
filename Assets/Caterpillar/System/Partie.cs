@@ -13,10 +13,10 @@ public class Partie
     public static bool JustTerminated = false;
 
     public static float TempsRestant;
-    public static List<Ingredient> Repas;
-    public static List<Recette> RecetteValidées;
-    public static List<Recette> RecetteComplètes;
-    public static List<Ingredient> ToutLeRepas;
+    public static List<Ingredient> Repas = new List<Ingredient>();
+    public static List<Recette> RecetteValidées = new List<Recette>();
+    public static List<Recette> RecetteComplètes = new List<Recette>();
+    public static List<Ingredient> ToutLeRepas = new List<Ingredient>();
 
     #endregion
 
@@ -40,6 +40,11 @@ public class Partie
         Score += 50;
 
         Debug.Log("Ingredient mange : " + Ingredient.Nom);
+
+        if (Level.CurrentLevel == null)
+        {
+            return;
+        }
 
         CheckRecette();
         CheckRecetteAOptions();

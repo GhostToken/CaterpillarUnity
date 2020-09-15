@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3444565548728385064}
   - component: {fileID: 1544870357238701139}
   - component: {fileID: 1731411485923360697}
+  - component: {fileID: 5426533929352469504}
   m_Layer: 0
   m_Name: carte postale 1
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4728694467322071454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.7, y: 18.300001, z: 12.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,7 +52,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6300707225465365772, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+  - {fileID: -2316415730972322150, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,4 +81,17 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4728694467322071454}
-  m_Mesh: {fileID: -5896451724529049482, guid: 86d46774c64ebcc4986d32ce6235db48, type: 3}
+  m_Mesh: {fileID: 3434257845798060607, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
+--- !u!65 &5426533929352469504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728694467322071454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4000008, y: 0.2, z: 2.2000005}
+  m_Center: {x: 0, y: 0, z: 0}
