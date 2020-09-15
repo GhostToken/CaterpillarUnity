@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4764423801531637076}
   - component: {fileID: 2375335629376300345}
   - component: {fileID: 1834240350355973060}
+  - component: {fileID: 2513133998938269974}
   m_Layer: 0
   m_Name: verre
   m_TagString: Untagged
@@ -175,5 +176,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 3, z: 1.6}
+  m_Size: {x: 1.6, y: 0.23021126, z: 1.6}
+  m_Center: {x: 0, y: -1.3848944, z: 0}
+--- !u!136 &2513133998938269974
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086792075196302968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8
+  m_Height: 3
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

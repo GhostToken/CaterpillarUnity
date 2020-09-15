@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5124153603879789356}
   - component: {fileID: 6494363379078185891}
   - component: {fileID: 4382614157995662087}
+  - component: {fileID: 4545903729167258409}
   m_Layer: 0
-  m_Name: smartphone 1 1
+  m_Name: smartphone 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424753522837416944}
   m_Mesh: {fileID: 6780818881962503105, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!65 &4545903729167258409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424753522837416944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 0.4, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4141057268506183793}
   - component: {fileID: 7937115301433169143}
   - component: {fileID: 6438964235237121909}
+  - component: {fileID: 139726627223762993}
+  - component: {fileID: 3141649843293610408}
   m_Layer: 0
   m_Name: verre petit
   m_TagString: Untagged
@@ -81,3 +83,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826808814807899283}
   m_Mesh: {fileID: -4364097357634889390, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!136 &139726627223762993
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826808814807899283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &3141649843293610408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826808814807899283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 0.19497395, z: 1.6}
+  m_Center: {x: 0, y: -0.902513, z: 0}

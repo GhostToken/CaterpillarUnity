@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7538608331028218514}
   - component: {fileID: 6836927790946720456}
   - component: {fileID: 1567738911570975057}
+  - component: {fileID: 5358399879172642827}
   m_Layer: 0
   m_Name: cuillere grande
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433171796121428060}
   m_Mesh: {fileID: 7558590567307128876, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &5358399879172642827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433171796121428060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 5.6, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0.1}

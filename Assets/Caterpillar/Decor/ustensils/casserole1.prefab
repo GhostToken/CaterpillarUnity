@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7638229149821207772}
   - component: {fileID: 4254537711655429859}
   - component: {fileID: 4014512632747634554}
+  - component: {fileID: 7215483200362142017}
   m_Layer: 0
   m_Name: casserole1
   m_TagString: Untagged
@@ -80,4 +81,18 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007922030337919039}
+  m_Mesh: {fileID: -6626469823908530489, guid: 395affbe90947b0428543d0783a68e45, type: 3}
+--- !u!64 &7215483200362142017
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007922030337919039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -6626469823908530489, guid: 395affbe90947b0428543d0783a68e45, type: 3}

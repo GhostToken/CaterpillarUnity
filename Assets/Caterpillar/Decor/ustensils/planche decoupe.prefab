@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6783974907249137915}
   - component: {fileID: 6437642822889357973}
   - component: {fileID: 7242428415804538102}
+  - component: {fileID: 3778785690405889475}
   m_Layer: 0
   m_Name: planche decoupe
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3740332461297809354}
   m_Mesh: {fileID: 4036243055151635274, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!65 &3778785690405889475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740332461297809354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.200001, y: 0.4, z: 12}
+  m_Center: {x: -0.10000014, y: -0.3, z: 0}

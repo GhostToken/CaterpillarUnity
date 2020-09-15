@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2194741589855852290}
   - component: {fileID: 7505370032825574242}
   - component: {fileID: 7353061440474543470}
+  - component: {fileID: 7476066443611584367}
   m_Layer: 0
   m_Name: cuillere bois
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298898900418143707}
   m_Mesh: {fileID: 4489642461652979834, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!65 &7476066443611584367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298898900418143707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6.4, z: 0.2}
+  m_Center: {x: 0, y: -0.29999995, z: 0}

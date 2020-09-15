@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1404295902898397637}
   - component: {fileID: 4364207809308715512}
   - component: {fileID: 4824239668909226093}
+  - component: {fileID: 7208997082737300695}
+  - component: {fileID: 6985690544515705726}
   m_Layer: 0
   m_Name: paille
   m_TagString: Untagged
@@ -81,3 +83,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204487247423544411}
   m_Mesh: {fileID: -3887142755647425701, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!136 &7208997082737300695
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204487247423544411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13350493
+  m_Height: 5.2000003
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -0.6989357}
+--- !u!136 &6985690544515705726
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204487247423544411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13350493
+  m_Height: 1.6161113
+  m_Direction: 2
+  m_Center: {x: 0, y: 2.52, z: 0.119996786}
