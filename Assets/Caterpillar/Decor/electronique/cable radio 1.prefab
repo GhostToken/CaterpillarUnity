@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9127119714634869653}
   - component: {fileID: 212778590233818006}
   - component: {fileID: 3053253091775567794}
+  - component: {fileID: 4320443568640041683}
+  - component: {fileID: 713592629925231603}
   m_Layer: 0
   m_Name: cable radio 1
   m_TagString: Untagged
@@ -81,3 +83,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872238704086067365}
   m_Mesh: {fileID: -8282654354388274759, guid: 395affbe90947b0428543d0783a68e45, type: 3}
+--- !u!65 &4320443568640041683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872238704086067365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23322487, y: 16.83953, z: 0.21428153}
+  m_Center: {x: -2.9833875, y: -0.6802349, z: 0.2928592}
+--- !u!65 &713592629925231603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872238704086067365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2000003, y: 0.21305275, z: 0.8}
+  m_Center: {x: 0, y: 7.7964897, z: 0}

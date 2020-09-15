@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8963225180772987249}
   - component: {fileID: 3440943750706272605}
   - component: {fileID: 1385041765141374583}
-  - component: {fileID: 3785107513250155955}
+  - component: {fileID: 6440847221774637698}
   m_Layer: 0
   m_Name: panier osier
   m_TagString: Untagged
@@ -174,8 +174,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5798507869636966677}
   m_Mesh: {fileID: 2018846067884649134, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
---- !u!136 &3785107513250155955
-CapsuleCollider:
+--- !u!64 &6440847221774637698
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,11 +183,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 5798507869636966677}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.89
-  m_Height: 13.5
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2018846067884649134, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
 --- !u!1 &6097045929383910825
 GameObject:
   m_ObjectHideFlags: 0

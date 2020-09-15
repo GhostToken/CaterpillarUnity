@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5399161463036793169}
   - component: {fileID: 7877002238584114363}
   - component: {fileID: 9056663105716480507}
+  - component: {fileID: 4620206126422296959}
+  - component: {fileID: 3129302223907607505}
   m_Layer: 0
   m_Name: tulipe 2
   m_TagString: Untagged
@@ -81,3 +83,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4102071812340562126}
   m_Mesh: {fileID: 4272162051477653622, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
+--- !u!65 &4620206126422296959
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102071812340562126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21237051, y: 5.3941407, z: 0.20940077}
+  m_Center: {x: 0.008954346, y: -1.0029297, z: 0.00015318394}
+--- !u!136 &3129302223907607505
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102071812340562126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.84049404
+  m_Height: 2.5440874
+  m_Direction: 1
+  m_Center: {x: -0.015855908, y: 2.8776183, z: 0.020129085}

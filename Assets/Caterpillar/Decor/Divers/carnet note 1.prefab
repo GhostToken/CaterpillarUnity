@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8560839727565511558}
   - component: {fileID: 6588481313718028175}
   - component: {fileID: 5001840472516031003}
+  - component: {fileID: 2138948736398936141}
   m_Layer: 0
   m_Name: carnet note 1
   m_TagString: Untagged
@@ -93,5 +94,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.4, y: 0.8, z: 4.4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.011155, y: 0.5815914, z: 3.9787436}
+  m_Center: {x: 0.19442272, y: -0.10920429, z: 0.0006597042}
+--- !u!65 &2138948736398936141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239232766757030380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6073303, y: 0.8, z: 3.2010574}
+  m_Center: {x: -2.3963346, y: 0, z: 0.0061678886}

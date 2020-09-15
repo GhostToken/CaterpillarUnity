@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8850481415523252001}
   - component: {fileID: 4575777605392433783}
   - component: {fileID: 1867728691623577270}
+  - component: {fileID: 3040330581814786635}
   m_Layer: 0
   m_Name: livre 5
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7166819212127479440}
   m_Mesh: {fileID: 5565039140652057648, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &3040330581814786635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166819212127479440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 3.4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

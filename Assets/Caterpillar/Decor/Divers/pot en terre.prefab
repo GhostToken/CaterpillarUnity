@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3966416778718834477}
   - component: {fileID: 1319595239044429782}
   - component: {fileID: 2441496097608758959}
+  - component: {fileID: 5222205150170052506}
+  - component: {fileID: 2991327935153096207}
   m_Layer: 0
   m_Name: pot en terre
   m_TagString: Untagged
@@ -81,3 +83,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8758716371050979281}
   m_Mesh: {fileID: 352088693559654544, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &5222205150170052506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758716371050979281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 0.5946131, z: 2.8}
+  m_Center: {x: 0, y: 1.0764383, z: 0}
+--- !u!65 &2991327935153096207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758716371050979281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4098773, y: 2.1831267, z: 2.3987865}
+  m_Center: {x: 0.0008943081, y: -0.30843663, z: -0.013012886}

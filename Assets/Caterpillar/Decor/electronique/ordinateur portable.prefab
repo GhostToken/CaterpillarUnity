@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1382796777130011760}
   - component: {fileID: 8472244622283172614}
   - component: {fileID: 852194940621987486}
+  - component: {fileID: 2239716974775118818}
   m_Layer: 0
   m_Name: ordinateur portable
   m_TagString: Untagged
@@ -208,3 +209,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.200002, y: 0.39036036, z: 6.2000012}
   m_Center: {x: -3.552723e-16, y: -3.20482, z: -0.099999905}
+--- !u!65 &2239716974775118818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667280414164087697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.200002, y: 6.4, z: 0.1885242}
+  m_Center: {x: -1.28713365e-14, y: -0.20000005, z: 2.9057393}

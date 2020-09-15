@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 53618314774961742}
   - component: {fileID: 7446362704252633336}
   - component: {fileID: 4018125522158760782}
+  - component: {fileID: 5627817228675523729}
   m_Layer: 0
   m_Name: crayon 5
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6629784084545336466}
   m_Mesh: {fileID: -7667470675541106101, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!136 &5627817228675523729
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6629784084545336466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.27146026
+  m_Height: 4.390483
+  m_Direction: 0
+  m_Center: {x: 0.014817715, y: 0, z: -0.0020240843}

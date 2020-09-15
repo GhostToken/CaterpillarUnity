@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3983481751986591727}
   - component: {fileID: 2610922117740685696}
   - component: {fileID: 6395040342998878131}
+  - component: {fileID: 4074252662282626660}
   m_Layer: 0
   m_Name: bristol blanc
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7080242905448517574}
   m_Mesh: {fileID: -83180803074283402, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &4074252662282626660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080242905448517574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.401099, y: 0.2, z: 3}
+  m_Center: {x: 0.00054991245, y: 0, z: 0}

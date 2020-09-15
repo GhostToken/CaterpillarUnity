@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9131140705775184687}
   - component: {fileID: 6356405381769834260}
   - component: {fileID: 6954748433415472534}
+  - component: {fileID: 7542064434159558249}
+  - component: {fileID: 6772736719970537393}
   m_Layer: 0
   m_Name: crayon ouvert 1
   m_TagString: Untagged
@@ -81,3 +83,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6871044794248242896}
   m_Mesh: {fileID: -577786405220650479, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!136 &7542064434159558249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871044794248242896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2650662
+  m_Height: 3.2557
+  m_Direction: 0
+  m_Center: {x: 0.48504853, y: -0.008367062, z: 0.08036214}
+--- !u!136 &6772736719970537393
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871044794248242896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2593034
+  m_Height: 1.6124587
+  m_Direction: 0
+  m_Center: {x: -2.8993576, y: -0.008367062, z: -0.08289057}

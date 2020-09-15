@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1563202944820621583}
   - component: {fileID: 5393395435666051727}
   - component: {fileID: 4708129505243442374}
-  - component: {fileID: 3165916535440688011}
+  - component: {fileID: 5282459017054103324}
   m_Layer: 0
   m_Name: argent 1
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401902267949909127}
   m_Mesh: {fileID: -7721956292003026974, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
---- !u!135 &3165916535440688011
-SphereCollider:
+--- !u!65 &5282459017054103324
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,7 +91,7 @@ SphereCollider:
   m_GameObject: {fileID: 401902267949909127}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 1.4000003
+  m_Size: {x: 2.8000007, y: 0.6, z: 2.8000007}
   m_Center: {x: 0, y: 0, z: 0}

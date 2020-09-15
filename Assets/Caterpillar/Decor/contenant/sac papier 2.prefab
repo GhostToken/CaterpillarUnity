@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 5423575509597861077}
   - component: {fileID: 8866748710133611230}
   - component: {fileID: 2004597048248463809}
+  - component: {fileID: 6057424113240798320}
+  - component: {fileID: 4728900973124690977}
+  - component: {fileID: 6660857788874028859}
+  - component: {fileID: 2748461252312239215}
   m_Layer: 0
   m_Name: sac papier 2
   m_TagString: Untagged
@@ -93,5 +97,57 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 6.8, z: 3.4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21140742, y: 6.8, z: 3.4}
+  m_Center: {x: 2.3942962, y: 0, z: 5.646884e-15}
+--- !u!65 &6057424113240798320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001969043825879500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21058106, y: 6.8, z: 3.4}
+  m_Center: {x: -2.3947096, y: 0, z: 4.6341376e-15}
+--- !u!65 &4728900973124690977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001969043825879500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6.8, z: 0.20093763}
+  m_Center: {x: 6.535164e-15, y: 0, z: -1.5995312}
+--- !u!65 &6660857788874028859
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001969043825879500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6.8, z: 0.20094311}
+  m_Center: {x: -4.6334837e-15, y: 0, z: 1.5995286}
+--- !u!65 &2748461252312239215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001969043825879500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.24659586, z: 3.4}
+  m_Center: {x: 0, y: -3.2767022, z: 0}

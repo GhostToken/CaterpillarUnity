@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4737222624353593283}
   - component: {fileID: 8858409699399642020}
   - component: {fileID: 5252787580064155629}
-  - component: {fileID: 305462985562786096}
+  - component: {fileID: 6318427130112113556}
   m_Layer: 0
   m_Name: theiere
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687412158516893690}
   m_Mesh: {fileID: -6804849354895113227, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
---- !u!65 &305462985562786096
-BoxCollider:
+--- !u!64 &6318427130112113556
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.600001, y: 4.2, z: 3.6086302}
-  m_Center: {x: 6.131756e-17, y: -0.4000001, z: 0.49568504}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6804849354895113227, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}

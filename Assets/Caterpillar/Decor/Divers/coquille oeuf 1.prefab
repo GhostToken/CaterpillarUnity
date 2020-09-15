@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6783179716298991167}
   - component: {fileID: 3897674905058143309}
   - component: {fileID: 6740286446588857039}
+  - component: {fileID: 5809733079219149955}
+  - component: {fileID: 5060013319699399119}
   m_Layer: 0
   m_Name: coquille oeuf 1
   m_TagString: Untagged
@@ -81,3 +83,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7214650074435031346}
   m_Mesh: {fileID: 2024098817949528974, guid: e8f40bbc4ac95b24e8dd56188eee8f12, type: 3}
+--- !u!65 &5809733079219149955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214650074435031346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.39088327, z: 1.2}
+  m_Center: {x: 0, y: -0.20455837, z: 0}
+--- !u!135 &5060013319699399119
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214650074435031346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5091053
+  m_Center: {x: 0, y: 0.0908947, z: 0}

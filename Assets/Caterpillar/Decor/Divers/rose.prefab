@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8424636724526397096}
   - component: {fileID: 5066521242006479142}
   - component: {fileID: 3285200690059954792}
+  - component: {fileID: 4179539666344854455}
+  - component: {fileID: 2525745505562744258}
   m_Layer: 0
   m_Name: rose
   m_TagString: Untagged
@@ -81,3 +83,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3041227456318839782}
   m_Mesh: {fileID: 8621087565440059285, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
+--- !u!65 &4179539666344854455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041227456318839782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22948754, y: 0.21448553, z: 7.5813665}
+  m_Center: {x: -0.00000029802322, y: -0.010046482, z: -1.0093169}
+--- !u!136 &2525745505562744258
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041227456318839782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7565391
+  m_Height: 2.5737052
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.0017178059, z: 3.950576}

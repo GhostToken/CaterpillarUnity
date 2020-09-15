@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 676218048760903561}
   - component: {fileID: 6887543533998069532}
   - component: {fileID: 6459280691402351812}
+  - component: {fileID: 8184819439225267287}
+  - component: {fileID: 8946159721242064013}
   m_Layer: 0
   m_Name: carnet notes 2
   m_TagString: Untagged
@@ -81,3 +83,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5705440624233690543}
   m_Mesh: {fileID: 7052994615479902227, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+--- !u!65 &8184819439225267287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705440624233690543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2107773, y: 0.62877303, z: 4}
+  m_Center: {x: 0.19461107, y: -0.100480795, z: 0}
+--- !u!65 &8946159721242064013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705440624233690543}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61512375, y: 0.8, z: 3.192184}
+  m_Center: {x: -2.9924378, y: 0, z: -0.0033371449}
