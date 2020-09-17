@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MeshOccluder : MonoBehaviour
 {
     #region Const
 
-    const float DUREE_MESH_INVISIBLE = 0.15f;
+    const float DUREE_MESH_INVISIBLE = 0.35f;
     const float MIN_OPACITY = 0.05f;
-    const float FADE_DURATION = 0.15f;
+    const float FADE_DURATION = 0.35f;
 
     #endregion
 
@@ -16,7 +17,7 @@ public class MeshOccluder : MonoBehaviour
 
     private class MeshQuiGene
     {
-        public Collider Collider;
+        public GameObject Reference;
         public Renderer Renderer;
         public float FadeTimer;
         public float GeneEncore;
@@ -24,10 +25,10 @@ public class MeshOccluder : MonoBehaviour
         private Material OriginalMaterial;
         private Material TransparentMaterial;
 
-        public MeshQuiGene(Collider ColliderGenant, Renderer RendererGenant, Material TransparentMaterialTemplate)
+        public MeshQuiGene(GameObject ReferenceGeneur, Material TransparentMaterialTemplate)
         {
-            Collider = ColliderGenant;
-            Renderer = RendererGenant;
+            Reference = ReferenceGeneur;
+            Renderer = ReferenceGeneur.GetComponentInChildren<Renderer>();
             OriginalMaterial = Renderer.sharedMaterial;
             TransparentMaterial = new Material(TransparentMaterialTemplate);
             TransparentMaterial.mainTexture = OriginalMaterial.mainTexture;
@@ -112,6 +113,45 @@ public class MeshOccluder : MonoBehaviour
         }
     }
 
+    private bool ShouldOcclude(Renderer Renderer)
+    {
+        if(Renderer == null)
+        {
+            return false;
+        }
+        if (Renderer.sharedMaterial == null)
+        {
+            return false;
+        }
+        return Renderer.sharedMaterial.shader.name.Contains("Glass") == false;
+    }
+
+    private GameObject GetObjectToOcclude(RaycastHit Hit)
+    {
+        GameObject HitObject = Hit.transform.gameObject;
+        if ( PrefabUtility.IsPartOfNonAssetPrefabInstance(HitObject))
+        {
+            return PrefabUtility.GetOutermostPrefabInstanceRoot(HitObject) as GameObject;
+        }
+
+        if( HitObject.GetComponent<Renderer>() == true )
+        {
+            return HitObject;
+        }
+
+        if(HitObject.GetComponentInParent<Renderer>() == true )
+        {
+            return HitObject.transform.parent.gameObject;
+        }
+
+        return null;
+    }
+
+    private bool ShouldOcclude(GameObject Geneur)
+    {
+        return (Geneur.GetComponentInChildren<Food>() == null);
+    }
+
     // Update is called once per frame
     private IEnumerator UpdateOccluding()
     {
@@ -130,21 +170,30 @@ public class MeshOccluder : MonoBehaviour
             {
                 foreach(RaycastHit hit in hits)
                 {
-                    MeshQuiGene Geneur = TouslesMeshGenants.Find(T => T.Collider == hit.collider);
+                    GameObject ObjectGeneur = GetObjectToOcclude(hit);
+
+                    if (ObjectGeneur == null)
+                    {
+                        continue;
+                    }
+                    if (ShouldOcclude(ObjectGeneur) == false)
+                    {
+                        continue;
+                    }
+
+                    Debug.Log("Occlude " + ObjectGeneur.name);
+
+                    MeshQuiGene Geneur = TouslesMeshGenants.Find(T => T.Reference == ObjectGeneur);
 
                     Debug.DrawLine(Start, hit.point, Color.red, 0.15f, false);
 
                     if (Geneur == null)
                     {
-                        Renderer renderer = hit.collider.GetComponentInChildren<Renderer>();
-                        if (renderer != null)
-                        {
-                            TouslesMeshGenants.Add(new MeshQuiGene(hit.collider, renderer, TransparentMaterialTemplate));
-                        }
+                        TouslesMeshGenants.Add(new MeshQuiGene(ObjectGeneur, TransparentMaterialTemplate));
                     }
                     else
                     {
-                        Geneur.GeneEncore += DUREE_MESH_INVISIBLE;
+                        Geneur.GeneEncore = DUREE_MESH_INVISIBLE;
                     }
                 }
             }
