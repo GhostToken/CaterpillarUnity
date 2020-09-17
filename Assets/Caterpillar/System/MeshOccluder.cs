@@ -129,10 +129,10 @@ public class MeshOccluder : MonoBehaviour
     private GameObject GetObjectToOcclude(RaycastHit Hit)
     {
         GameObject HitObject = Hit.transform.gameObject;
-        if ( PrefabUtility.IsPartOfNonAssetPrefabInstance(HitObject))
-        {
-            return PrefabUtility.GetOutermostPrefabInstanceRoot(HitObject) as GameObject;
-        }
+        //if ( PrefabUtility.IsPartOfNonAssetPrefabInstance(HitObject))
+        //{
+        //    return PrefabUtility.GetOutermostPrefabInstanceRoot(HitObject) as GameObject;
+        //}
 
         if( HitObject.GetComponent<Renderer>() == true )
         {

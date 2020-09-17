@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c301446503757d7489518e39f8d76841,
+  m_LightingDataAsset: {fileID: 112000000, guid: 5c5f9267d80eec54bb50fd1aa5352b47,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 5ee139f7028a818408aa0ed95ce00235,
     type: 2}
@@ -109,7 +109,7 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
+    agentHeight: 1.5
     agentSlope: 30.5
     agentClimb: 0.51
     ledgeDropHeight: 0
