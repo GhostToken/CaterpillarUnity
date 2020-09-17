@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8975315556157335012}
   - component: {fileID: 4926729175150432925}
   - component: {fileID: -5163617808969229015}
+  - component: {fileID: 1760072999904843191}
   m_Layer: 9
   m_Name: lardon
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: 3d32c2527144e2a46b6bcf1bcabce789, type: 2}
   DownScaleSpeed: 1.5
+--- !u!65 &1760072999904843191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341147084273254606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.2, z: 0.8}
+  m_Center: {x: 0, y: 0, z: 0}

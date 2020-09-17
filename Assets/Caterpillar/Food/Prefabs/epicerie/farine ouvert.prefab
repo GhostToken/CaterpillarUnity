@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2922276556493917455}
   - component: {fileID: 6305602086213737552}
   - component: {fileID: 6813195447793115599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: farine ouvert
   m_TagString: Untagged
   m_Icon: {fileID: 0}

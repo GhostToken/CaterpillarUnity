@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7148745188810464820}
   - component: {fileID: -4811063906822664576}
   - component: {fileID: 3893826631852876625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sucre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
+  Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
   DownScaleSpeed: 1.5
 --- !u!65 &3893826631852876625
 BoxCollider:

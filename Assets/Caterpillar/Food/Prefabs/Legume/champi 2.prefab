@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -933770873021411612}
   - component: {fileID: -2144210718166410569}
   - component: {fileID: 8362249692970320498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: champi 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

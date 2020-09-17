@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
+  Ingredient: {fileID: 11400000, guid: cb4eca70115ffa34cbfbb9a7eed203ae, type: 2}
   DownScaleSpeed: 1.5
 --- !u!135 &6829680881501132639
 SphereCollider:

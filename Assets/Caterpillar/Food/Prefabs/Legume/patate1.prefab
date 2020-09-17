@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1619979212404878267}
   - component: {fileID: 6844257264094522703}
   - component: {fileID: 4887800300707897480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: patate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
