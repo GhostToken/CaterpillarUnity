@@ -107,9 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Offset: {x: 0, y: 45, z: -60}
-  MaxCameraSpeed: 5
-  MaxCameraRotationSpeed: 60
-  MaxCameraZoomSpeed: 5
+  MaxCameraSpeed: 10
+  MaxCameraRotationSpeed: 120
+  MaxCameraZoomSpeed: 10
+  MinOrthographicSize: 1
+  MaxOrthographicSize: 20
 --- !u!114 &-5731568430842462374
 MonoBehaviour:
   m_ObjectHideFlags: 0

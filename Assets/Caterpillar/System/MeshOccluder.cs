@@ -7,9 +7,11 @@ public class MeshOccluder : MonoBehaviour
 {
     #region Const
 
-    const float DUREE_MESH_INVISIBLE = 0.35f;
-    const float MIN_OPACITY = 0.05f;
-    const float FADE_DURATION = 0.35f;
+    const float C_DUREE_MESH_INVISIBLE = 0.35f;
+    const float C_MIN_OPACITY = 0.15f;
+    const float C_FADE_DURATION = 0.35f;
+    const string C_GLASS_SHADER_KEYWORD = "Glass";
+    const string C_ALPHA_SHADER_PROPERTY = "Alpha";
 
     #endregion
 
@@ -17,29 +19,38 @@ public class MeshOccluder : MonoBehaviour
 
     private class MeshQuiGene
     {
-        public GameObject Reference;
         public Renderer Renderer;
         public float FadeTimer;
         public float GeneEncore;
 
+        bool UseGeneratedMaterial = false;
         private Material OriginalMaterial;
+        private float OriginalAlpha = 1.0f;
         private Material TransparentMaterial;
 
-        public MeshQuiGene(GameObject ReferenceGeneur, Material TransparentMaterialTemplate)
+        public MeshQuiGene(Renderer RendererGenant, Material TransparentMaterialTemplate)
         {
-            Reference = ReferenceGeneur;
-            Renderer = ReferenceGeneur.GetComponentInChildren<Renderer>();
+            Renderer = RendererGenant;
             OriginalMaterial = Renderer.sharedMaterial;
-            TransparentMaterial = new Material(TransparentMaterialTemplate);
-            TransparentMaterial.mainTexture = OriginalMaterial.mainTexture;
-            Renderer.material = TransparentMaterial;
-            GeneEncore = DUREE_MESH_INVISIBLE;
+            if (OriginalMaterial.shader.name.Contains(C_GLASS_SHADER_KEYWORD) == false)
+            {
+                TransparentMaterial = new Material(TransparentMaterialTemplate);
+                TransparentMaterial.mainTexture = OriginalMaterial.mainTexture;
+                Renderer.material = TransparentMaterial;
+                UseGeneratedMaterial = true;
+            }
+            else
+            {
+                TransparentMaterial = OriginalMaterial;
+                OriginalAlpha = OriginalMaterial.GetFloat(C_ALPHA_SHADER_PROPERTY);
+            }
+            GeneEncore = C_DUREE_MESH_INVISIBLE;
             FadeTimer = 0.0f;
         }
 
         public void Update()
         {
-            if ((GeneEncore > 0.0f) && (FadeTimer < FADE_DURATION))
+            if ((GeneEncore > 0.0f) && (FadeTimer < C_FADE_DURATION))
             {
                 FadeTimer += Time.deltaTime;
                 UpdateAlpha();
@@ -57,15 +68,18 @@ public class MeshOccluder : MonoBehaviour
 
         private void UpdateAlpha()
         {
-            float alpha = Mathf.Lerp(1.0f, MIN_OPACITY, FadeTimer / FADE_DURATION);
-            TransparentMaterial.SetFloat("Alpha", alpha);
+            float alpha = Mathf.Lerp(OriginalAlpha, C_MIN_OPACITY, FadeTimer / C_FADE_DURATION);
+            TransparentMaterial.SetFloat(C_ALPHA_SHADER_PROPERTY, alpha);
         }
 
         public void Terminate()
         {
-            Renderer.sharedMaterial = OriginalMaterial;
-            GameObject.Destroy(TransparentMaterial);
-            TransparentMaterial = null;
+            if(UseGeneratedMaterial == true)
+            {
+                Renderer.sharedMaterial = OriginalMaterial;
+                GameObject.Destroy(TransparentMaterial);
+                TransparentMaterial = null;
+            }
         }
 
         public bool CanBeTerminated
@@ -113,43 +127,30 @@ public class MeshOccluder : MonoBehaviour
         }
     }
 
-    private bool ShouldOcclude(Renderer Renderer)
-    {
-        if(Renderer == null)
-        {
-            return false;
-        }
-        if (Renderer.sharedMaterial == null)
-        {
-            return false;
-        }
-        return Renderer.sharedMaterial.shader.name.Contains("Glass") == false;
-    }
-
-    private GameObject GetObjectToOcclude(RaycastHit Hit)
+    private Renderer GetObjectToOcclude(RaycastHit Hit)
     {
         GameObject HitObject = Hit.transform.gameObject;
-        //if ( PrefabUtility.IsPartOfNonAssetPrefabInstance(HitObject))
-        //{
-        //    return PrefabUtility.GetOutermostPrefabInstanceRoot(HitObject) as GameObject;
-        //}
+        Renderer rendererGenant = null;
 
-        if( HitObject.GetComponent<Renderer>() == true )
+        rendererGenant = HitObject.GetComponent<Renderer>();
+        if (rendererGenant == null )
         {
-            return HitObject;
+            rendererGenant = HitObject.GetComponentInParent<Renderer>();
+        }
+        if (rendererGenant == null)
+        {
+            rendererGenant = HitObject.GetComponentInChildren<Renderer>();
+        }
+        if(rendererGenant == null)
+        {
+            return null;
+        }
+        if (rendererGenant.sharedMaterial == null)
+        {
+            return null;
         }
 
-        if(HitObject.GetComponentInParent<Renderer>() == true )
-        {
-            return HitObject.transform.parent.gameObject;
-        }
-
-        return null;
-    }
-
-    private bool ShouldOcclude(GameObject Geneur)
-    {
-        return (Geneur.GetComponentInChildren<Food>() == null);
+        return rendererGenant;
     }
 
     // Update is called once per frame
@@ -170,30 +171,23 @@ public class MeshOccluder : MonoBehaviour
             {
                 foreach(RaycastHit hit in hits)
                 {
-                    GameObject ObjectGeneur = GetObjectToOcclude(hit);
+                    Renderer RendererGeneur = GetObjectToOcclude(hit);
 
-                    if (ObjectGeneur == null)
-                    {
-                        continue;
-                    }
-                    if (ShouldOcclude(ObjectGeneur) == false)
+                    if (RendererGeneur == null)
                     {
                         continue;
                     }
 
-                    Debug.Log("Occlude " + ObjectGeneur.name);
-
-                    MeshQuiGene Geneur = TouslesMeshGenants.Find(T => T.Reference == ObjectGeneur);
-
+                    MeshQuiGene Geneur = TouslesMeshGenants.Find(T => T.Renderer == RendererGeneur);
                     Debug.DrawLine(Start, hit.point, Color.red, 0.15f, false);
 
                     if (Geneur == null)
                     {
-                        TouslesMeshGenants.Add(new MeshQuiGene(ObjectGeneur, TransparentMaterialTemplate));
+                        TouslesMeshGenants.Add(new MeshQuiGene(RendererGeneur, TransparentMaterialTemplate));
                     }
                     else
                     {
-                        Geneur.GeneEncore = DUREE_MESH_INVISIBLE;
+                        Geneur.GeneEncore = C_DUREE_MESH_INVISIBLE;
                     }
                 }
             }

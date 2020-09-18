@@ -36,7 +36,7 @@ public partial class Account : MonoBehaviour
 
     #region Global Handlers
 
-    private void OnPlayfabLoginResult(LoginResult Result)
+    private void OnPlayfabLoginSuccess(LoginResult Result)
     {
         LoggedOnPlayfab = true;
         PlayfabLogins = Result;
@@ -45,12 +45,6 @@ public partial class Account : MonoBehaviour
 
         GetLocalPlayerUserDatas();
         GetLocalPlayerStatistics();
-        //PlayFabClientAPI.AddGenericID();
-        //PlayFabClientAPI.AddOrUpdateContactEmail();
-        //PlayFabClientAPI.AndroidDevicePushNotificationRegistration();
-        //PlayFabClientAPI.UpdateAvatarUrl();
-        //PlayFabClientAPI.UpdateUserTitleDisplayName();
-        //PlayFabClientAPI.GrantCharacterToUser();
     }
 
     #endregion
@@ -61,7 +55,7 @@ public partial class Account : MonoBehaviour
     {
         PlayFabClientAPI.GetPlayerStatistics( new GetPlayerStatisticsRequest(),
             OnGetLocalPlayerStatistics,
-            error =>
+            (error) =>
             {
                 Debug.Log("Got error retrieving player statistics");
                 Debug.LogError(error.GenerateErrorReport());
@@ -71,12 +65,6 @@ public partial class Account : MonoBehaviour
 
     private void OnGetLocalPlayerStatistics(GetPlayerStatisticsResult Result)
     {
-        Debug.Log("Retrieved Local Player statistics :");
-        foreach (StatisticValue statistic in Result.Statistics)
-        {
-            Debug.Log(statistic.StatisticName + " " + statistic.Value + " ( " + statistic.Version + " )");
-        }
-
         SaveGame.OnGetLocalPlayerStatistics(Result);
     }
 
@@ -94,12 +82,6 @@ public partial class Account : MonoBehaviour
 
     private void OnGetLocalUserData(GetUserDataResult Result)
     {
-        Debug.Log("Retrieved Local Player USer Data :");
-        foreach (var record in Result.Data)
-        {
-            Debug.Log(record.Key + " " + record.Value);
-        }
-
         SaveGame.OnGetLocalUserData(Result);
     }
 
