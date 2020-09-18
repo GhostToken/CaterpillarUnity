@@ -331,6 +331,12 @@ public class SaveGame : MonoBehaviour
     {
         AllTimesTotalScore = Result.TryGetInStatistics(AllTimesTotalScoreIdentifier, AllTimesTotalScore);
         BiggestScore = Result.TryGetInStatistics(BiggestScoreIdentifier, BiggestScore);
+
+        for (int LevelId = 1; LevelId <= MaxLevelReached; ++LevelId)
+        {
+            LevelRecord Record = GetRecord(LevelId);
+            Record.OnGetLocalPlayerStatistics(Result);
+        }
     }
 
     public static void OnGetLocalUserData(GetUserDataResult Result)

@@ -1,6 +1,7 @@
 ﻿using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
+using System;
 
 #if UNITY_ANDROID
 
@@ -15,6 +16,19 @@ public partial class Account : MonoBehaviour
 
     private bool LoggedWithGooglePlay = false;
     private string AndroidPushToken = null;
+
+    #endregion
+
+
+    #region static Properties
+
+    private static string DeviceLinkedFlag
+    {
+        get
+        {
+            return "AndroidDeviceLinkedFlag";
+        }
+    }
 
     #endregion
 
@@ -73,13 +87,19 @@ public partial class Account : MonoBehaviour
                 CreateAccount = true
             };
 
-            PlayFabClientAPI.LoginWithGoogleAccount(LoginRequest, OnPlayfabLoginResult, OnPlayfabGooglePlayLoginError);
+            PlayFabClientAPI.LoginWithGoogleAccount(LoginRequest, OnPlayfabGooglePlayLoginSuccess, OnPlayfabGooglePlayLoginError);
         }
         else
         {
             Debug.LogWarning("Google : Failed to Login with Google Play : Fallback to Android Device Login");
             SignInWithAndroidDevice();
         }
+    }
+
+    private void OnPlayfabGooglePlayLoginSuccess(LoginResult Result)
+    {
+        OnPlayfabLoginSuccess(Result);
+        LinkAndroidDevice();
     }
 
     private void OnPlayfabGooglePlayLoginError(PlayFabError Error)
@@ -101,7 +121,12 @@ public partial class Account : MonoBehaviour
             AndroidDeviceId = SystemInfo.deviceUniqueIdentifier,
             OS = "Android"
         };
-        PlayFabClientAPI.LoginWithAndroidDeviceID(LoginRequest, OnPlayfabLoginResult, OnPlayfabAndroidDeviceLoginError);
+        PlayFabClientAPI.LoginWithAndroidDeviceID(LoginRequest, OnPlayfabAndroidDeviceLoginResult, OnPlayfabAndroidDeviceLoginError);
+    }
+
+    private void OnPlayfabAndroidDeviceLoginResult(LoginResult Result)
+    {
+        OnPlayfabLoginSuccess(Result);
     }
 
     private void OnPlayfabAndroidDeviceLoginError(PlayFabError Error)
@@ -109,6 +134,32 @@ public partial class Account : MonoBehaviour
         Debug.LogError("Playfab Android Device Login Failed -> Error : " + Error.ToString());
         SignInWithAndroidDevice();
         Loginfail.Invoke();
+    }
+
+    public void LinkAndroidDevice()
+    {
+        if( PlayerPrefs.HasKey(DeviceLinkedFlag) == false )
+        {
+            LinkAndroidDeviceIDRequest LinkRequest = new LinkAndroidDeviceIDRequest()
+            {
+                AndroidDeviceId = SystemInfo.deviceUniqueIdentifier,
+                AndroidDevice = SystemInfo.deviceName,
+                OS = "Android",
+                ForceLink = true
+            };
+            PlayFabClientAPI.LinkAndroidDeviceID(LinkRequest, 
+            OnLinkDeviceSuccess,
+            (error) =>
+            {
+                Debug.LogError("Got error Linking Android Device ID");
+                Debug.LogError(error.GenerateErrorReport());
+            });
+        }
+    }
+
+    private void OnLinkDeviceSuccess(LinkAndroidDeviceIDResult Result)
+    {
+        PlayerPrefs.SetString(DeviceLinkedFlag, "true");
     }
 
     #endregion

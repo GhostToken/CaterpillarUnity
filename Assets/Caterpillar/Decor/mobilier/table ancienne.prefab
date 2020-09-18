@@ -1063,7 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754231005078526899}
   - component: {fileID: 4189220890303411992}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: table ancienne
   m_TagString: Untagged
   m_Icon: {fileID: 0}

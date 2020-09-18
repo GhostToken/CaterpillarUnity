@@ -10,6 +10,8 @@ public class CameraFollowing : MonoBehaviour
     public float MaxCameraSpeed;
     public float MaxCameraRotationSpeed;
     public float MaxCameraZoomSpeed = 1.0f;
+    public float MinOrthographicSize = 1;
+    public float MaxOrthographicSize = 20;
 
     private Vector3 LastTargetPosition = Vector3.zero;
     private Vector3 TargetMove = Vector3.zero;
@@ -52,7 +54,7 @@ public class CameraFollowing : MonoBehaviour
         float Zoom = Mathf.Clamp(ZoomToComplete, -MaxCameraZoomSpeed * Time.deltaTime, MaxCameraZoomSpeed * Time.deltaTime);
         ZoomToComplete -= Zoom;
 
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Zoom, 1, 10);
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Zoom, MinOrthographicSize, MaxOrthographicSize);
     }
 
     void UpdateRotation()
