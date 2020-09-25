@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 4487280693579445106}
   - component: {fileID: 4764423801531637076}
   - component: {fileID: 2375335629376300345}
-  - component: {fileID: 1834240350355973060}
-  - component: {fileID: 2513133998938269974}
+  - component: {fileID: 3248493661031092318}
   m_Layer: 0
   m_Name: verre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4487280693579445106
 Transform:
@@ -83,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6086792075196302968}
   m_Mesh: {fileID: 4073575230690486077, guid: 395affbe90947b0428543d0783a68e45, type: 3}
---- !u!65 &1834240350355973060
-BoxCollider:
+--- !u!64 &3248493661031092318
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,20 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 0.23021126, z: 1.6}
-  m_Center: {x: 0, y: -1.3848944, z: 0}
---- !u!136 &2513133998938269974
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6086792075196302968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4073575230690486077, guid: 395affbe90947b0428543d0783a68e45, type: 3}

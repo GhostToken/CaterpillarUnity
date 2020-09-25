@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5057499967405372274}
   - component: {fileID: 6265585713728008535}
   - component: {fileID: 7750269893042323431}
-  - component: {fileID: 2261003258700762139}
+  - component: {fileID: 6957626632728779028}
   m_Layer: 0
   m_Name: mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5057499967405372274
 Transform:
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3031191749302908533}
   m_Mesh: {fileID: 6378474432172283329, guid: 66bf0c6c21c7ee642a71a462cd8b6000, type: 3}
---- !u!136 &2261003258700762139
-CapsuleCollider:
+--- !u!64 &6957626632728779028
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.194732
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.30526802}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6378474432172283329, guid: 66bf0c6c21c7ee642a71a462cd8b6000, type: 3}

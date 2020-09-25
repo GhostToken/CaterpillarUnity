@@ -76,32 +76,4 @@ public static class FVectorMethods
         return uiPosition;
     }
 
-    /// <summary>
-    /// Extracting position from Matrix
-    /// </summary>
-    public static Vector3 PosFromMatrix(Matrix4x4 m)
-    {
-        return m.GetColumn(3);
-    }
-
-    /// <summary>
-    /// Extracting rotation from Matrix
-    /// </summary>
-    public static Quaternion RotFromMatrix(Matrix4x4 m)
-    {
-        return Quaternion.LookRotation(m.GetColumn(2), m.GetColumn(1));
-    }
-
-    /// <summary>
-    /// Extracting scale from Matrix
-    /// </summary>
-    public static Vector3 ScaleFromMatrix(Matrix4x4 m)
-    {
-        return new Vector3
-        (
-            m.GetColumn(0).magnitude,
-            m.GetColumn(1).magnitude,
-            m.GetColumn(2).magnitude
-        );
-    }
 }

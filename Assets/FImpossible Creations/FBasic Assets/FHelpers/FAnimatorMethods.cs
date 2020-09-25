@@ -5,15 +5,17 @@
 /// </summary>
 public static class FAnimatorMethods
 {
+
     /// <summary>
     /// Sets animator's float value with lerp
     /// </summary>
     public static void LerpFloatValue(Animator animator, string name = "RunWalk", float value = 0f, float deltaSpeed = 8f)
     {
         float newValue = animator.GetFloat(name);
-        newValue = FLogicMethods.FLerp(newValue, value, Time.deltaTime * deltaSpeed);
+        newValue = Lerp(newValue, value, Time.deltaTime * deltaSpeed);
         animator.SetFloat(name, newValue);
     }
+
 
     /// <summary>
     /// Function called to detect if no-looped animation finish
@@ -46,6 +48,7 @@ public static class FAnimatorMethods
         return false;
     }
 
+
     /// <summary>
     /// Resetting all additional layers' weights to zero (lerp but reaching value)
     /// </summary> 
@@ -53,9 +56,10 @@ public static class FAnimatorMethods
     {
         for (int i = 1; i < animator.layerCount; i++)
         {
-            animator.SetLayerWeight(i, FLogicMethods.FLerp(animator.GetLayerWeight(i), 0f, Time.deltaTime * speed));
+            animator.SetLayerWeight(i, Lerp(animator.GetLayerWeight(i), 0f, Time.deltaTime * speed));
         }
     }
+
 
     /// <summary>
     /// Transitioning value of animator layer's weight to target with smooth effect
@@ -63,9 +67,10 @@ public static class FAnimatorMethods
     public static void LerpLayerWeight(Animator animator, int layer = 0, float newValue = 1f, float speed = 8f)
     {
         float newWeight = animator.GetLayerWeight(layer);
-        newWeight = FLogicMethods.FLerp(newWeight, newValue, Time.deltaTime * speed);
+        newWeight = Lerp(newWeight, newValue, Time.deltaTime * speed);
         animator.SetLayerWeight(layer, newWeight);
     }
+
 
     /// <summary>
     /// Returning true if state exist
@@ -75,4 +80,14 @@ public static class FAnimatorMethods
         int animHash = Animator.StringToHash(clipName);
         return animator.HasState(layer, animHash);
     }
+
+
+    public static float Lerp(float a, float b, float t, float factor = 0.01f)
+    {
+        float preB = b; if (preB > a) b += factor; else b -= factor;
+        float val = Mathf.Lerp(a, b, t);
+        if (preB > a) { if (val >= preB) return preB; } else if (val <= preB) return preB;
+        return val;
+    }
+
 }

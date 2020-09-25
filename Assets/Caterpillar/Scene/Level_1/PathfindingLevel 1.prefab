@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6627210931531056249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440682, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440683, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAACAn+vofapnUgIAAPoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z4jAM/SuMz1smUGDL3nZTSvfQjynd6SUXEcvEg2Nn/FGgHf772o4hKT05lp6k9yQ5n4RL02BplV5qTh8URfJrQMI3+THonPe4h42SK/6BJ8wbp7YKIIiYF7BcefsohBlVo9W8/C03IoAzb3SSM6XrBd1grow13sxAGPQurWyIlt70OSD7FHBI50c4B0f/VaK0qDvU1STBRrMvOCdLAXWDNPDt4NenrNfj4TQCpdeSMNlwNJ6GGkoIbhIZYg9NFJtDY5yX4gGUgxcXaWTDGFIh31Q2aT/HPzFm0CYNGg63XPs2tYnJH9X2rgazbQm+g3Ch1CSbzyK3NuvDN8B4Op1HANOqvj+XzkIZW/Fy+wKHEkwwWu3wwnrbsR/HTu1AbGEt8K1C+aiWWjlJu1BncHzbm9RZXV5hue1wLdkLo2u+D3TUDeoY9e9zwet1QvjrSqjY8nm4o/YD+uvpxvUwCeWtgcI/g6+w6e9Rctxxbax3pXIycFsrpwOULGLDghRnc6UlRnNi3KAEYQ/PPo29HOGFr1f2wnMH4cXE9cimnfv0Fr6WitZzxCi78DyrXZxV0GEqtXtAUz05K7jspQqOR9+oXEnZrli/KaewldMMSux5No7Tr7tFMBtlc7hhOIMSMvrzCqbA2JwxyuYwuRkjiavHpVcK4rllmnbJz012pKTfs9OvZLDU0MR9pxp2S/5Rq17TuWRqVWpE+dRmODNH7Yv450kXlPsGrdBaLuPEyWdBhCq3SItzoiJKXeythqLLUpCGvysbLAXJ4w+kIEdy/A9QSwMEFAAACAgAAICf63Dlh8dtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tFKqgaGBZaJFWqpZYnKiQYq5bqJpYlqaZVpaSpploomFUapSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf6+h9qmdSAgAA+gQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf63Dlh8dtAAAAeAAAAAkAJAAAAAAAAAAAAAAAnwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABXAwAAAAA=
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819670212207440684, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1,
+        type: 3}
+      propertyPath: m_Name
+      value: PathfindingLevel 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6aa0a5433147d7d4cb9c2b29db8a7ac1, type: 3}

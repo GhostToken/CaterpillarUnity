@@ -7,6 +7,8 @@ public class ReplaceGameObjects : ScriptableWizard
     public GameObject NouveauPrefab;
     public Transform NouveauParent;
 
+    public bool EffaceAnciensObjets = true;
+
     public GameObject[] AncienObjets;
  
     [MenuItem("Caterpillar/Replace GameObjects")]
@@ -30,7 +32,10 @@ public class ReplaceGameObjects : ScriptableWizard
             newObject.transform.position = go.transform.position;
             newObject.transform.rotation = go.transform.rotation;
 
-            GameObject.DestroyImmediate(go);
+            if( EffaceAnciensObjets )
+            {
+                GameObject.DestroyImmediate(go);
+            }
         }
     }
 }

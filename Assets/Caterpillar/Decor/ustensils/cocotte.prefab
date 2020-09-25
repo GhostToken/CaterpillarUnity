@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4005002092354384673}
   - component: {fileID: 4825505188525159855}
   - component: {fileID: 8953649555303047879}
-  - component: {fileID: 3545948358402746019}
+  - component: {fileID: 7908178724175971305}
   m_Layer: 0
   m_Name: cocotte
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163782465589162079}
   m_Mesh: {fileID: 3195679423233210499, guid: 395affbe90947b0428543d0783a68e45, type: 3}
---- !u!65 &3545948358402746019
-BoxCollider:
+--- !u!64 &7908178724175971305
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.020358, y: 5, z: 6.0000014}
-  m_Center: {x: -0.00025892252, y: 0, z: -2.1006583e-19}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3195679423233210499, guid: 395affbe90947b0428543d0783a68e45, type: 3}

@@ -1,0 +1,2 @@
+Scale Export normal : 0.1
+Scale export personnage : 0.0625

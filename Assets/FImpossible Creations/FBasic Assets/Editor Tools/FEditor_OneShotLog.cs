@@ -68,8 +68,6 @@ namespace FIMSpace
             }
             else
             {
-                Debug.Log("nima parsa z " + dateBin);
-
                 return false;
             }
 

@@ -23,7 +23,11 @@ public class CameraFollowing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Target = FindObjectOfType<Caterpillar>().transform;
+        Caterpillar Cat = null;
+        if( Cat = FindObjectOfType<Caterpillar>() )
+        {
+            Target = Cat.transform;
+        }
 
         Vector3 TargetPosition = Target.position + Target.TransformVector(Offset);
 

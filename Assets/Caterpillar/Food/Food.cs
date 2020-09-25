@@ -7,17 +7,14 @@ public class Food : MonoBehaviour
 {
     public Ingredient Ingredient;
     public float DownScaleSpeed = 1.5f;
-    bool Mange = false;
+    bool DejaMange = false;
 
-    private void OnCollisionStay(Collision collision)
+    public void Mange()
     {
-        if( collision.gameObject.GetComponent<Caterpillar>() )
+        if (DejaMange == false)
         {
-            if (!Mange)
-            {
-                Mange = true;
-                StartCoroutine(Mangeage());
-            }
+            DejaMange = true;
+            StartCoroutine(Mangeage());
         }
     }
 
@@ -28,8 +25,7 @@ public class Food : MonoBehaviour
             transform.localScale -= Vector3.one * DownScaleSpeed * Time.deltaTime;
             yield return null;
         }
-
-        Mange = true;
+        
         Partie.Mange(Ingredient);
         GameObject.Destroy(gameObject);
     }

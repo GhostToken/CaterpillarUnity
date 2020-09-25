@@ -178,12 +178,12 @@ namespace FIMSpace.FSpine
         {
             if (Input.GetKeyDown(KeyCode.Space)) Jump();
 
-            if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
                 if (Input.GetKey(KeyCode.LeftShift)) Sprint = true; else Sprint = false;
 
                 RotationOffset = 0f;
-                if (Input.GetKey(KeyCode.Q)) RotationOffset = -90;
+                if (Input.GetKey(KeyCode.A)) RotationOffset = -90;
                 if (Input.GetKey(KeyCode.D)) RotationOffset = 90;
                 if (Input.GetKey(KeyCode.S)) RotationOffset = 180;
 

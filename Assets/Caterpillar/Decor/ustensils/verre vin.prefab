@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5325234688886389677}
   - component: {fileID: 1626164190857882864}
   - component: {fileID: 8935936195407902820}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: verre vin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7853396246035242853}
   - component: {fileID: 545204692825964922}
   - component: {fileID: 522541158865825232}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

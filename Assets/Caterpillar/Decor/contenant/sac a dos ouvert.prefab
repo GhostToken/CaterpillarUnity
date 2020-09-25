@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3095923736635111515}
   - component: {fileID: 9153188020127391252}
   - component: {fileID: 6866226298778900066}
-  - component: {fileID: 7661247110928042219}
+  - component: {fileID: 5851593187565100632}
   m_Layer: 0
   m_Name: sac a dos ouvert
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6913912783883543485}
   m_Mesh: {fileID: -2923938500194845992, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
---- !u!65 &7661247110928042219
-BoxCollider:
+--- !u!64 &5851593187565100632
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.400001, y: 6, z: 8.178608}
-  m_Center: {x: 0, y: 0, z: -4.910696}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2923938500194845992, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
