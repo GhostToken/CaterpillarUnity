@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: compote pomme banane
   TypeDeRecette: 2
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: ac1747be5ee428548a71f7024dce1d13, type: 2}
-  - {fileID: 11400000, guid: 29a053ae19e51c745a8f572a1eb755b5, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
-  - {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
-  - {fileID: 11400000, guid: ac04fcd40ca16494192423b6cbf5a24e, type: 2}
+  Description: Grand classique
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: ac1747be5ee428548a71f7024dce1d13, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 29a053ae19e51c745a8f572a1eb755b5, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  - Flags: 2
+    Ingredient: {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
+  - Flags: 2
+    Ingredient: {fileID: 11400000, guid: ac04fcd40ca16494192423b6cbf5a24e, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

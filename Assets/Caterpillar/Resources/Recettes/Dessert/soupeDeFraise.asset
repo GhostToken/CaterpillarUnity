@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: soupe de fraises froides
   TypeDeRecette: 2
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: feb2ec78ccccea94a85765f5e2e3acdd, type: 2}
-  - {fileID: 11400000, guid: d10caa56d4d7e63468b672170ebb321e, type: 2}
-  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: 304c1e5d0fc65a64991db8e81db58e34, type: 2}
+  Description: 
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: feb2ec78ccccea94a85765f5e2e3acdd, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  - Flags: 2
+    Ingredient: {fileID: 11400000, guid: d10caa56d4d7e63468b672170ebb321e, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 304c1e5d0fc65a64991db8e81db58e34, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

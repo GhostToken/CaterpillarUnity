@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
   m_Name: Crepe
   m_EditorClassIdentifier: 
-  Nom: salade de fruits
+  Nom: Crepe
   TypeDeRecette: 2
-  Description: 
-  Polaroid: {fileID: 2800000, guid: 996a9366ddecd6d4695e7b90c073c0b9, type: 3}
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
-  - {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}
-  - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: e805692fb3931be4a96c9df6903ec779, type: 2}
-  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
-  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  Description: Delicieuses crepes bretonnes
+  Polaroid: {fileID: 2800000, guid: 1ad5a065581bb744b8cf016e9f739125, type: 3}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: e805692fb3931be4a96c9df6903ec779, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

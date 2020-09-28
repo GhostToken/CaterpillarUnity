@@ -19,17 +19,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 58caed45d19ae3a44b4af37b2d976ac7, type: 2}
   - {fileID: 11400000, guid: cdf15d831e64a064fa3933921b44bb55, type: 2}
   StarOne:
-    PasDeGrignotage: 0
+    Description: 1 recettes
+    Conditions: 0
     NombreDeRecette: 1
     NombreDeRecetteUnique: 0
-    Description: 1 recettes
+    ScoreRequis: 0
   StarTwo:
-    PasDeGrignotage: 0
+    Description: 2 recettes
+    Conditions: 0
     NombreDeRecette: 2
     NombreDeRecetteUnique: 0
-    Description: 2 recettes
+    ScoreRequis: 0
   StarThree:
-    PasDeGrignotage: 0
+    Description: 3 recettes dont 2 unique
+    Conditions: 0
     NombreDeRecette: 3
     NombreDeRecetteUnique: 2
-    Description: 3 recettes dont 2 unique
+    ScoreRequis: 0

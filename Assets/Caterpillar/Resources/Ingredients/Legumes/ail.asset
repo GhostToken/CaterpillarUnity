@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: ail
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: Ail
   Type: 0
   Icon: {fileID: 21300000, guid: 74f2422fee1e18d47b79221a3b48abb5, type: 3}

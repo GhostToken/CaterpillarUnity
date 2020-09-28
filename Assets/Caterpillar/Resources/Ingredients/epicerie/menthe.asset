@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: menthe
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: menthe
   Type: 0
   Icon: {fileID: 21300000, guid: 445590a6f11bb2e4fae39217b36442e1, type: 3}

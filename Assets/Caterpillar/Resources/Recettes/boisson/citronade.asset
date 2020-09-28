@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: citronade
   m_EditorClassIdentifier: 
   Nom: citronade
-  TypeDeRecette: 0
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: ac04fcd40ca16494192423b6cbf5a24e, type: 2}
-  - {fileID: 11400000, guid: 304c1e5d0fc65a64991db8e81db58e34, type: 2}
-  - {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  TypeDeRecette: 3
+  Description: 
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: ac04fcd40ca16494192423b6cbf5a24e, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 304c1e5d0fc65a64991db8e81db58e34, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
+  IngredientsDeBase: []
   IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

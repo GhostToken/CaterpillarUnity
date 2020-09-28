@@ -17,17 +17,20 @@ MonoBehaviour:
   Scene: Level 3
   RecetteAFaire: []
   StarOne:
-    PasDeGrignotage: 0
+    Description: 1 recette
+    Conditions: 6
     NombreDeRecette: 1
     NombreDeRecetteUnique: 0
-    Description: 1 recette
+    ScoreRequis: 0
   StarTwo:
-    PasDeGrignotage: 0
+    Description: 2 recettes
+    Conditions: 0
     NombreDeRecette: 2
     NombreDeRecetteUnique: 0
-    Description: 2 recettes
+    ScoreRequis: 0
   StarThree:
-    PasDeGrignotage: 1
+    Description: 2 recettes sans grignotage
+    Conditions: 1
     NombreDeRecette: 3
     NombreDeRecetteUnique: 0
-    Description: 2 recettes sans grignotage
+    ScoreRequis: 0

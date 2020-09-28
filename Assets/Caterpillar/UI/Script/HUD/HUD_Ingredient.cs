@@ -17,7 +17,7 @@ public class HUD_Ingredient : MonoBehaviour
 
     private void Update()
     {
-        Done.enabled = Partie.Repas.Contains(ThisIngredient);
+        Done.enabled = Partie.Estomac.Contains(ThisIngredient);
     }
 
     #endregion

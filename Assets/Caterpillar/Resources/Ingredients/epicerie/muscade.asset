@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: muscade
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: muscade
   Type: 7
   Icon: {fileID: 0}

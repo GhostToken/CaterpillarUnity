@@ -15,13 +15,17 @@ MonoBehaviour:
   Nom: gratin dauphinois
   TypeDeRecette: 1
   Description: 
-  Polaroid: {fileID: 2800000, guid: d1c765cd450819f49aa4c3f5c1349da1, type: 3}
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
-  - {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
-  - {fileID: 11400000, guid: 522034eb62830f848b52c410bf36e1d3, type: 2}
-  - {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: b5b6830392ba39b4c9b732bca2304d03, type: 2}
-  - {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
-  "IngredientsCach\xE9s": []
+  Polaroid: {fileID: 2800000, guid: 2fa026f93ee46b4499e891b51ccdc980, type: 3}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 522034eb62830f848b52c410bf36e1d3, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6797d081ef5b7ac4d8fc7269a69e982a, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
+  - Flags: 2
+    Ingredient: {fileID: 11400000, guid: b5b6830392ba39b4c9b732bca2304d03, type: 2}

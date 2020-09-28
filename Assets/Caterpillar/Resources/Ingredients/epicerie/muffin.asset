@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: muffin
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: muffins
   Type: 7
   Icon: {fileID: 21300000, guid: cacfa53733e5c07488f4a0eecd714ffc, type: 3}

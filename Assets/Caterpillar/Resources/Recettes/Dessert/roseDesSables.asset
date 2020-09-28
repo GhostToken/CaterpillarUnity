@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: roses des sables
   TypeDeRecette: 2
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: de7638e6124f05144b36b044b14ba790, type: 2}
-  - {fileID: 11400000, guid: 2327c70bcfabbfd44adeaff73d42ef1b, type: 2}
-  - {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: bf5518e8927edce48bc8655d8f551632, type: 2}
+  Description: "Dessert tr\xE8s sucr\xE9"
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: de7638e6124f05144b36b044b14ba790, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 2327c70bcfabbfd44adeaff73d42ef1b, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: bf5518e8927edce48bc8655d8f551632, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []
