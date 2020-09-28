@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08277049fb97a04da934f1e3d244a72, type: 3}
   m_Name: poeleeLegumes
   m_EditorClassIdentifier: 
-  Nom: "poel\xE9e de l\xE9gumes"
+  Nom: "Poel\xE9e de l\xE9gumes"
   TypeDeRecette: 1
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
-  - {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
-  - {fileID: 11400000, guid: cea496a5d16f3c641859c29a33f3f6ec, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
+  Description: Classique des Campagnes
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: cea496a5d16f3c641859c29a33f3f6ec, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

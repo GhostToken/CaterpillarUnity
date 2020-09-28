@@ -14,14 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: boeuf bourguignon
   TypeDeRecette: 1
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: 745738f55d6c94a46b9538496af47b43, type: 2}
-  - {fileID: 11400000, guid: 3d32c2527144e2a46b6bcf1bcabce789, type: 2}
-  - {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
-  - {fileID: 11400000, guid: 703fc52164ac62b43bb951453c05b758, type: 2}
-  - {fileID: 11400000, guid: 95c6d23134e60a6448e33e96c6565eeb, type: 2}
-  - {fileID: 11400000, guid: 522034eb62830f848b52c410bf36e1d3, type: 2}
-  IngredientsOptionnels:
-  - {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
-  - {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
+  Description: Grand classique de la cuisine francaise
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 745738f55d6c94a46b9538496af47b43, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 3d32c2527144e2a46b6bcf1bcabce789, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 703fc52164ac62b43bb951453c05b758, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 95c6d23134e60a6448e33e96c6565eeb, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 522034eb62830f848b52c410bf36e1d3, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
+  - Flags: 0
+    Ingredient: {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
+  IngredientsDeBase: []
+  IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

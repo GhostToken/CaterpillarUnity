@@ -40,6 +40,8 @@ public class AfterLevelPopup : MonoBehaviour
     public TextMeshProUGUI TotalScoreTemps;
     public TextMeshProUGUI TotalScoreArtefact;
 
+    public Image[] Polaroids;
+
     public float AnimationDuration = 0.25f;
 
     public RectTransform ExpandArea;
@@ -82,6 +84,7 @@ public class AfterLevelPopup : MonoBehaviour
         Star_Objective_Description_1.text = ThisLevel.StarOne.Description;
         Star_Objective_Description_2.text = ThisLevel.StarTwo.Description;
         Star_Objective_Description_3.text = ThisLevel.StarThree.Description;
+        UpdatePolaroids(ThisLevel);
     }
 
     virtual protected void SetupCompletion(int LevelId)
@@ -89,6 +92,22 @@ public class AfterLevelPopup : MonoBehaviour
         UpdateStars(Partie.Stars);
         UpdateResultats();
         StartCoroutine(UpdateScore(Partie.Score));
+    }
+
+    protected void UpdatePolaroids(Level ThisLevel)
+    {
+        for(int index = 0; index < Polaroids.Length; ++index)
+        {
+            if(index < ThisLevel.RecetteAFaire.Count)
+            {
+                Polaroids[index].sprite = ThisLevel.RecetteAFaire[index].Polaroid;
+            }
+            else
+            {
+
+            }
+            Recette recette = ThisLevel.RecetteAFaire[index];
+        }
     }
 
     protected void UpdateStars(int Stars)

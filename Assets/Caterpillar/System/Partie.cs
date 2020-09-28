@@ -13,9 +13,11 @@ public class Partie
     public static bool JustTerminated = false;
 
     public static float TempsRestant;
-    public static List<Ingredient> Repas = new List<Ingredient>();
+    public static List<Ingredient> Estomac = new List<Ingredient>();
+
     public static List<Recette> RecetteValidées = new List<Recette>();
     public static List<Recette> RecetteComplètes = new List<Recette>();
+
     public static List<Ingredient> ToutLeRepas = new List<Ingredient>();
 
     #endregion
@@ -27,7 +29,7 @@ public class Partie
         Score = 0;
         Stars = 0;
         TempsRestant = (float)Level.CurrentLevel.Duration.TotalSeconds;
-        Repas = new List<Ingredient>();
+        Estomac = new List<Ingredient>();
         ToutLeRepas = new List<Ingredient>();
         RecetteValidées = new List<Recette>();
         RecetteComplètes = new List<Recette>();
@@ -35,7 +37,7 @@ public class Partie
 
     public static void Mange(Ingredient Ingredient)
     {
-        Repas.Add(Ingredient);
+        Estomac.Add(Ingredient);
         ToutLeRepas.Add(Ingredient);
         Score += 50;
 
@@ -105,32 +107,27 @@ public class Partie
         foreach (Recette recetteAFaire in Level.CurrentLevel.RecetteAFaire)
         {
             bool recetteValidée = true;
-            foreach (Ingredient ingredientAManger in recetteAFaire.IngredientsDeBase)
+
+            foreach (Composants composant in recetteAFaire.Ingredients)
             {
-                if(!Repas.Contains(ingredientAManger))
+                if(composant.Flags.HasFlag(EIngredientFlags.Necessaire) == true)
                 {
-                    recetteValidée = false;
-                    break;
-                }
-            }
-            foreach (Ingredient ingredientAManger in recetteAFaire.IngredientsCachés)
-            {
-                if (!Repas.Contains(ingredientAManger))
-                {
-                    recetteValidée = false;
-                    break;
+                    if (!Estomac.Contains(composant.Ingredient))
+                    {
+                        recetteValidée = false;
+                        break;
+                    }
                 }
             }
 
             if (recetteValidée)
             {
-                foreach (Ingredient ingredientMangé in recetteAFaire.IngredientsDeBase)
+                foreach (Composants composant in recetteAFaire.Ingredients)
                 {
-                    Repas.Remove(ingredientMangé);
-                }
-                foreach (Ingredient ingredientMangé in recetteAFaire.IngredientsCachés)
-                {
-                    Repas.Remove(ingredientMangé);
+                    if (composant.Flags.HasFlag(EIngredientFlags.Necessaire) == true)
+                    {
+                        Estomac.Remove(composant.Ingredient);
+                    }
                 }
 
                 RecetteValidées.Add(recetteAFaire);
@@ -146,20 +143,27 @@ public class Partie
         foreach (Recette recetteIncomplete in RecetteValidées)
         {
             bool recetteComplete = true;
-            foreach (Ingredient ingredientAManger in recetteIncomplete.IngredientsOptionnels)
+
+            foreach (Composants composant in recetteIncomplete.Ingredients)
             {
-                if (!Repas.Contains(ingredientAManger))
+                if (composant.Flags.HasFlag(EIngredientFlags.Necessaire) == false)
                 {
-                    recetteComplete = false;
-                    break;
+                    if (!Estomac.Contains(composant.Ingredient))
+                    {
+                        recetteComplete = false;
+                        break;
+                    }
                 }
             }
 
             if(recetteComplete)
             {
-                foreach(Ingredient ingredientMangé in recetteIncomplete.IngredientsOptionnels)
+                foreach (Composants composant in recetteIncomplete.Ingredients)
                 {
-                    Repas.Remove(ingredientMangé);
+                    if (composant.Flags.HasFlag(EIngredientFlags.Necessaire) == false)
+                    {
+                        Estomac.Remove(composant.Ingredient);
+                    }
                 }
 
                 RecetteComplètes.Add(recetteIncomplete);
@@ -175,7 +179,7 @@ public class Partie
     {
         int TotalRecetteValidées = RecetteComplètes.Count + RecetteValidées.Count;
         int TotalRecetteUniqueValidées = CompteRecettesUniques();
-        bool IngredientRestants = Repas.Count > 0;
+        bool IngredientRestants = Estomac.Count > 0;
 
         switch (Stars)
         {
@@ -185,7 +189,7 @@ public class Partie
                 }
             case 0:
                 {
-                    if( Level.CurrentLevel.StarOne.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
+                    if( Level.CurrentLevel.StarOne.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants, Score))
                     {
                         Stars++;
                         Score += 500;
@@ -194,7 +198,7 @@ public class Partie
                 }
             case 1:
                 {
-                    if (Level.CurrentLevel.StarTwo.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
+                    if (Level.CurrentLevel.StarTwo.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants, Score))
                     {
                         Stars++;
                         Score += 500;
@@ -203,7 +207,7 @@ public class Partie
                 }
             case 2:
                 {
-                    if (Level.CurrentLevel.StarThree.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants))
+                    if (Level.CurrentLevel.StarThree.EstReussie(TotalRecetteValidées, TotalRecetteUniqueValidées, IngredientRestants, Score))
                     {
                         Stars++;
                         Score += 500;

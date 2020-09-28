@@ -37,20 +37,42 @@ public class RecettePanel : MonoBehaviour
         BackGround.color = RecetteTypeSetttings.Find(T => T.Type == Recette.TypeDeRecette).Color;
         NomRecette.text = Recette.Nom;
 
-        CurrentWidth = BaseWidth + IngredientWidth * (Recette.IngredientsDeBase.Count + Recette.IngredientsOptionnels.Count);
+        CurrentWidth = BaseWidth + IngredientWidth * (Recette.Ingredients.Count);
         GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CurrentWidth);
 
-        foreach (Ingredient ingredient in Recette.IngredientsDeBase)
+        foreach (Composants composant in Recette.Ingredients)
         {
-            AddIngredient(ingredient);
+            if (composant.Flags.HasFlag(EIngredientFlags.Necessaire) == true)
+            {
+                if (composant.Flags.HasFlag(EIngredientFlags.Caché) == false)
+                {
+                    AddIngredient(composant.Ingredient);
+                }
+            }
         }
-        foreach (Ingredient ingredient in Recette.IngredientsOptionnels)
+
+        foreach (Composants composant in Recette.Ingredients)
         {
-            AddIngredient(ingredient);
+            if (composant.Flags.HasFlag(EIngredientFlags.Necessaire) == false)
+            {
+                if (composant.Flags.HasFlag(EIngredientFlags.Caché) == false)
+                {
+                    AddIngredient(composant.Ingredient);
+                }
+            }
         }
+
+        // Later : ajouter ingredients cachés
+        //foreach (Composants composant in Recette.Ingredients)
+        //{
+        //    if (composant.Flags.HasFlag(EIngredientFlags.Caché) == true)
+        //    {
+        //        AddIngredient(composant.Ingredient);
+        //    }
+        //}
     }
 
-    public void AddIngredient(Ingredient ingredient)
+    public void AddIngredient(Ingredient ingredient, bool caché = false)
     {
         GameObject panelObject = GameObject.Instantiate(PrefabIngredient);
         IngredientPanel panel = panelObject.GetComponent<IngredientPanel>();

@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: "tarte \xE0 la tomate"
   TypeDeRecette: 1
-  IngredientsDeBase:
-  - {fileID: 11400000, guid: dcaae5255d48a6e4d9ad845b4b83d010, type: 2}
-  - {fileID: 11400000, guid: 34c269671043c804a9070f9419eca57b, type: 2}
-  - {fileID: 11400000, guid: 96158ce4c6a76eb48b2a436ad15b8b0a, type: 2}
-  - {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
-  - {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
+  Description: Cousine de la pizza italienne
+  Polaroid: {fileID: 0}
+  Ingredients:
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: dcaae5255d48a6e4d9ad845b4b83d010, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 34c269671043c804a9070f9419eca57b, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 96158ce4c6a76eb48b2a436ad15b8b0a, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
+  - Flags: 1
+    Ingredient: {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
+  IngredientsDeBase: []
   IngredientsOptionnels: []
   "IngredientsCach\xE9s": []

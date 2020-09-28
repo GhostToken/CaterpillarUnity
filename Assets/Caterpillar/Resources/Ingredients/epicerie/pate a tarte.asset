@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: pate a tarte
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: pate a tarte
   Type: 7
   Icon: {fileID: 21300000, guid: bb3c447bd5770ae4b85536365a7d5145, type: 3}

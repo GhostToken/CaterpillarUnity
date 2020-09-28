@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: pain
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: pain
   Type: 7
   Icon: {fileID: 21300000, guid: d5f338f153a9b064286ef5ee8e67cb5c, type: 3}

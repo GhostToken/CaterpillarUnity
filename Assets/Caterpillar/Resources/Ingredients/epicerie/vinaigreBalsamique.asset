@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee9639e6ee2764ba1daeb92f5ee84d, type: 3}
   m_Name: vinaigreBalsamique
   m_EditorClassIdentifier: 
-  Nom: 
+  Nom: vinaigre balsamique
   Type: 0
   Icon: {fileID: 0}
