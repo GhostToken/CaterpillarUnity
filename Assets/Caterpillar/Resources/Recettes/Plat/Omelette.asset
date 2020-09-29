@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: " omelette compl\xEAte"
   TypeDeRecette: 1
-  Description: 
-  Polaroid: {fileID: 2800000, guid: d1c765cd450819f49aa4c3f5c1349da1, type: 3}
+  Description: "rapidit\xE9 simplicit\xE9 deliciosit\xE9"
+  Polaroid: {fileID: 21300000, guid: 6ffcbb6a5123a9f45b212ae11efb2652, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
@@ -29,6 +29,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 7d1faacfe14edf4498fdc2a11b056c54, type: 2}
   - Flags: 2
     Ingredient: {fileID: 11400000, guid: 95c6d23134e60a6448e33e96c6565eeb, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []

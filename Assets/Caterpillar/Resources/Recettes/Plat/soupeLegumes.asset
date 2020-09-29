@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: "soupe de l\xE9gumes"
   TypeDeRecette: 1
-  Description: 
+  Description: pour affronter les soirs d'hiver
   Polaroid: {fileID: 0}
   Ingredients:
   - Flags: 1
@@ -25,6 +25,5 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: cea496a5d16f3c641859c29a33f3f6ec, type: 2}
   - Flags: 0
     Ingredient: {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []
+  - Flags: 2
+    Ingredient: {fileID: 11400000, guid: 14c8113f10c0dfd489ab7e2b43e6dbba, type: 2}

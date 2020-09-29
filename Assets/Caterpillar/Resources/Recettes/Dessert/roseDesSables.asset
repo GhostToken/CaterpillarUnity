@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: roses des sables
   TypeDeRecette: 2
-  Description: "Dessert tr\xE8s sucr\xE9"
-  Polaroid: {fileID: 0}
+  Description: "a tendance \xE0 fondre dans la main mais d\xE9licieux"
+  Polaroid: {fileID: 21300000, guid: b4e153bb29c6ffa42b75bb758a93a40f, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: de7638e6124f05144b36b044b14ba790, type: 2}
@@ -25,6 +25,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 86642a4dc80578347907ceaf5ea03c07, type: 2}
   - Flags: 0
     Ingredient: {fileID: 11400000, guid: bf5518e8927edce48bc8655d8f551632, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []

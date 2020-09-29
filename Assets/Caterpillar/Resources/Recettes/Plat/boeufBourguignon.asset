@@ -15,7 +15,7 @@ MonoBehaviour:
   Nom: boeuf bourguignon
   TypeDeRecette: 1
   Description: Grand classique de la cuisine francaise
-  Polaroid: {fileID: 0}
+  Polaroid: {fileID: 21300000, guid: 09f2f6b7c9044df4e9b8bd5a0dd1fdb7, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 745738f55d6c94a46b9538496af47b43, type: 2}
@@ -33,6 +33,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
   - Flags: 0
     Ingredient: {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []
