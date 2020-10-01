@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: gateau au chocolat
   TypeDeRecette: 2
-  Description: Dessert basique
-  Polaroid: {fileID: 0}
+  Description: classique indetronable
+  Polaroid: {fileID: 21300000, guid: 89512e6400e70414caec39fc57484459, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 2f85844f3faa6874b8d7336a3b957b1d, type: 2}
@@ -27,6 +27,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 2327c70bcfabbfd44adeaff73d42ef1b, type: 2}
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []
