@@ -15,7 +15,7 @@ MonoBehaviour:
   Nom: salade de fruit
   TypeDeRecette: 2
   Description: le plus simple des desserts
-  Polaroid: {fileID: 2800000, guid: 33ff099b95d2c6c468f1cfca44f21d12, type: 3}
+  Polaroid: {fileID: 21300000, guid: 996a9366ddecd6d4695e7b90c073c0b9, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 304c1e5d0fc65a64991db8e81db58e34, type: 2}
@@ -29,6 +29,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: 2b4773bd9e7c7594baa5ebc259c52eb5, type: 2}
   - Flags: 2
     Ingredient: {fileID: 11400000, guid: 5fd0fb14e9a68b04bae133a569cb223f, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []

@@ -242,9 +242,9 @@ public class SaveGame : MonoBehaviour
 
     private void Load_LocalStorage()
     {
-        MaxLevelReached = TryGetPlayerPrefs(MaxLevelReachedIdentifier, MaxLevelReached);
-        AllTimesTotalScore = TryGetPlayerPrefs(AllTimesTotalScoreIdentifier, AllTimesTotalScore);
-        BiggestScore = TryGetPlayerPrefs(BiggestScoreIdentifier, BiggestScore);
+        MaxLevelReached = PlayerPrefsHelpers.TryGet(MaxLevelReachedIdentifier, MaxLevelReached);
+        AllTimesTotalScore = PlayerPrefsHelpers.TryGet(AllTimesTotalScoreIdentifier, AllTimesTotalScore);
+        BiggestScore = PlayerPrefsHelpers.TryGet(BiggestScoreIdentifier, BiggestScore);
 
         for (int Level = 1; Level <= MaxLevelReached; ++Level)
         {
@@ -348,37 +348,6 @@ public class SaveGame : MonoBehaviour
             LevelRecord Record = GetRecord(LevelId);
             Record.OnGetLocalUserData(Result);
         }
-    }
-
-    #endregion
-
-    #region PlayerPrefs Helpers
-
-    int TryGetPlayerPrefs(string Identifier, int PreviousValue)
-    {
-        if (PlayerPrefs.HasKey(Identifier))
-        {
-            return PlayerPrefs.GetInt(Identifier);
-        }
-        return PreviousValue;
-    }
-
-    float TryGetPlayerPrefs(string Identifier, float PreviousValue)
-    {
-        if (PlayerPrefs.HasKey(Identifier))
-        {
-            return PlayerPrefs.GetFloat(Identifier);
-        }
-        return PreviousValue;
-    }
-
-    string TryGetPlayerPrefs(string Identifier, string PreviousValue)
-    {
-        if (PlayerPrefs.HasKey(Identifier))
-        {
-            return PlayerPrefs.GetString(Identifier);
-        }
-        return PreviousValue;
     }
 
     #endregion

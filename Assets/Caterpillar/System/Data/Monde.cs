@@ -9,7 +9,8 @@ public class Monde : ScriptableObject
 
     public string Nom;
     public string Description;
-
+    public Sprite Icon;
+    public int index = 0;
     public List<Level> AllLevels;
 
     #endregion
@@ -30,9 +31,14 @@ public class Monde : ScriptableObject
         return AllMondes;
     }
 
-    public static Monde GetLevel(string Monde)
+    public static Monde GetMonde(string Monde)
     {
         return GetAllMondes().Find(T => T.Nom == Monde);
+    }
+
+    public static Monde GetMonde(int MondeId)
+    {
+        return GetAllMondes().Find(T => T.index == MondeId);
     }
 
     #endregion

@@ -13,13 +13,22 @@ public partial class Account : MonoBehaviour
 
     #endregion
 
+
+    #region Events
+
     public UnityEvent LoginSuccess;
     public UnityEvent Loginfail;
+
+    #endregion
+
+
+    #region Properties
 
     private bool LoggedOnPlayfab = false;
     private LoginResult PlayfabLogins = null;
 
-    //public object SteamUser { get; private set; }
+    #endregion
+
 
     #region Unity Handlers
 
@@ -45,9 +54,11 @@ public partial class Account : MonoBehaviour
 
         GetLocalPlayerUserDatas();
         GetLocalPlayerStatistics();
+        GetLocalPlayerInventory();
     }
 
     #endregion
+
 
     #region Playfab Data Pull
 
@@ -83,6 +94,23 @@ public partial class Account : MonoBehaviour
     private void OnGetLocalUserData(GetUserDataResult Result)
     {
         SaveGame.OnGetLocalUserData(Result);
+    }
+
+    void GetLocalPlayerInventory()
+    {
+        PlayFabClientAPI.GetUserInventory( new GetUserInventoryRequest(),
+            OnGetLocalInventory,
+            (error) =>
+            {
+                Debug.Log("Got error retrieving user inventory :");
+                Debug.Log(error.GenerateErrorReport());
+            }
+        );
+    }
+
+    private void OnGetLocalInventory(GetUserInventoryResult Result)
+    {
+        Inventaire.OnGetLocalInventory(Result);
     }
 
     #endregion

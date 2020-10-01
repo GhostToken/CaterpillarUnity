@@ -8,7 +8,9 @@ public enum EEcran
 {
     Principal,
     Inventaire,
-    Carte
+    Moi,
+    Carte,
+    Porte
 }
 
 [Serializable]
@@ -123,19 +125,29 @@ public class Menu : MonoBehaviour
 
         switch (Current)
         {
-            case EEcran.Carte:
+            case EEcran.Principal:
                 {
-                    StartTransitionTo(EEcran.Principal, false);
+                    StartTransitionTo(EEcran.Moi, false);
                     break;
                 }
-            case EEcran.Principal:
+            case EEcran.Moi:
+                {
+                    StartTransitionTo(EEcran.Carte, false);
+                    break;
+                }
+            case EEcran.Carte:
                 {
                     StartTransitionTo(EEcran.Inventaire, false);
                     break;
                 }
             case EEcran.Inventaire:
                 {
-                    StartTransitionTo(EEcran.Carte, false);
+                    StartTransitionTo(EEcran.Porte, false);
+                    break;
+                }
+            case EEcran.Porte:
+                {
+                    StartTransitionTo(EEcran.Principal, false);
                     break;
                 }
         }
@@ -150,19 +162,29 @@ public class Menu : MonoBehaviour
 
         switch (Current)
         {
-            case EEcran.Carte:
+            case EEcran.Principal:
+                {
+                    StartTransitionTo(EEcran.Porte, true);
+                    break;
+                }
+            case EEcran.Porte:
                 {
                     StartTransitionTo(EEcran.Inventaire, true);
                     break;
                 }
             case EEcran.Inventaire:
                 {
-                    StartTransitionTo(EEcran.Principal, true);
+                    StartTransitionTo(EEcran.Carte, true);
                     break;
                 }
-            case EEcran.Principal:
+            case EEcran.Carte:
                 {
-                    StartTransitionTo(EEcran.Carte, true);
+                    StartTransitionTo(EEcran.Moi, true);
+                    break;
+                }
+            case EEcran.Moi:
+                {
+                    StartTransitionTo(EEcran.Principal, true);
                     break;
                 }
         }
@@ -184,9 +206,12 @@ public class Menu : MonoBehaviour
 
         CloseAllPopups();
 
-        if (!Config.ShowFooter)
+        if(Footer != null)
         {
-            Footer.SetActive(false);
+            if (!Config.ShowFooter)
+            {
+                Footer.SetActive(false);
+            }
         }
 
         if (!Config.ShowHeader)
@@ -237,9 +262,12 @@ public class Menu : MonoBehaviour
         EndPosition.z = (ToLeft ? Config.ToLeftZ : Config.ToRightZ);
         Camera.transform.position = EndPosition;
 
-        if (Config.ShowFooter)
+        if (Footer != null)
         {
-            Footer.SetActive(true);
+            if (Config.ShowFooter)
+            {
+                Footer.SetActive(true);
+            }
         }
 
         if (Config.ShowHeader)

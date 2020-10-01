@@ -15,7 +15,7 @@ MonoBehaviour:
   Nom: "velout\xE9 de poireaux"
   TypeDeRecette: 1
   Description: 
-  Polaroid: {fileID: 0}
+  Polaroid: {fileID: 21300000, guid: 58859cd37d022694aa9764b45f112fa5, type: 3}
   Ingredients:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: dbb10f596a43b904ca27fcfae9465915, type: 2}
@@ -23,6 +23,3 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: e9c9d19f9d7a9cb4fa17fa1ff62d2ca0, type: 2}
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 6d8c5f2b7c3d8fb4ba64083e9f038b27, type: 2}
-  IngredientsDeBase: []
-  IngredientsOptionnels: []
-  "IngredientsCach\xE9s": []
