@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelPopup : MonoBehaviour
+public class LevelPopup : Popup
 {
     #region Property
 

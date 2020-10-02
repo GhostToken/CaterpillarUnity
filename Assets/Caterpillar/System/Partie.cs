@@ -33,6 +33,8 @@ public class Partie
         ToutLeRepas = new List<Ingredient>();
         RecetteValidées = new List<Recette>();
         RecetteComplètes = new List<Recette>();
+
+
     }
 
     public static void Mange(Ingredient Ingredient)

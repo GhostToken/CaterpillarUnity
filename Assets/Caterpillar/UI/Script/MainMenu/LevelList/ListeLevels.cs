@@ -24,10 +24,8 @@ public class ListeLevels : MonoBehaviour
 
     #region Unity Methods
 
-    private IEnumerator Start()
+    private void OnEnable()
     {
-        yield return null;
-        yield return null;
         Open(0);
     }
 

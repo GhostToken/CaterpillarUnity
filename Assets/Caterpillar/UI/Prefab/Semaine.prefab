@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796728993502226
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796729329607498}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796729058331204
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796729058331205
 RectTransform:
   m_ObjectHideFlags: 0
@@ -431,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729280230707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -565,6 +566,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796729488554666}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796729329607496
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729329607497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -717,7 +719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729488554665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -850,7 +852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796729489719506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -890,7 +892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729518379683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1024,6 +1026,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796729805115612}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796729689675124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729741037838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1253,7 +1256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729742616259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1387,6 +1390,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796730548563676}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796729805115610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796729805115611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1687,7 +1691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796730241521789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1723,7 +1727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796730300274621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1761,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796730548563675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1896,7 +1900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796730625790874
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796730698649779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2167,6 +2171,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796729741037839}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796730710591252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2437796730710591253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2320,6 +2325,7 @@ MonoBehaviour:
   Trois_Etoile: {fileID: 21300000, guid: 1bdf3ff506e654d4a8426dd76d45f8f7, type: 3}
   Date: {fileID: 2437796730625790875}
   IsWeekEnd: 0
+  AnimationDuration: 0.15
 --- !u!1 &2437796730732909328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796730813817180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2446,7 +2452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2437796730985556818
 RectTransform:
   m_ObjectHideFlags: 0

@@ -43,6 +43,14 @@ public class Inventaire : MonoBehaviour
         }
     }
 
+    public static int GameCost
+    {
+        get
+        {
+            return 50;
+        }
+    }
+
     #endregion
 
     #region Events
@@ -84,6 +92,41 @@ public class Inventaire : MonoBehaviour
             return VirtualCurrency[identifier];
         }
         return 0;
+    }
+
+    public static bool CanStartGame()
+    {
+        return (GetCurrency(ECurrency.Energy) > GameCost);
+    }
+
+    public static void ConsumeGameCost()
+    {
+        ConsumeCurrency(ECurrency.Energy, GameCost);
+    }
+
+    #endregion
+
+    #region Static Private Methods
+
+    private static void ConsumeCurrency(ECurrency _Currency, int _Amount)
+    {
+        SubtractUserVirtualCurrencyRequest request = new SubtractUserVirtualCurrencyRequest()
+        {
+            Amount = _Amount,
+            VirtualCurrency = _Currency.ToIdentifier()
+        };
+        PlayFabClientAPI.SubtractUserVirtualCurrency(request, OnTransactionResult,
+        (error) =>
+        {
+            Debug.Log("Got error substractin user currency :");
+            Debug.Log(error.GenerateErrorReport());
+        });
+    }
+
+    private static void OnTransactionResult(ModifyUserVirtualCurrencyResult Result)
+    {
+        VirtualCurrency[Result.VirtualCurrency] = Result.Balance;
+        OnInventoryUpdate();
     }
 
     #endregion

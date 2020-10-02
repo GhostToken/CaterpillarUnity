@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AfterLevelPopup : MonoBehaviour
+public class AfterLevelPopup : Popup
 {
     #region Property
 
@@ -58,6 +58,7 @@ public class AfterLevelPopup : MonoBehaviour
     #endregion
 
     #region Methods
+
     public void Open(int LevelId)
     {
         CurrentLevelId = LevelId;

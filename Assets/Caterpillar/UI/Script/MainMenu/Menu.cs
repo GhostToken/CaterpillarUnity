@@ -81,6 +81,26 @@ public class Menu : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // Make sure user is on Android platform
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            // Check if Back was pressed this frame
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if(HasPopupOpen() == true )
+                {
+                    Menu.Instance.CloseAllPopups();
+                }
+                else
+                {
+                    TransitionToStart();
+                }
+            }
+        }
+    }
+
     private void OnEnable()
     {
         EasyTouch.On_SwipeEnd += OnSwipeEnd;
@@ -194,6 +214,37 @@ public class Menu : MonoBehaviour
 
     #region Method
 
+    private void TransitionToStart()
+    {
+        switch (Current)
+        {
+            case EEcran.Principal:
+                {
+                    break;
+                }
+            case EEcran.Moi:
+                {
+                    StartTransitionTo(EEcran.Principal, true);
+                    break;
+                }
+            case EEcran.Carte:
+                {
+                    StartTransitionTo(EEcran.Principal, true);
+                    break;
+                }
+            case EEcran.Inventaire:
+                {
+                    StartTransitionTo(EEcran.Principal, false);
+                    break;
+                }
+            case EEcran.Porte:
+                {
+                    StartTransitionTo(EEcran.Principal, false);
+                    break;
+                }
+        }
+    }
+
     private void StartTransitionTo(EEcran NextScreen, bool ToLeft)
     {
         if(MoveInProgress == true)
@@ -287,10 +338,19 @@ public class Menu : MonoBehaviour
 
     #region Events
 
-    public void CloseAllPopups()
+    public bool CloseAllPopups()
     {
-        LevelPopup.gameObject.SetActive(false);
-        AfterLevelPopup.gameObject.SetActive(false);
+        if(LevelPopup.gameObject.activeSelf)
+        {
+            LevelPopup.gameObject.SetActive(false);
+            return true;
+        }
+        if (AfterLevelPopup.gameObject.activeSelf)
+        {
+            AfterLevelPopup.gameObject.SetActive(false);
+            return true;
+        }
+        return false;
     }
 
     public void OpenNextLevel()

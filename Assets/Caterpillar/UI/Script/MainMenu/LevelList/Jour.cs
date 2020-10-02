@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
 {
@@ -20,7 +21,21 @@ namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
 
         private int LevelOfMonth = -1;
         private Level Level = null;
-        private Button Button = null;
+        private Button m_Button = null;
+
+        public float AnimationDuration = 0.15f;
+
+        private Button Button
+        {
+            get
+            {
+                if(m_Button == null)
+                {
+                    m_Button = GetComponent<Button>();
+                }
+                return m_Button;
+            }
+        }
 
         #endregion
 
@@ -47,8 +62,6 @@ namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
 
         private void Start()
         {
-            Button = GetComponent<Button>();
-            Cache();
         }
 
         #endregion
@@ -75,6 +88,11 @@ namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
             Button.enabled = true;
             if (EstDebloqué(Level.Id) == true )
             {
+                Etoile.transform.localScale = Vector3.zero;
+                Sequence Sequence = DOTween.Sequence();
+                Sequence.Append(Etoile.transform.DOScale(1.0f, AnimationDuration));
+                Sequence.Append(Etoile.transform.DOPunchScale(Vector3.one * 0.25f, AnimationDuration / 2.0f));
+                Sequence.PrependInterval(AnimationDuration * _LevelOfMonth);
                 Etoile.gameObject.SetActive(true);
                 Date.gameObject.SetActive(false);
                 switch (SaveGame.GetStars(Level.Id))
