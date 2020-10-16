@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8170288631832950672}
   - component: {fileID: 2615262447763648150}
   m_Layer: 9
-  m_Name: menthe
+  m_Name: menthe en pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

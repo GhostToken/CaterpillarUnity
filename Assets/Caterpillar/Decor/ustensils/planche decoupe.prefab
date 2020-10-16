@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6437642822889357973}
   - component: {fileID: 7242428415804538102}
   - component: {fileID: 3778785690405889475}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: planche decoupe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

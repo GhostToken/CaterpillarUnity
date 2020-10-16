@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2747874545950070148}
   - component: {fileID: 8965984649875564960}
   - component: {fileID: 313802113316010038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: opercule yahourt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

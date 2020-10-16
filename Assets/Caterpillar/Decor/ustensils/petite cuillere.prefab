@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8447013716157276749}
   - component: {fileID: 5401121211406907698}
   - component: {fileID: 5804329897556215037}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: petite cuillere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

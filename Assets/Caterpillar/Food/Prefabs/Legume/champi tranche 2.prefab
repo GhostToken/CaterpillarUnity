@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2660485654256929242}
   - component: {fileID: 890513771006986265}
   - component: {fileID: -2128165656041934253}
-  m_Layer: 9
+  - component: {fileID: 2362501734862758850}
+  m_Layer: 0
   m_Name: champi tranche 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4404945957217045218}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0.6, y: 17.1, z: -2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +53,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5905042819730651015, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+  - {fileID: -7684791843880630106, guid: d2afca023b827e5439152140f4cd89a0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +82,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4404945957217045218}
-  m_Mesh: {fileID: 7723742262843661178, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+  m_Mesh: {fileID: -5544499059905818717, guid: d2afca023b827e5439152140f4cd89a0, type: 3}
 --- !u!114 &-2128165656041934253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
   DownScaleSpeed: 1.5
+--- !u!65 &2362501734862758850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404945957217045218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 1.4, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

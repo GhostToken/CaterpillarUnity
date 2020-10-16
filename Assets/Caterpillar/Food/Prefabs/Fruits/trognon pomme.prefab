@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 506837051764762805}
   - component: {fileID: 8808684235633220998}
   - component: {fileID: 4622066641272109612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: trognon pomme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
