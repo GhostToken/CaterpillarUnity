@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Nom: fraise
   Type: 1
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 90494078b40b267438a8c3239f16ada0, type: 3}
