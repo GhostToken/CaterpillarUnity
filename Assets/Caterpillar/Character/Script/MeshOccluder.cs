@@ -98,6 +98,7 @@ public class MeshOccluder : MonoBehaviour
     public Material TransparentMaterialTemplate;
     static private List<MeshQuiGene> TouslesMeshGenants = new List<MeshQuiGene>();
     static float LastUpdateTime = 0.0f;
+    public LayerMask LayerMask;
 
     #endregion
 
@@ -163,7 +164,7 @@ public class MeshOccluder : MonoBehaviour
             Vector3 Direction = -Camera.main.transform.forward;
             Vector3 Start = transform.position + Direction;
             Ray ray = new Ray(Start, Direction);
-            RaycastHit[] hits = Physics.SphereCastAll(ray, 0.25f, 100.0f, (LayerMask.NameToLayer("Default") | LayerMask.NameToLayer("Ingredient")));
+            RaycastHit[] hits = Physics.SphereCastAll(ray, 0.25f, 100.0f, LayerMask);
 
             Debug.DrawLine(Start, Start + Direction * 100.0f, Color.green, 0.15f, false);
 

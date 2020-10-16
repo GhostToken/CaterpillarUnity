@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &859946333701628371
 Transform:
@@ -171,7 +171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5474396332564881789}
-  - component: {fileID: 2981580826506048038}
   m_Layer: 12
   m_Name: pile assiette
   m_TagString: Untagged
@@ -196,23 +195,10 @@ Transform:
   - {fileID: 8264108843876713462}
   - {fileID: 1071332638608720418}
   - {fileID: 859946333701628371}
+  - {fileID: 2507564706799111522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2981580826506048038
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981580826506048037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.4
-  m_Height: 7
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4612162002477465555
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +215,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8264108843876713462
 Transform:
@@ -310,7 +296,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1071332638608720418
 Transform:
@@ -391,7 +377,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8097920901851884091
 Transform:
@@ -456,6 +442,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5672429922642553406}
   m_Mesh: {fileID: 6621995940912765755, guid: 395affbe90947b0428543d0783a68e45, type: 3}
+--- !u!1 &6324791669293779837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2507564706799111522}
+  - component: {fileID: 6761507974842018792}
+  m_Layer: 12
+  m_Name: assiette dessert collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2507564706799111522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324791669293779837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.043, z: 0}
+  m_LocalScale: {x: 1, y: 4.783698, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 5474396332564881789}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &6761507974842018792
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324791669293779837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6621995940912765755, guid: 395affbe90947b0428543d0783a68e45, type: 3}
 --- !u!1 &6843540179500711038
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +503,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5018554108465725935
 Transform:
