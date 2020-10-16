@@ -9,7 +9,7 @@ public class Monde : ScriptableObject
 
     public string Nom;
     public string Description;
-    public Sprite Icon;
+    public Sprite Baniere;
     public int index = 0;
     public List<Level> AllLevels;
 

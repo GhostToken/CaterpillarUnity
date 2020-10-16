@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.UI;
 
 public enum EDay
 {
@@ -18,6 +18,10 @@ public class ListeLevels : MonoBehaviour
 {
     #region Properties
 
+    public TextMeshProUGUI Mois;
+    public Image Baniere;
+    public TextMeshProUGUI Description;
+
     public Semaine[] Semaines;
 
     #endregion
@@ -26,6 +30,7 @@ public class ListeLevels : MonoBehaviour
 
     private void OnEnable()
     {
+        // TO DO : Determine last reached world
         Open(0);
     }
 
@@ -36,6 +41,10 @@ public class ListeLevels : MonoBehaviour
     public void Open(int MondeId)
     {
         Monde.CurrentMonde = Monde.GetMonde(MondeId);
+
+        Mois.text = Monde.CurrentMonde.Nom;
+        Baniere.sprite = Monde.CurrentMonde.Baniere;
+        Description.text = Monde.CurrentMonde.Description;
 
         int NumSemaine = (Monde.CurrentMonde.AllLevels.Count / 6) + 1;
         int Offset = Monde.CurrentMonde.AllLevels.Count % 6;

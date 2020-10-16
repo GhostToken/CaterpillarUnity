@@ -46,9 +46,9 @@ namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
             return LevelId <= SaveGame.MaxLevelReached;
         }
 
-        public Level GetLevel(int Day)
+        public Level GetLevel(int _LevelOfMonth)
         {
-            return Monde.CurrentMonde.AllLevels[Day];
+            return Monde.CurrentMonde.AllLevels[_LevelOfMonth];
         }
 
         public string GetDate(int Day)

@@ -77,7 +77,6 @@ public class SaveGame : MonoBehaviour
 
         public void Record(int NewStars, int NewScore)
         {
-            Debug.Log("Record Level " + Id + " Starts : " + Stars + " Score : " + Score);
             if (NewStars > Stars)
             {
                 Stars = NewStars;
@@ -92,7 +91,6 @@ public class SaveGame : MonoBehaviour
         {
             PlayerPrefs.SetInt(StarsIdentifier, Stars);
             PlayerPrefs.SetInt(ScoreIdentifier, Score);
-            Debug.Log("Save Level " + Id + " Starts : " + Stars + " Score : " + Score);
         }
 
         public void Load_LocalStorage()
@@ -105,7 +103,6 @@ public class SaveGame : MonoBehaviour
             {
                 Score = PlayerPrefs.GetInt(ScoreIdentifier);
             }
-            Debug.Log("Load Level " + Id + " Starts : " + Stars + " Score : " + Score);
         }
 
         #endregion

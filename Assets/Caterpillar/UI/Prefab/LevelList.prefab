@@ -2005,6 +2005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09aa3967710010e468bb047178dbfc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mois: {fileID: 6711467409268048347}
+  Baniere: {fileID: 6711467408860649143}
+  Description: {fileID: 6711467409475919670}
   Semaines:
   - {fileID: 6711467408159208762}
   - {fileID: 2844436187847529718}

@@ -24,9 +24,7 @@ public class TeteDeCaterpillar : MonoBehaviour
         while(true)
         {
             float attente = UnityEngine.Random.Range(0.15f, DelaisEntreTete);
-            Debug.Log("Nouvelle attente : " + attente);
             yield return new WaitForSecondsRealtime(attente);
-            Debug.Log("attente finie ! ");
 
             GameObject nouvelleTete = TouteLesTetes[UnityEngine.Random.Range(0, TouteLesTetes.Count)];
             AppliqueTete(nouvelleTete);

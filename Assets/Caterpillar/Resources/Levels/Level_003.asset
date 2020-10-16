@@ -15,10 +15,12 @@ MonoBehaviour:
   Id: 3
   TypeDeNiveau: 0
   Scene: Level 3
-  RecetteAFaire: []
+  RecetteAFaire:
+  - {fileID: 11400000, guid: 0c4980a517b6d0449a9a233737ca3d52, type: 2}
+  - {fileID: 11400000, guid: 4474bb1cba9ab334fb3370bd26face26, type: 2}
   StarOne:
     Description: 1 recette
-    Conditions: 6
+    Conditions: 2
     NombreDeRecette: 1
     NombreDeRecetteUnique: 0
     ScoreRequis: 0
@@ -30,7 +32,7 @@ MonoBehaviour:
     ScoreRequis: 0
   StarThree:
     Description: 2 recettes sans grignotage
-    Conditions: 1
-    NombreDeRecette: 3
-    NombreDeRecetteUnique: 0
+    Conditions: 3
+    NombreDeRecette: 2
+    NombreDeRecetteUnique: 2
     ScoreRequis: 0

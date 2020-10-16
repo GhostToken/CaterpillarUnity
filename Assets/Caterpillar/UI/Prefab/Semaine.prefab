@@ -533,7 +533,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5356870995279580359}
+      - m_Target: {fileID: 1087431977846361933}
         m_TargetAssemblyTypeName: Assets.Caterpillar.UI.Script.MainMenu.LevelList.Jour,
           Assembly-CSharp
         m_MethodName: Selectionne
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5356870995279580359}
+      - m_Target: {fileID: 4503929876572971713}
         m_TargetAssemblyTypeName: Assets.Caterpillar.UI.Script.MainMenu.LevelList.Jour,
           Assembly-CSharp
         m_MethodName: Selectionne
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5356870995279580359}
+      - m_Target: {fileID: 4142120512562819337}
         m_TargetAssemblyTypeName: Assets.Caterpillar.UI.Script.MainMenu.LevelList.Jour,
           Assembly-CSharp
         m_MethodName: Selectionne
@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5356870995279580359}
+      - m_Target: {fileID: 1773720254974933597}
         m_TargetAssemblyTypeName: Assets.Caterpillar.UI.Script.MainMenu.LevelList.Jour,
           Assembly-CSharp
         m_MethodName: Selectionne
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5356870995279580359}
+      - m_Target: {fileID: 8782701936558119599}
         m_TargetAssemblyTypeName: Assets.Caterpillar.UI.Script.MainMenu.LevelList.Jour,
           Assembly-CSharp
         m_MethodName: Selectionne

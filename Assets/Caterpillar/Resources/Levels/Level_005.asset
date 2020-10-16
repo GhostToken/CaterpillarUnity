@@ -15,19 +15,24 @@ MonoBehaviour:
   Id: 5
   TypeDeNiveau: 0
   Scene: Level 5
-  RecetteAFaire: []
+  RecetteAFaire:
+  - {fileID: 11400000, guid: ccfbc96d01b8472469a2dc33600e6699, type: 2}
+  - {fileID: 11400000, guid: a1656486f4bc9d74dae8cb64da364949, type: 2}
   StarOne:
-    PasDeGrignotage: 0
-    NombreDeRecette: 0
+    Description: 1 recette
+    Conditions: 2
+    NombreDeRecette: 1
     NombreDeRecetteUnique: 0
-    Description: 
+    ScoreRequis: 0
   StarTwo:
-    PasDeGrignotage: 0
+    Description: 2 recettes uniques
+    Conditions: 4
     NombreDeRecette: 0
-    NombreDeRecetteUnique: 0
-    Description: 
+    NombreDeRecetteUnique: 2
+    ScoreRequis: 0
   StarThree:
-    PasDeGrignotage: 0
-    NombreDeRecette: 0
-    NombreDeRecetteUnique: 0
-    Description: 
+    Description: 3 recettes dont 2 unique
+    Conditions: 6
+    NombreDeRecette: 3
+    NombreDeRecetteUnique: 2
+    ScoreRequis: 0
