@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8880381406377637151}
   - component: {fileID: 2922276556493917455}
   - component: {fileID: 6305602086213737552}
-  - component: {fileID: 6813195447793115599}
+  - component: {fileID: 532623975224420677}
   m_Layer: 9
   m_Name: farine ouvert
   m_TagString: Untagged
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: fef1b6561dd935a4186cbf5582c0fc31, type: 2}
   DownScaleSpeed: 1.5
---- !u!65 &6813195447793115599
-BoxCollider:
+--- !u!64 &532623975224420677
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,6 +124,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8000001, y: 4.4, z: 2.6000001}
-  m_Center: {x: 0, y: -0.099999905, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5744313193034978582, guid: 66bf0c6c21c7ee642a71a462cd8b6000, type: 3}
