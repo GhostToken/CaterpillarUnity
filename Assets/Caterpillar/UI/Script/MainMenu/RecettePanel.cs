@@ -62,21 +62,20 @@ public class RecettePanel : MonoBehaviour
             }
         }
 
-        // Later : ajouter ingredients cachés
-        //foreach (Composants composant in Recette.Ingredients)
-        //{
-        //    if (composant.Flags.HasFlag(EIngredientFlags.Caché) == true)
-        //    {
-        //        AddIngredient(composant.Ingredient);
-        //    }
-        //}
+        foreach (Composants composant in Recette.Ingredients)
+        {
+            if (composant.Flags.HasFlag(EIngredientFlags.Caché) == true)
+            {
+                AddIngredient(composant.Ingredient, true);
+            }
+        }
     }
 
     public void AddIngredient(Ingredient ingredient, bool caché = false)
     {
         GameObject panelObject = GameObject.Instantiate(PrefabIngredient);
         IngredientPanel panel = panelObject.GetComponent<IngredientPanel>();
-        panel.SetIngredient(ingredient);
+        panel.SetIngredient(ingredient, caché);
         panel.rectTransform().SetParent(ListeIngredient, false);
         ListeIngredient.SetSizeWithCurrentAnchors( RectTransform.Axis.Horizontal, Mathf.Max(ListeIngredient.rect.width, CurrentWidth + ParentWidth));
     }
