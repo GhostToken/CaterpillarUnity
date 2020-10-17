@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5382953310370814023}
   - component: {fileID: -6672546707500882976}
   - component: {fileID: 3819330406488398284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boite patisseries
   m_TagString: Untagged
   m_Icon: {fileID: 0}

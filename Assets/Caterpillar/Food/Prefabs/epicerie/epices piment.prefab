@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3791386346298490147}
   - component: {fileID: 5746146075088627915}
   - component: {fileID: 2424495667524308643}
-  - component: {fileID: 2830704170728345849}
+  - component: {fileID: 7325401619883925270}
   - component: {fileID: 7104544487413495522}
-  - component: {fileID: 7635451782702803800}
   m_Layer: 9
   m_Name: epices piment
   m_TagString: Untagged
@@ -28,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6913045881827813181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.8, y: 18.92, z: -2.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +53,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2232011338072259280, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
+  - {fileID: 6848909363255244578, guid: d2afca023b827e5439152140f4cd89a0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,23 +82,21 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6913045881827813181}
-  m_Mesh: {fileID: -3377420250347483698, guid: 927f938fc3608a642adc0ac2948bc703, type: 3}
---- !u!54 &2830704170728345849
-Rigidbody:
+  m_Mesh: {fileID: 9205052798786403513, guid: d2afca023b827e5439152140f4cd89a0, type: 3}
+--- !u!64 &7325401619883925270
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6913045881827813181}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9205052798786403513, guid: d2afca023b827e5439152140f4cd89a0, type: 3}
 --- !u!114 &7104544487413495522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,16 +111,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: 5f4c32874e4d22a48a6273f2953626da, type: 2}
   DownScaleSpeed: 1.5
---- !u!65 &7635451782702803800
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6913045881827813181}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 3, z: 1.6}
-  m_Center: {x: 0, y: 0, z: 0}

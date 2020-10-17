@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 518733257985686286}
   - component: {fileID: 4926352815559665415}
   - component: {fileID: 7265786014966048013}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ustensil_pile_assiette_dessert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 3865514580201771462}
 --- !u!28 &-3297381194385256157
 Texture2D:

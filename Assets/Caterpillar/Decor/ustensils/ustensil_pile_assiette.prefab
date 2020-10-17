@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6316882421143580990}
   - component: {fileID: 6346090765073182736}
   - component: {fileID: 6915910787946351852}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ustensil_pile_assiette
   m_TagString: Untagged
   m_Icon: {fileID: 0}

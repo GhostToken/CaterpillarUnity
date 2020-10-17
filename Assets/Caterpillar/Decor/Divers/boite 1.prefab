@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5892187380955121805}
   - component: {fileID: 1686754179122818764}
   - component: {fileID: 4124138330403386133}
-  - component: {fileID: 101876316471402121}
+  - component: {fileID: 3665626641831130805}
   m_Layer: 0
   m_Name: boite 1
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8813227502907069124}
   m_Mesh: {fileID: -1811069651059106321, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
---- !u!65 &101876316471402121
-BoxCollider:
+--- !u!64 &3665626641831130805
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.4, y: 2.6000001, z: 3.4}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1811069651059106321, guid: 3d39b132457f52749a01cd2cd5450d04, type: 3}
