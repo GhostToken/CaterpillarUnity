@@ -8,6 +8,8 @@ public class IngredientPanel : MonoBehaviour
 {
     #region Properties
 
+    public Sprite IngredientMystere;
+    public Sprite IngredientOptionnel;
     public Image Icon;
     public TextMeshProUGUI NomIngredient;
 
@@ -15,10 +17,10 @@ public class IngredientPanel : MonoBehaviour
 
     #region Public Methods
 
-    public void SetIngredient( Ingredient Ingredient)
+    public void SetIngredient( Ingredient Ingredient, bool caché = false)
     {
-        NomIngredient.text = Ingredient.Nom;
-        Icon.sprite = Ingredient.Icon;
+        NomIngredient.text = (caché ? "?" : Ingredient.Nom);
+        Icon.sprite = (caché ? IngredientMystere : Ingredient.Icon);
     }
 
     #endregion

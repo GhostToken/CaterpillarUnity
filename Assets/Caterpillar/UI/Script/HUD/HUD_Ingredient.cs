@@ -7,6 +7,8 @@ public class HUD_Ingredient : MonoBehaviour
 {
     #region Properties
 
+    public Sprite IngredientMystere;
+    public Sprite IngredientOptionnel;
     public Image Icon;
     public Image Done;
     private Ingredient ThisIngredient;
@@ -24,10 +26,10 @@ public class HUD_Ingredient : MonoBehaviour
 
     #region Public Methods
 
-    public void SetIngredient(Ingredient Ingredient)
+    public void SetIngredient(Ingredient Ingredient, bool caché = false)
     {
         ThisIngredient = Ingredient;
-        Icon.sprite = Ingredient.Icon;
+        Icon.sprite = ( caché ? IngredientMystere : Ingredient.Icon);
         Done.enabled = false;
     }
 

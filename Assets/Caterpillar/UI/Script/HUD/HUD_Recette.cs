@@ -61,14 +61,14 @@ public class HUD_Recette : MonoBehaviour
             }
         }
 
-        // Later : ajouter ingredients cachés
-        //foreach (Composants composant in Recette.Ingredients)
-        //{
-        //    if (composant.Flags.HasFlag(EIngredientFlags.Caché) == true)
-        //    {
-        //        AddIngredient(composant.Ingredient);
-        //    }
-        //}
+        foreach (Composants composant in Recette.Ingredients)
+        {
+            if (composant.Flags.HasFlag(EIngredientFlags.Caché) == true)
+            {
+                AddIngredient(composant.Ingredient, true);
+            }
+        }
+
         return CurrentWidth;
     }
 
@@ -76,7 +76,7 @@ public class HUD_Recette : MonoBehaviour
     {
         GameObject ingredientObject = GameObject.Instantiate(PrefabIngredient);
         HUD_Ingredient hud = ingredientObject.GetComponent<HUD_Ingredient>();
-        hud.SetIngredient(ingredient);
+        hud.SetIngredient(ingredient, caché);
         RectTransform liste = GetComponent<RectTransform>();
         hud.rectTransform().SetParent(liste, false);
         liste.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Max(liste.rect.width, CurrentWidth + ParentWidth));
