@@ -20,6 +20,13 @@ static public class Options
             return "MenuAffiché";
         }
     }
+    private static string MoveMarkerIdentifier
+    {
+        get
+        {
+            return "MoveMarker";
+        }
+    }
 
     #endregion
 
@@ -54,6 +61,22 @@ static public class Options
         set
         {
             PlayerPrefs.SetInt(MenuAffichéIdentifier, (value ? 1 : 0));
+        }
+    }
+
+    static public bool MoveMarker
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey(MoveMarkerIdentifier) == false)
+            {
+                return true;
+            }
+            return (PlayerPrefs.GetInt(MoveMarkerIdentifier) == 1);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(MoveMarkerIdentifier, (value ? 1 : 0));
         }
     }
 

@@ -1896,6 +1896,8 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 10240
+  MoveMarker: {fileID: 5463123202335698412, guid: 75b2fe96672577b44ad77332bbb422e0,
+    type: 3}
 --- !u!114 &353174545912364733
 MonoBehaviour:
   m_ObjectHideFlags: 0

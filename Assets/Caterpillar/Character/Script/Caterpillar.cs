@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using HedgehogTeam.EasyTouch;
 using Pathfinding;
+using UnityEngine.Timeline;
 
 public class Caterpillar : MonoBehaviour
 {
@@ -11,6 +12,21 @@ public class Caterpillar : MonoBehaviour
 
     public LayerMask LayerMask;
     public IAstarAI AI;
+    public GameObject MoveMarker;
+
+    private GameObject MoveMarkerInstance;
+
+    private GameObject Marker
+    {
+        get
+        {
+            if(MoveMarkerInstance == null)
+            {
+                MoveMarkerInstance = GameObject.Instantiate(MoveMarker);
+            }
+            return MoveMarkerInstance;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +44,6 @@ public class Caterpillar : MonoBehaviour
         EasyTouch.On_SimpleTap -= OnTap;
     }
 
-    //Vector3 RayCastPoint;
     public void OnTap(Gesture gesture)
     {
         if( Partie.Paused == true)
@@ -44,23 +59,10 @@ public class Caterpillar : MonoBehaviour
             return;
         }
 
-        //RayCastPoint = hit.point;
+        Marker.transform.position = hit.point;
+
         AI.destination =  hit.point;
     }
-
-    // public void OnDrawGizmos() 
-    // {
-    //     if( Application.isPlaying && Application.isEditor)
-    //     {
-    //         Gizmos.color = Color.blue;
-    //         Gizmos.DrawWireSphere(RayCastPoint, 0.25f);
-    //         Gizmos.color = Color.green;
-    //         if( AI != null)
-    //         {
-    //             Gizmos.DrawWireSphere(AI.destination, 0.25f);
-    //         }
-    //     }
-    // }
 
     #endregion
 

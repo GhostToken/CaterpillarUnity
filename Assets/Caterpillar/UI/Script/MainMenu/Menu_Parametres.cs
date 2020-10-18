@@ -10,6 +10,7 @@ public class Menu_Parametres : MonoBehaviour
     public Toggle Notifications;
     public Toggle MeshOccluding;
     public Toggle MenuAffiché;
+    public Toggle MoveMarker;
 
     #endregion
 
@@ -21,6 +22,7 @@ public class Menu_Parametres : MonoBehaviour
         Notifications.isOn = Account.GetNotificationEnabled();
         MeshOccluding.isOn = Options.MeshOccluding;
         MenuAffiché.isOn = Options.MenuAffiché;
+        MoveMarker.isOn = Options.MoveMarker;
     }
 
     #endregion
@@ -40,6 +42,11 @@ public class Menu_Parametres : MonoBehaviour
     public void SetMenuAffiché(bool Active)
     {
         Options.MenuAffiché = Active;
+    }
+
+    public void SetMoveMarker(bool Active)
+    {
+        Options.MoveMarker = Active;
     }
 
     #endregion

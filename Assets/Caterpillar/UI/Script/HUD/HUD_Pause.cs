@@ -21,6 +21,7 @@ public class HUD_Pause : LevelPopup
 
     public void GoToMenu()
     {
+        Partie.SetPause(false);
         Menu.Open();
     }
 
