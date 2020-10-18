@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using HedgehogTeam.EasyTouch;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,6 +8,12 @@ using UnityEngine.SceneManagement;
 public class Partie
 {
     #region Properties
+
+    public static bool Paused
+    {
+        get;
+        private set;
+    }
 
     public static int Score;
     public static int Stars;
@@ -33,8 +40,6 @@ public class Partie
         ToutLeRepas = new List<Ingredient>();
         RecetteValidées = new List<Recette>();
         RecetteComplètes = new List<Recette>();
-
-
     }
 
     public static void Mange(Ingredient Ingredient)
@@ -84,10 +89,7 @@ public class Partie
         Score += Mathf.FloorToInt(TempsRestant) * 200;
         SaveGame.RecordCurrentGame();
         JustTerminated = true;
-        ScreenFader.Launch_FadeIn( () =>
-        {
-            SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single);
-        });
+        Menu.Open();
     }
 
     public static int CompteRecetteCompletees(Recette Recette)
@@ -100,9 +102,33 @@ public class Partie
         return Result;
     }
 
+    public static void SetPause(bool _Paused)
+    {
+        if(_Paused == true)
+        {
+            Paused = true;
+        }
+        else
+        {
+            EasyTouch.instance.StartCoroutine(DelayUnPause());
+        }
+    }
+
     #endregion
 
     #region Private Methods
+
+    static private IEnumerator DelayUnPause()
+    {
+        yield return null;
+        yield return null;
+        for( int fingerId = 0; fingerId < EasyTouch.GetTouchCount(); ++fingerId)
+        {
+            EasyTouch.ResetTouch(fingerId);
+        }
+        yield return null;
+        Paused = false;
+    }
 
     private static void CheckRecette()
     {

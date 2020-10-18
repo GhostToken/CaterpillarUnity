@@ -90,7 +90,7 @@ public class Level : ScriptableObject
     public int Id;
     [SerializeField]
     private ETypeNiveau TypeDeNiveau = ETypeNiveau.GloutonDebutant;
-    public TimeSpan Duration = new TimeSpan(0, 1, 0);
+    public int Duree = 180;
 
     public string Scene;
     public List<Recette> RecetteAFaire;
@@ -143,6 +143,14 @@ public class Level : ScriptableObject
                 {
                     return "Dieu des fourneaux";
                 }
+        }
+    }
+
+    public TimeSpan Duration
+    {
+        get
+        {
+            return new TimeSpan(0, 0, Duree);
         }
     }
 

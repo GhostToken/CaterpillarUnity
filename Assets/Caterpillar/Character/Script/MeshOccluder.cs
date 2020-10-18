@@ -99,17 +99,37 @@ public class MeshOccluder : MonoBehaviour
     static private List<MeshQuiGene> TouslesMeshGenants = new List<MeshQuiGene>();
     static float LastUpdateTime = 0.0f;
     public LayerMask LayerMask;
+    private Coroutine OccludingCoroutine = null;
 
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(UpdateOccluding());
+        if( Options.MeshOccluding == true)
+        {
+            OccludingCoroutine = StartCoroutine(UpdateOccluding());
+        }
     }
 
     void Update()
     {
+        if (Options.MeshOccluding == true)
+        {
+            if (OccludingCoroutine == null)
+            {
+                OccludingCoroutine = StartCoroutine(UpdateOccluding());
+            }
+        }
+        else
+        {
+            if (OccludingCoroutine != null)
+            {
+                StopCoroutine(OccludingCoroutine);
+                OccludingCoroutine = null;
+            }
+        }
+
         if( Time.time > LastUpdateTime)
         {
             LastUpdateTime = Time.time;

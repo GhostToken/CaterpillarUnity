@@ -39,7 +39,7 @@ public class LevelPopup : Popup
 
     #region Methods
 
-    public void Open(int LevelId)
+    virtual public void Open(int LevelId)
     {
         foreach(RectTransform root in ScaleRoot)
         {
@@ -60,7 +60,7 @@ public class LevelPopup : Popup
         }
     }
 
-    public void Close()
+    virtual public void Close()
     {
         Menu.Instance.CloseAllPopups();
     }

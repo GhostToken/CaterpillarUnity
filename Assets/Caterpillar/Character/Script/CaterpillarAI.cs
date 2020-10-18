@@ -637,6 +637,11 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
 
     protected virtual void Update()
     {
+        if( Partie.Paused == true)
+        {
+            return;
+        }
+
         if (shouldRecalculatePath) SearchPath();
         if ((canMove) && (!reachedEndOfPath))
         {

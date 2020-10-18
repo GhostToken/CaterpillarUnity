@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum EEcran
 {
@@ -337,6 +338,14 @@ public class Menu : MonoBehaviour
     #endregion
 
     #region Events
+
+    static public void Open()
+    {
+        ScreenFader.Launch_FadeIn(() =>
+        {
+            SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single);
+        });
+    }
 
     public bool CloseAllPopups()
     {

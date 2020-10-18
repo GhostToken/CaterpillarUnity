@@ -8,6 +8,8 @@ public class Menu_Parametres : MonoBehaviour
     #region Properties
 
     public Toggle Notifications;
+    public Toggle MeshOccluding;
+    public Toggle MenuAffiché;
 
     #endregion
 
@@ -17,6 +19,8 @@ public class Menu_Parametres : MonoBehaviour
     void Start()
     {
         Notifications.isOn = Account.GetNotificationEnabled();
+        MeshOccluding.isOn = Options.MeshOccluding;
+        MenuAffiché.isOn = Options.MenuAffiché;
     }
 
     #endregion
@@ -26,6 +30,16 @@ public class Menu_Parametres : MonoBehaviour
     public void SetNotificationActive(bool Active)
     {
         Account.SetNotificationActive(Active);
+    }
+
+    public void SetMeshOccluding(bool Active)
+    {
+        Options.MeshOccluding = Active;
+    }
+
+    public void SetMenuAffiché(bool Active)
+    {
+        Options.MenuAffiché = Active;
     }
 
     #endregion

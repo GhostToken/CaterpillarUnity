@@ -19,6 +19,7 @@ public class HUD : MonoBehaviour
     public Image BackGroundTimer;
     public TextMeshProUGUI Points;
     public HUD_ListeRecette ListeRecette;
+    public HUD_Pause Pause;
 
     #endregion
 
@@ -65,6 +66,7 @@ public class HUD : MonoBehaviour
     {
         LevelId.SetText(Level.CurrentLevel.Id.ToString());
         ListeRecette.SetLevel(Level.CurrentLevel);
+        ListeRecette.gameObject.SetActive(Options.MenuAffiché);
 
         Points.SetText("0");
 
@@ -74,6 +76,15 @@ public class HUD : MonoBehaviour
         StarOn_1.enabled = false;
         StarOn_2.enabled = false;
         StarOn_3.enabled = false;
+    }
+
+    public void OuvrePauseMenu()
+    {
+        if(Pause != null)
+        {
+            Pause.gameObject.SetActive(true);
+            Pause.Open(Level.CurrentLevel.Id);
+        }
     }
 
     #endregion

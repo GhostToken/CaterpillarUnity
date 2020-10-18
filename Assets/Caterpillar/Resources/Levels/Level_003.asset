@@ -32,7 +32,7 @@ MonoBehaviour:
     ScoreRequis: 0
   StarThree:
     Description: 2 recettes sans grignotage
-    Conditions: 3
+    Conditions: 6
     NombreDeRecette: 2
     NombreDeRecetteUnique: 2
     ScoreRequis: 0

@@ -31,6 +31,11 @@ public class Caterpillar : MonoBehaviour
     //Vector3 RayCastPoint;
     public void OnTap(Gesture gesture)
     {
+        if( Partie.Paused == true)
+        {
+            return;
+        }
+
         Ray ray;
         RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(gesture.position);

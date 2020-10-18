@@ -26,7 +26,7 @@ MonoBehaviour:
     ScoreRequis: 0
   StarTwo:
     Description: 2 recettes uniques
-    Conditions: 4
+    Conditions: 2
     NombreDeRecette: 0
     NombreDeRecetteUnique: 2
     ScoreRequis: 0
