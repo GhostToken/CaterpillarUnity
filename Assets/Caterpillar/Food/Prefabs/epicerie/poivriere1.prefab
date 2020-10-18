@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8662022960825002620}
   - component: {fileID: -206820169987386113}
   - component: {fileID: 4180153918166572536}
-  - component: {fileID: 5768462724273208374}
+  - component: {fileID: 587777014}
   m_Layer: 9
   m_Name: poivriere1
   m_TagString: Untagged
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 11400000, guid: 8e547ee0491fa614f8481335d99dda0a, type: 2}
   DownScaleSpeed: 1.5
---- !u!64 &5768462724273208374
-MeshCollider:
+--- !u!65 &587777014
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,7 +124,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2116425010991137134, guid: 395affbe90947b0428543d0783a68e45, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 3, z: 1.4}
+  m_Center: {x: 0.00000047683716, y: 0, z: 0.0000009536743}

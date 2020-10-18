@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -301404594144305678}
   - component: {fileID: 1923083370328802976}
   - component: {fileID: 7462056138615789003}
+  - component: {fileID: 1562346290415282636}
   m_Layer: 9
   m_Name: muffin
   m_TagString: Untagged
@@ -126,3 +127,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2066543, y: 0.39327908, z: 1.181601}
   m_Center: {x: -0.012526631, y: -0.6033604, z: 0.004175663}
+--- !u!114 &1562346290415282636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856703869169131737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc8f5166db1e3489c2c351eab11be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ingredient: {fileID: 11400000, guid: 92e7f96e5132f87428af11b6c85a233f, type: 2}
+  DownScaleSpeed: 1.5
