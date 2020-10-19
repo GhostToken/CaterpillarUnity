@@ -24,7 +24,7 @@ MonoBehaviour:
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 6ffb69522b82215479e57f565bcc55d4, type: 2}
   - Flags: 1
-    Ingredient: {fileID: 11400000, guid: 703fc52164ac62b43bb951453c05b758, type: 2}
+    Ingredient: {fileID: 11400000, guid: e327b71d38554ec4aa6429dbb36f7e31, type: 2}
   - Flags: 1
     Ingredient: {fileID: 11400000, guid: 95c6d23134e60a6448e33e96c6565eeb, type: 2}
   - Flags: 1

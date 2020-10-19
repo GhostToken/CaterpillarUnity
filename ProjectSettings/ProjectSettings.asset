@@ -125,7 +125,7 @@ PlayerSettings:
     16:10: 0
     16:9: 0
     Others: 1
-  bundleVersion: 0.022
+  bundleVersion: 0.023
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -171,7 +171,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.GhostToken.Caterpillar
   buildNumber: {}
-  AndroidBundleVersionCode: 14
+  AndroidBundleVersionCode: 15
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

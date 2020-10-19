@@ -142,6 +142,7 @@ public class Partie
                 {
                     if (!Estomac.Contains(composant.Ingredient))
                     {
+                        Debug.Log("ingredient manquant pour " + recetteAFaire.Nom + " : " + composant.Ingredient.Nom);
                         recetteValidée = false;
                         break;
                     }
