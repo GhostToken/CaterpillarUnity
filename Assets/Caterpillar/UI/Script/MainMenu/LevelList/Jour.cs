@@ -43,7 +43,6 @@ namespace Assets.Caterpillar.UI.Script.MainMenu.LevelList
 
         bool EstDebloqué(int LevelId)
         {
-            return true;
             return LevelId <= SaveGame.MaxLevelReached;
         }
 
