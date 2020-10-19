@@ -34,6 +34,14 @@ public class SaveGame : MonoBehaviour
         }
     }
 
+    private static string TutorialVuIdentifier
+    {
+        get
+        {
+            return "TutorialVu";
+        }
+    }
+
     #endregion
 
     #region Data Structures
@@ -215,6 +223,7 @@ public class SaveGame : MonoBehaviour
     public static int MaxLevelReached = 1;
     public static int AllTimesTotalScore = 0;
     public static int BiggestScore = 0;
+    public static bool TutorialVu = false;
     public static List<LevelRecord> AllLevelRecords = new List<LevelRecord>();
 
     #endregion
@@ -242,6 +251,7 @@ public class SaveGame : MonoBehaviour
         MaxLevelReached = PlayerPrefsHelpers.TryGet(MaxLevelReachedIdentifier, MaxLevelReached);
         AllTimesTotalScore = PlayerPrefsHelpers.TryGet(AllTimesTotalScoreIdentifier, AllTimesTotalScore);
         BiggestScore = PlayerPrefsHelpers.TryGet(BiggestScoreIdentifier, BiggestScore);
+        TutorialVu = PlayerPrefsHelpers.TryGet(TutorialVuIdentifier, TutorialVu);
 
         for (int Level = 1; Level <= MaxLevelReached; ++Level)
         {
@@ -256,6 +266,7 @@ public class SaveGame : MonoBehaviour
         PlayerPrefs.SetInt(MaxLevelReachedIdentifier, MaxLevelReached );
         PlayerPrefs.SetInt(AllTimesTotalScoreIdentifier, AllTimesTotalScore);
         PlayerPrefs.SetInt(BiggestScoreIdentifier, BiggestScore);
+        PlayerPrefsHelpers.SetBool(TutorialVuIdentifier, TutorialVu);
 
         foreach (LevelRecord Record in AllLevelRecords)
         {

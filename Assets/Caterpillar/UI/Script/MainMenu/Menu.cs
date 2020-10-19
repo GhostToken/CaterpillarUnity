@@ -37,6 +37,7 @@ public class Menu : MonoBehaviour
 
     public LevelPopup LevelPopup;
     public AfterLevelPopup AfterLevelPopup;
+    public Tutorial_Slide Tutoriel;
 
 
     EEcran Current = EEcran.Principal;
@@ -55,7 +56,7 @@ public class Menu : MonoBehaviour
 
     public bool HasPopupOpen()
     {
-        return LevelPopup.gameObject.activeInHierarchy;
+        return LevelPopup.gameObject.activeInHierarchy | AfterLevelPopup.gameObject.activeInHierarchy;
     }
 
     static public Menu Instance
@@ -79,6 +80,11 @@ public class Menu : MonoBehaviour
         {
             Partie.JustTerminated = false;
             OpenAfterLevelPopup();
+        }
+
+        if( SaveGame.TutorialVu == false)
+        {
+            OpenTutoriel();
         }
     }
 
@@ -349,7 +355,8 @@ public class Menu : MonoBehaviour
 
     public bool CloseAllPopups()
     {
-        if(LevelPopup.gameObject.activeSelf)
+        Tutoriel.gameObject.SetActive(false);
+        if (LevelPopup.gameObject.activeSelf)
         {
             LevelPopup.gameObject.SetActive(false);
             return true;
@@ -377,6 +384,12 @@ public class Menu : MonoBehaviour
     {
         AfterLevelPopup.gameObject.SetActive(true);
         AfterLevelPopup.Open(Level.CurrentLevel.Id);
+    }
+
+    public void OpenTutoriel()
+    {
+        CloseAllPopups();
+        Tutoriel.gameObject.SetActive(true);
     }
 
     #endregion

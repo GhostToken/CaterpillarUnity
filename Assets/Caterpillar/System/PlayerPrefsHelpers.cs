@@ -30,4 +30,18 @@ public static class PlayerPrefsHelpers
         }
         return PreviousValue;
     }
+
+    public static bool TryGet(string Identifier, bool PreviousValue)
+    {
+        if (PlayerPrefs.HasKey(Identifier))
+        {
+            return PlayerPrefs.GetInt(Identifier) == 1;
+        }
+        return PreviousValue;
+    }
+
+    public static void SetBool(string Identifier, bool Value)
+    {
+        PlayerPrefs.SetInt(Identifier, Value ? 1 : 0);
+    }
 }

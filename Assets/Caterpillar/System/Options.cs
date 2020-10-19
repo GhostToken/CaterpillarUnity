@@ -20,6 +20,7 @@ static public class Options
             return "MenuAffiché";
         }
     }
+
     private static string MoveMarkerIdentifier
     {
         get

@@ -49,5 +49,10 @@ public class Menu_Parametres : MonoBehaviour
         Options.MoveMarker = Active;
     }
 
+    public void RevoirTutoriel()
+    {
+        Menu.Instance.OpenTutoriel();
+    }
+
     #endregion
 }
