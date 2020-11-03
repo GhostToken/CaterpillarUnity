@@ -1655,9 +1655,7 @@ GameObject:
   - component: {fileID: 6025471502917494909}
   - component: {fileID: 2517977827259874082}
   - component: {fileID: 2517977827259874083}
-  - component: {fileID: 5912672875521990885}
   - component: {fileID: 5912672875521990884}
-  - component: {fileID: 353174545912364733}
   m_Layer: 10
   m_Name: Caterpillar
   m_TagString: Player
@@ -1779,9 +1777,7 @@ MonoBehaviour:
   AdditionalDebugAlpha: 1
   drawGizmos: 0
   UseCollisions: 1
-  IncludedColliders:
-  - {fileID: 0}
-  - {fileID: 0}
+  IncludedColliders: []
   CollidersOffsets:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -1853,34 +1849,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.38
   m_Center: {x: 0, y: 0.57, z: 0.09}
---- !u!114 &5912672875521990885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5912672875521990887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
 --- !u!114 &5912672875521990884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,36 +1861,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26becdc437e89a4d9a05d9cf7016959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LayerMask:
+  Speed: 3
+  LayerMask_TapToMove:
     serializedVersion: 2
     m_Bits: 10240
-  MoveMarker: {fileID: 5463123202335698412, guid: 75b2fe96672577b44ad77332bbb422e0,
+  LayerMask_Joystick:
+    serializedVersion: 2
+    m_Bits: 14337
+  MoveMarkerPrefab: {fileID: 5463123202335698412, guid: 75b2fe96672577b44ad77332bbb422e0,
     type: 3}
---- !u!114 &353174545912364733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5912672875521990887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d785cda5b84e79f49b804282b68a7341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 2
-  repathRate: 0.5
-  canSearch: 1
-  canMove: 1
-  speed: 3
-  orientation: 0
-  enableRotation: 1
-  rotationSpeed: 10
-  slowdownDistance: 0.6
-  endReachedDistance: 0.2
-  interpolatePathSwitches: 1
-  switchPathInterpolationSpeed: 5
-  targetCompatibility: {fileID: 0}
+  JoystickPrefab: {fileID: 1311921685913996758, guid: 39f9eb13d3767394e907f28fc05d8321,
+    type: 3}
 --- !u!1 &5912686747052778593
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,14 @@ static public class Options
         }
     }
 
+    private static string UseTapToMoveIdentifier
+    {
+        get
+        {
+            return "UseTapToMove";
+        }
+    }
+
     #endregion
 
     #region Properties
@@ -78,6 +86,22 @@ static public class Options
         set
         {
             PlayerPrefs.SetInt(MoveMarkerIdentifier, (value ? 1 : 0));
+        }
+    }
+
+    static public bool UseTapToMove
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey(UseTapToMoveIdentifier) == false)
+            {
+                return true;
+            }
+            return (PlayerPrefs.GetInt(UseTapToMoveIdentifier) == 1);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(UseTapToMoveIdentifier, (value ? 1 : 0));
         }
     }
 

@@ -11,18 +11,21 @@ public class Menu_Parametres : MonoBehaviour
     public Toggle MeshOccluding;
     public Toggle MenuAffiché;
     public Toggle MoveMarker;
+    public Toggle TapToMove;
 
     #endregion
 
 
     #region Unity Handlers
 
-    void Start()
+    void OnEnable()
     {
         Notifications.isOn = Account.GetNotificationEnabled();
         MeshOccluding.isOn = Options.MeshOccluding;
         MenuAffiché.isOn = Options.MenuAffiché;
         MoveMarker.isOn = Options.MoveMarker;
+        TapToMove.isOn = Options.UseTapToMove;
+        MoveMarker.enabled = Options.UseTapToMove;
     }
 
     #endregion
@@ -47,6 +50,11 @@ public class Menu_Parametres : MonoBehaviour
     public void SetMoveMarker(bool Active)
     {
         Options.MoveMarker = Active;
+    }
+
+    public void SetTapToMove(bool Active)
+    {
+        Options.UseTapToMove = Active;
     }
 
     public void RevoirTutoriel()

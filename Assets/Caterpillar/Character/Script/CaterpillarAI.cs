@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using Pathfinding.Util;
+using HedgehogTeam.EasyTouch;
 
 /// <summary>
 /// Linearly interpolating movement script.
@@ -345,6 +346,10 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
         tr = transform;
 
         seeker = GetComponent<Seeker>();
+        if( seeker == null)
+        {
+            seeker = gameObject.AddComponent<Seeker>();
+        }
 
         // Tell the StartEndModifier to ask for our exact position when post processing the path This
         // is important if we are using prediction and requesting a path from some point slightly ahead
@@ -363,7 +368,15 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
     protected virtual void Start()
     {
         startHasRun = true;
+
+        seeker = GetComponent<Seeker>();
+        if (seeker == null)
+        {
+            seeker = gameObject.AddComponent<Seeker>();
+        }
+
         Init();
+        InitInput();
     }
 
     /// <summary>Called when the component is enabled</summary>
@@ -372,6 +385,7 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
         // Make sure we receive callbacks when paths complete
         seeker.pathCallback += OnPathComplete;
         Init();
+        OnEnableInput();
     }
 
     void Init()
@@ -390,6 +404,8 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
         ClearPath();
         // Make sure we no longer receive callbacks when paths complete
         seeker.pathCallback -= OnPathComplete;
+
+        OnDisableInput();
     }
 
     /// <summary>\copydoc Pathfinding::IAstarAI::GetRemainingPath</summary>
@@ -765,4 +781,64 @@ public class CaterpillarAI : VersionedMonoBehaviour, IAstarAI
 #pragma warning restore 618
         return 2;
     }
+
+    #region Input
+
+    public LayerMask LayerMask;
+    public GameObject MoveMarkerPrefab;
+    private GameObject MoveMarkerInstance;
+
+    private GameObject Marker
+    {
+        get
+        {
+            if (MoveMarkerInstance == null)
+            {
+                MoveMarkerInstance = GameObject.Instantiate(MoveMarkerPrefab);
+            }
+            return MoveMarkerInstance;
+        }
+    }
+
+    private void InitInput()
+    {
+    }
+
+    private void OnEnableInput()
+    {
+        if (Options.UseTapToMove)
+        {
+            EasyTouch.On_SimpleTap += OnTap;
+        }
+    }
+
+    private void OnDisableInput()
+    {
+        if (Options.UseTapToMove)
+        {
+            EasyTouch.On_SimpleTap -= OnTap;
+        }
+    }
+
+    public void OnTap(Gesture gesture)
+    {
+        if (Partie.Paused == true)
+        {
+            return;
+        }
+
+        Ray ray;
+        RaycastHit hit;
+        ray = Camera.main.ScreenPointToRay(gesture.position);
+        if (!Physics.Raycast(ray, out hit, 1000, LayerMask))
+        {
+            return;
+        }
+
+        Marker.transform.position = hit.point;
+
+        destination = hit.point;
+    }
+
+    #endregion
 }

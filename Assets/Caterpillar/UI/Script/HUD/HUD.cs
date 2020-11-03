@@ -49,7 +49,7 @@ public class HUD : MonoBehaviour
         int seconds = Mathf.FloorToInt(Partie.TempsRestant % 60.0f);
 
         Timer.SetText(minutes.ToString("00") + ":" + seconds.ToString("00"));
-        BackGroundTimer.fillAmount = (Partie.TempsRestant / (float)Level.CurrentLevel.Duration.TotalSeconds);
+        BackGroundTimer.fillAmount = 1.0f -(Partie.TempsRestant / (float)Level.CurrentLevel.Duration.TotalSeconds);
 
         Points.SetText(Partie.Score.ToString());
 
@@ -70,7 +70,7 @@ public class HUD : MonoBehaviour
 
         Points.SetText("0");
 
-        BackGroundTimer.fillAmount = 1.0f; ;
+        BackGroundTimer.fillAmount = 0.0f;
         Timer.SetText(Level.CurrentLevel.Duration.Minutes.ToString() + ":" + Level.CurrentLevel.Duration.Seconds.ToString());
 
         StarOn_1.enabled = false;

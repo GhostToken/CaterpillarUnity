@@ -8,7 +8,6 @@ public class HUD_ListeRecette : MonoBehaviour
 
     public int BaseWidth = 150;
     public int IngredientWidth = 100;
-    public int ParentWidth = 80;
 
     public GameObject PrefabRecette;
 

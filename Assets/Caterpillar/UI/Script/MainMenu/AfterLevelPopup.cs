@@ -44,13 +44,12 @@ public class AfterLevelPopup : Popup
 
     public float AnimationDuration = 0.25f;
 
-    public RectTransform ExpandArea;
-    public RectTransform ExpandAreaIcon;
-    public float ExpandAreaMinHeight = 120;
-    public float ExpandAreaMaxHeight = 736;
+    public RectTransform ObjectiveArea;
+    public RectTransform ObjectiveAreaIcon;
     public RectTransform PolaroidArea;
-    public float PolaroidAreaMinScale = 0.5f;
-    public float PolaroidAreaMaxScale = 1.0f;
+
+    public float ObjectiveAreaMinHeight = 120;
+    public float ObjectiveAreaMaxHeight = 736;
 
     private int CurrentLevelId;
     private bool DetailVisible = false;
@@ -67,6 +66,7 @@ public class AfterLevelPopup : Popup
         {
             SetupLevel(ThisLevel);
             SetupCompletion(LevelId);
+            InitializeObjectiveArea();
         }
         else
         {
@@ -231,22 +231,32 @@ public class AfterLevelPopup : Popup
 
     #region Events
 
+    public void InitializeObjectiveArea()
+    {
+        float AreaYLimit_Lower = ObjectiveArea.anchorMin.y + ObjectiveAreaMinHeight / Screen.height;
+        ObjectiveArea.anchorMax = new Vector2(1.0f, AreaYLimit_Lower);
+        PolaroidArea.anchorMin = new Vector2(0.0f, AreaYLimit_Lower);
+    }
+
     public void OpenDetails()
     {
+        float AreaYLimit_Lower = ObjectiveArea.anchorMin.y + ObjectiveAreaMinHeight / Screen.height;
+        float AreaYLimit_Higher = ObjectiveArea.anchorMin.y + ObjectiveAreaMaxHeight / Screen.height;
+
         int Stars = Partie.Stars;
         DetailVisible = !DetailVisible;
-        ExpandAreaIcon.DOScale(new Vector3(1.0f, (DetailVisible ? -1.0f : 1.0f), 1.0f), AnimationDuration);
+        ObjectiveAreaIcon.DOScale(new Vector3(1.0f, (DetailVisible ? -1.0f : 1.0f), 1.0f), AnimationDuration);
         if (DetailVisible)
         {
-            ExpandArea.DOSizeDelta(new Vector2(ExpandArea.sizeDelta.x, ExpandAreaMaxHeight), AnimationDuration);
-            PolaroidArea.DOScale(Vector3.one * PolaroidAreaMinScale, AnimationDuration);
+            ObjectiveArea.DOAnchorMax(new Vector2(1.0f, AreaYLimit_Higher), AnimationDuration);
+            PolaroidArea.DOAnchorMin(new Vector2(0.0f, AreaYLimit_Higher), AnimationDuration);
             UpdateDetailsStars(Stars);
             UpdateTextColors(Stars);
         }
         else
         {
-            ExpandArea.DOSizeDelta(new Vector2(ExpandArea.sizeDelta.x, ExpandAreaMinHeight), AnimationDuration);
-            PolaroidArea.DOScale(Vector3.one * PolaroidAreaMaxScale, AnimationDuration);
+            ObjectiveArea.DOAnchorMax(new Vector2(1.0f, AreaYLimit_Lower), AnimationDuration);
+            PolaroidArea.DOAnchorMin(new Vector2(0.0f, AreaYLimit_Lower), AnimationDuration);
         }
     }
 

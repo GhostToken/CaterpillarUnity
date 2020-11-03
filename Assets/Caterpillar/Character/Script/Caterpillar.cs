@@ -5,63 +5,45 @@ using UnityEngine;
 using HedgehogTeam.EasyTouch;
 using Pathfinding;
 using UnityEngine.Timeline;
+using UnityEditor.SceneManagement;
 
 public class Caterpillar : MonoBehaviour
 {
     #region Navigation 
 
-    public LayerMask LayerMask;
-    public IAstarAI AI;
-    public GameObject MoveMarker;
+    public float Speed = 3.0f;
 
-    private GameObject MoveMarkerInstance;
+    public LayerMask LayerMask_TapToMove;
+    public LayerMask LayerMask_Joystick;
+    public GameObject MoveMarkerPrefab;
 
-    private GameObject Marker
-    {
-        get
-        {
-            if(MoveMarkerInstance == null)
-            {
-                MoveMarkerInstance = GameObject.Instantiate(MoveMarker);
-            }
-            return MoveMarkerInstance;
-        }
-    }
+    public GameObject JoystickPrefab;
+
+    private CaterpillarAI AI;
+    private CaterpillarInput Input;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        AI = GetComponent<IAstarAI>();
-    }
-
-    private void OnEnable()
-    {
-        EasyTouch.On_SimpleTap += OnTap;
-    }
-
-    private void OnDisable()
-    {
-        EasyTouch.On_SimpleTap -= OnTap;
-    }
-
-    public void OnTap(Gesture gesture)
-    {
-        if( Partie.Paused == true)
+        if(Options.UseTapToMove)
         {
-            return;
+            AI = gameObject.AddComponent<CaterpillarAI>();
+            AI.speed = Speed;
+            AI.LayerMask = LayerMask_TapToMove;
+            AI.MoveMarkerPrefab = MoveMarkerPrefab;
         }
-
-        Ray ray;
-        RaycastHit hit;
-        ray = Camera.main.ScreenPointToRay(gesture.position);
-        if (!Physics.Raycast(ray, out hit, 1000, LayerMask))
+        else
         {
-            return;
+            Input = gameObject.AddComponent<CaterpillarInput>();
+            Input.BaseSpeed = Speed;
+            Input.GroundLayerMask = LayerMask_Joystick;
+
+            GameObject JoystickPrefabInstance = GameObject.Instantiate(JoystickPrefab);
+            JoystickPrefabInstance.GetComponentInChildren<ETCJoystick>().onMove.AddListener(Input.OnMove);
+            JoystickPrefabInstance.GetComponentInChildren<ETCJoystick>().onMoveEnd.AddListener(Input.OnMoveEnd);
         }
-
-        Marker.transform.position = hit.point;
-
-        AI.destination =  hit.point;
     }
 
     #endregion

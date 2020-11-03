@@ -777,6 +777,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Perceval
       objectReference: {fileID: 0}
+    - target: {fileID: 3897909927970139550, guid: 436cbd60fa9c1fe4d953469d4d91a612,
+        type: 3}
+      propertyPath: LayerMask_Joystick.m_Bits
+      value: 14337
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436cbd60fa9c1fe4d953469d4d91a612, type: 3}
 --- !u!1001 &227315619
