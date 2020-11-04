@@ -6,6 +6,13 @@ using System;
 
 public class CameraFollowing : MonoBehaviour
 {
+    public enum ECameraMode
+    {
+        Orbital,
+        ThirdPerson
+    }
+
+    public ECameraMode Mode = ECameraMode.ThirdPerson;
     public Vector3 Offset;
     public float MaxCameraSpeed;
     public float MaxCameraRotationSpeed;
@@ -35,14 +42,30 @@ public class CameraFollowing : MonoBehaviour
 
         transform.position = TargetPosition;
         transform.LookAt(Target.position);
+
+        Mode = (Options.UseOrbitalCamera ? ECameraMode.Orbital : ECameraMode.ThirdPerson);
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateZoom();
-        UpdateRotation();
-        UpdatePosition();
+
+        switch(Mode)
+        {
+            case ECameraMode.Orbital:
+                {
+                    UpdateRotation();
+                    UpdatePosition();
+                    break;
+                }
+            default:
+            case ECameraMode.ThirdPerson:
+                {
+                    UpdateFollowing();
+                    break;
+                }
+        }
     }
 
     void UpdateZoom()
@@ -59,6 +82,17 @@ public class CameraFollowing : MonoBehaviour
         ZoomToComplete -= Zoom;
 
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - Zoom, MinOrthographicSize, MaxOrthographicSize);
+    }
+
+    void UpdateFollowing()
+    {
+        Vector3 TargetForward = Target.forward;
+        TargetForward.y = 0.0f;
+        TargetForward = TargetForward.normalized;
+        Vector3 TargetPosition = Target.position + Target.right * Offset.x + TargetForward * Offset.z + Vector3.up * Offset.y; 
+
+        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MaxCameraSpeed * Time.deltaTime);
+        transform.LookAt(Target.position);
     }
 
     void UpdateRotation()

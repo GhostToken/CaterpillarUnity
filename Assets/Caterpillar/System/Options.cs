@@ -37,6 +37,14 @@ static public class Options
         }
     }
 
+    private static string UseOrbitalCameraIdentifier
+    {
+        get
+        {
+            return "UseOrbitalCamera";
+        }
+    }
+
     #endregion
 
     #region Properties
@@ -53,7 +61,7 @@ static public class Options
         }
         set
         {
-            PlayerPrefs.SetInt(MeshOccludingIdentifier, (value ? 1 : 0));
+            PlayerPrefsHelpers.SetBool(MeshOccludingIdentifier, value);
         }
     }
 
@@ -69,7 +77,7 @@ static public class Options
         }
         set
         {
-            PlayerPrefs.SetInt(MenuAffichéIdentifier, (value ? 1 : 0));
+            PlayerPrefsHelpers.SetBool(MenuAffichéIdentifier, value);
         }
     }
 
@@ -85,7 +93,7 @@ static public class Options
         }
         set
         {
-            PlayerPrefs.SetInt(MoveMarkerIdentifier, (value ? 1 : 0));
+            PlayerPrefsHelpers.SetBool(MoveMarkerIdentifier, value);
         }
     }
 
@@ -101,7 +109,23 @@ static public class Options
         }
         set
         {
-            PlayerPrefs.SetInt(UseTapToMoveIdentifier, (value ? 1 : 0));
+            PlayerPrefsHelpers.SetBool(UseTapToMoveIdentifier, value);
+        }
+    }
+
+    static public bool UseOrbitalCamera
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey(UseOrbitalCameraIdentifier) == false)
+            {
+                return false;
+            }
+            return (PlayerPrefs.GetInt(UseOrbitalCameraIdentifier) == 1);
+        }
+        set
+        {
+            PlayerPrefsHelpers.SetBool(UseOrbitalCameraIdentifier, value);
         }
     }
 

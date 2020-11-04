@@ -44,4 +44,13 @@ public static class PlayerPrefsHelpers
     {
         PlayerPrefs.SetInt(Identifier, Value ? 1 : 0);
     }
+
+    public static bool GetGool(string Identifier)
+    {
+        if (PlayerPrefs.HasKey(Identifier) == false)
+        {
+            return false;
+        }
+        return (PlayerPrefs.GetInt(Identifier) == 1);
+    }
 }

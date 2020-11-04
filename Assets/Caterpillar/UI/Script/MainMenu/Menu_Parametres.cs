@@ -12,6 +12,7 @@ public class Menu_Parametres : MonoBehaviour
     public Toggle MenuAffiché;
     public Toggle MoveMarker;
     public Toggle TapToMove;
+    public Toggle Orbital;
 
     #endregion
 
@@ -25,7 +26,8 @@ public class Menu_Parametres : MonoBehaviour
         MenuAffiché.isOn = Options.MenuAffiché;
         MoveMarker.isOn = Options.MoveMarker;
         TapToMove.isOn = Options.UseTapToMove;
-        MoveMarker.enabled = Options.UseTapToMove;
+        MoveMarker.isOn = Options.UseTapToMove;
+        Orbital.isOn = Options.UseOrbitalCamera;
     }
 
     #endregion
@@ -55,6 +57,12 @@ public class Menu_Parametres : MonoBehaviour
     public void SetTapToMove(bool Active)
     {
         Options.UseTapToMove = Active;
+    }
+
+    public void SetOrbital(bool Active)
+    {
+        Options.UseOrbitalCamera = Active;
+        Debug.Log("set orbital " + Active);
     }
 
     public void RevoirTutoriel()
