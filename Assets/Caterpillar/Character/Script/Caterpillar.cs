@@ -1,11 +1,6 @@
-﻿using FIMSpace.FSpine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HedgehogTeam.EasyTouch;
-using Pathfinding;
-using UnityEngine.Timeline;
-using UnityEditor.SceneManagement;
 
 public class Caterpillar : MonoBehaviour
 {
